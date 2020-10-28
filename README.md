@@ -15,7 +15,7 @@ fitting it to the desired platform and model. The CNN VGG16 was used to test the
 https://arxiv.org/abs/2004.13075
 
 # Development Tools
-This code targets a development platform with Linux and Xilinx Vivado 2019.1 and the target platform Xilinx Ultra96v2 runing PYNQ. 
+This code targets a development platform with Linux and Xilinx Vivado 2019.1 and the target platform Xilinx Ultra96v2 runing PYNQ version 2.4. 
 
 # Directories
 - Training: contains the Python code to train fixed-point CNN models in Keras. The trained model is saved in Training/json (*.json) and the weights in Training/weights (*.h5).
