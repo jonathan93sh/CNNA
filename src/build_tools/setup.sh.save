@@ -1,0 +1,2 @@
+export PATH=$(HOME/.build/systemc-2.3.3/lib-linux64:$(PATH)
+echo $PATH

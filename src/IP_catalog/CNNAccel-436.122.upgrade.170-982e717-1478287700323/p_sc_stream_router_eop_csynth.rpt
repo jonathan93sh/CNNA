@@ -1,0 +1,154 @@
+
+
+================================================================
+== Vivado HLS Report for 'p_sc_stream_router_eop'
+================================================================
+* Date:           Sun Mar  1 15:14:22 2020
+
+* Version:        2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)
+* Project:        CNNAccel
+* Solution:       default
+* Product family: zynquplus
+* Target device:  xczu3eg-sbva484-1-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   5.00|     4.334|        0.62|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    ?|    ?|    ?|    ?|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        +----------------------------------------------------------+------------------------------------------------+-----+-----+-----+-----+---------+
+        |                                                          |                                                |  Latency  |  Interval | Pipeline|
+        |                         Instance                         |                     Module                     | min | max | min | max |   Type  |
+        +----------------------------------------------------------+------------------------------------------------+-----+-----+-----+-----+---------+
+        |grp_p_sc_stream_router_eop_thread_sc_stream_router_fu_96  |p_sc_stream_router_eop_thread_sc_stream_router  |    ?|    ?|    ?|    ?|   none  |
+        +----------------------------------------------------------+------------------------------------------------+-----+-----+-----+-----+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+-----+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  | URAM|
++-----------------+---------+-------+--------+-------+-----+
+|DSP              |        -|      -|       -|      -|    -|
+|Expression       |        -|      -|       -|      -|    -|
+|FIFO             |        -|      -|       -|      -|    -|
+|Instance         |        -|      -|     294|    361|    -|
+|Memory           |        -|      -|       -|      -|    -|
+|Multiplexer      |        -|      -|       -|      -|    -|
+|Register         |        -|      -|     128|      -|    -|
++-----------------+---------+-------+--------+-------+-----+
+|Total            |        0|      0|     422|    361|    0|
++-----------------+---------+-------+--------+-------+-----+
+|Available        |      432|    360|  141120|  70560|    0|
++-----------------+---------+-------+--------+-------+-----+
+|Utilization (%)  |        0|      0|   ~0   |   ~0  |    0|
++-----------------+---------+-------+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +----------------------------------------------------------+------------------------------------------------+---------+-------+-----+-----+-----+
+    |                         Instance                         |                     Module                     | BRAM_18K| DSP48E|  FF | LUT | URAM|
+    +----------------------------------------------------------+------------------------------------------------+---------+-------+-----+-----+-----+
+    |grp_p_sc_stream_router_eop_thread_sc_stream_router_fu_96  |p_sc_stream_router_eop_thread_sc_stream_router  |        0|      0|  294|  361|    0|
+    +----------------------------------------------------------+------------------------------------------------+---------+-------+-----+-----+-----+
+    |Total                                                     |                                                |        0|      0|  294|  361|    0|
+    +----------------------------------------------------------+------------------------------------------------+---------+-------+-----+-----+-----+
+
+    * DSP48E: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    N/A
+
+    * Multiplexer: 
+    N/A
+
+    * Register: 
+    +----------------+----+----+-----+-----------+
+    |      Name      | FF | LUT| Bits| Const Bits|
+    +----------------+----+----+-----+-----------+
+    |s_packed_in     |  32|   0|   32|          0|
+    |s_packed_out_A  |  32|   0|   32|          0|
+    |s_packed_out_B  |  32|   0|   32|          0|
+    |s_state         |  32|   0|   32|          0|
+    +----------------+----+----+-----+-----------+
+    |Total           | 128|   0|  128|          0|
+    +----------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++----------------------+-----+-----+------------+-----------------------------------------------------+--------------+
+|       RTL Ports      | Dir | Bits|  Protocol  |                    Source Object                    |    C Type    |
++----------------------+-----+-----+------------+-----------------------------------------------------+--------------+
+|clk                   |  in |    1| ap_ctrl_hs | _sc_stream_router_eop<384>::_sc_stream_router_eop.1 | return value |
+|reset                 |  in |    1| ap_ctrl_hs | _sc_stream_router_eop<384>::_sc_stream_router_eop.1 | return value |
+|din_0_dout            |  in |  384|   ap_fifo  |                        din_0                        |    pointer   |
+|din_0_empty_n         |  in |    1|   ap_fifo  |                        din_0                        |    pointer   |
+|din_0_read            | out |    1|   ap_fifo  |                        din_0                        |    pointer   |
+|din_1_dout            |  in |    1|   ap_fifo  |                        din_1                        |    pointer   |
+|din_1_empty_n         |  in |    1|   ap_fifo  |                        din_1                        |    pointer   |
+|din_1_read            | out |    1|   ap_fifo  |                        din_1                        |    pointer   |
+|din_2_dout            |  in |   48|   ap_fifo  |                        din_2                        |    pointer   |
+|din_2_empty_n         |  in |    1|   ap_fifo  |                        din_2                        |    pointer   |
+|din_2_read            | out |    1|   ap_fifo  |                        din_2                        |    pointer   |
+|ctrl_channel_dout     |  in |    1|   ap_fifo  |                     ctrl_channel                    |    pointer   |
+|ctrl_channel_empty_n  |  in |    1|   ap_fifo  |                     ctrl_channel                    |    pointer   |
+|ctrl_channel_read     | out |    1|   ap_fifo  |                     ctrl_channel                    |    pointer   |
+|dout_a_0_din          | out |  384|   ap_fifo  |                       dout_a_0                      |    pointer   |
+|dout_a_0_full_n       |  in |    1|   ap_fifo  |                       dout_a_0                      |    pointer   |
+|dout_a_0_write        | out |    1|   ap_fifo  |                       dout_a_0                      |    pointer   |
+|dout_a_1_din          | out |    1|   ap_fifo  |                       dout_a_1                      |    pointer   |
+|dout_a_1_full_n       |  in |    1|   ap_fifo  |                       dout_a_1                      |    pointer   |
+|dout_a_1_write        | out |    1|   ap_fifo  |                       dout_a_1                      |    pointer   |
+|dout_a_2_din          | out |   48|   ap_fifo  |                       dout_a_2                      |    pointer   |
+|dout_a_2_full_n       |  in |    1|   ap_fifo  |                       dout_a_2                      |    pointer   |
+|dout_a_2_write        | out |    1|   ap_fifo  |                       dout_a_2                      |    pointer   |
+|dout_b_0_din          | out |  384|   ap_fifo  |                       dout_b_0                      |    pointer   |
+|dout_b_0_full_n       |  in |    1|   ap_fifo  |                       dout_b_0                      |    pointer   |
+|dout_b_0_write        | out |    1|   ap_fifo  |                       dout_b_0                      |    pointer   |
+|dout_b_1_din          | out |    1|   ap_fifo  |                       dout_b_1                      |    pointer   |
+|dout_b_1_full_n       |  in |    1|   ap_fifo  |                       dout_b_1                      |    pointer   |
+|dout_b_1_write        | out |    1|   ap_fifo  |                       dout_b_1                      |    pointer   |
+|dout_b_2_din          | out |   48|   ap_fifo  |                       dout_b_2                      |    pointer   |
+|dout_b_2_full_n       |  in |    1|   ap_fifo  |                       dout_b_2                      |    pointer   |
+|dout_b_2_write        | out |    1|   ap_fifo  |                       dout_b_2                      |    pointer   |
+|s_packed_in           | out |   32|   ap_vld   |                     s_packed_in                     |    pointer   |
+|s_packed_out_A        | out |   32|   ap_vld   |                    s_packed_out_A                   |    pointer   |
+|s_packed_out_B        | out |   32|   ap_vld   |                    s_packed_out_B                   |    pointer   |
+|s_state               | out |   32|   ap_vld   |                       s_state                       |    pointer   |
++----------------------+-----+-----+------------+-----------------------------------------------------+--------------+
+

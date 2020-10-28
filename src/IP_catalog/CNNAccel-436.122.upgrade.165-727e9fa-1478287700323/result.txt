@@ -1,0 +1,8 @@
+conv_start:110 ns
+mse: 0.027605
+conv_end:165120 ns
+pool_start:165120 ns
+pool_end:340470 ns
+fc_start:340470 ns
+mse: 2.341348
+fc_end:423820 ns

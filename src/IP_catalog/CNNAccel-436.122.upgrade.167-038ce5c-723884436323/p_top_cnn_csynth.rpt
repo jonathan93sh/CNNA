@@ -1,0 +1,633 @@
+
+
+================================================================
+== Vivado HLS Report for 'p_top_cnn'
+================================================================
+* Date:           Sun Feb 23 21:58:39 2020
+
+* Version:        2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)
+* Project:        CNNAccel
+* Solution:       default
+* Product family: zynquplus
+* Target device:  xczu3eg-sbva484-1-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   5.00|     8.898|        0.62|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    ?|    ?|    ?|    ?|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        +-------------------------------------------------------+-------------------------------------------+-----+-----+-----+-----+---------+
+        |                                                       |                                           |  Latency  |  Interval | Pipeline|
+        |                        Instance                       |                   Module                  | min | max | min | max |   Type  |
+        +-------------------------------------------------------+-------------------------------------------+-----+-----+-----+-----+---------+
+        |grp_p_sc_stream_resize_equal_inst_1_fu_3232            |p_sc_stream_resize_equal_inst_1            |    ?|    ?|    ?|    ?|   none  |
+        |grp_p_sc_stream_resize_equal_inst_3_fu_3254            |p_sc_stream_resize_equal_inst_3            |    ?|    ?|    ?|    ?|   none  |
+        |grp_p_sc_stream_splitter_fix_fu_3276                   |p_sc_stream_splitter_fix                   |    ?|    ?|    ?|    ?|   none  |
+        |grp_p_sc_stream_splitter_cloneinst_1_fu_3388           |p_sc_stream_splitter_cloneinst_1           |    0|    3|    0|    3|   none  |
+        |grp_p_sc_stream_buffer_not_stream_while_write_fu_3432  |p_sc_stream_buffer_not_stream_while_write  |    ?|    ?|    ?|    ?|   none  |
+        |grp_p_sc_stream_buffer_not_stream_while_write_fu_3462  |p_sc_stream_buffer_not_stream_while_write  |    ?|    ?|    ?|    ?|   none  |
+        |grp_p_sc_stream_buffer_not_stream_while_write_fu_3492  |p_sc_stream_buffer_not_stream_while_write  |    ?|    ?|    ?|    ?|   none  |
+        |grp_p_sc_stream_buffer_not_stream_while_write_fu_3522  |p_sc_stream_buffer_not_stream_while_write  |    ?|    ?|    ?|    ?|   none  |
+        |grp_p_sc_stream_buffer_not_stream_while_write_fu_3552  |p_sc_stream_buffer_not_stream_while_write  |    ?|    ?|    ?|    ?|   none  |
+        |grp_p_sc_stream_buffer_not_stream_while_write_fu_3582  |p_sc_stream_buffer_not_stream_while_write  |    ?|    ?|    ?|    ?|   none  |
+        |grp_p_sc_stream_buffer_not_stream_while_write_fu_3612  |p_sc_stream_buffer_not_stream_while_write  |    ?|    ?|    ?|    ?|   none  |
+        |grp_p_sc_stream_buffer_not_stream_while_write_fu_3642  |p_sc_stream_buffer_not_stream_while_write  |    ?|    ?|    ?|    ?|   none  |
+        |grp_p_sc_stream_buffer_not_stream_while_write_fu_3672  |p_sc_stream_buffer_not_stream_while_write  |    ?|    ?|    ?|    ?|   none  |
+        |grp_p_sc_stream_buffer_not_stream_while_write_fu_3702  |p_sc_stream_buffer_not_stream_while_write  |    ?|    ?|    ?|    ?|   none  |
+        |grp_p_sc_stream_buffer_not_stream_while_write_fu_3732  |p_sc_stream_buffer_not_stream_while_write  |    ?|    ?|    ?|    ?|   none  |
+        |grp_p_sc_stream_buffer_not_stream_while_write_fu_3762  |p_sc_stream_buffer_not_stream_while_write  |    ?|    ?|    ?|    ?|   none  |
+        |grp_p_sc_stream_buffer_not_stream_while_write_fu_3792  |p_sc_stream_buffer_not_stream_while_write  |    ?|    ?|    ?|    ?|   none  |
+        |grp_p_sc_stream_buffer_not_stream_while_write_fu_3822  |p_sc_stream_buffer_not_stream_while_write  |    ?|    ?|    ?|    ?|   none  |
+        |grp_p_sc_stream_buffer_not_stream_while_write_fu_3852  |p_sc_stream_buffer_not_stream_while_write  |    ?|    ?|    ?|    ?|   none  |
+        |grp_p_sc_stream_buffer_not_stream_while_write_fu_3882  |p_sc_stream_buffer_not_stream_while_write  |    ?|    ?|    ?|    ?|   none  |
+        |grp_p_sc_stream_bias_fu_3912                           |p_sc_stream_bias                           |    ?|    ?|    ?|    ?|   none  |
+        |grp_p_sc_stream_bias_fu_3934                           |p_sc_stream_bias                           |    ?|    ?|    ?|    ?|   none  |
+        |grp_p_sc_stream_bias_fu_3956                           |p_sc_stream_bias                           |    ?|    ?|    ?|    ?|   none  |
+        |grp_p_sc_stream_bias_fu_3978                           |p_sc_stream_bias                           |    ?|    ?|    ?|    ?|   none  |
+        |grp_p_sc_stream_bias_fu_4000                           |p_sc_stream_bias                           |    ?|    ?|    ?|    ?|   none  |
+        |grp_p_sc_stream_bias_fu_4022                           |p_sc_stream_bias                           |    ?|    ?|    ?|    ?|   none  |
+        |grp_p_sc_stream_bias_fu_4044                           |p_sc_stream_bias                           |    ?|    ?|    ?|    ?|   none  |
+        |grp_p_sc_stream_bias_fu_4066                           |p_sc_stream_bias                           |    ?|    ?|    ?|    ?|   none  |
+        |grp_p_sc_stream_bias_fu_4088                           |p_sc_stream_bias                           |    ?|    ?|    ?|    ?|   none  |
+        |grp_p_sc_stream_bias_fu_4110                           |p_sc_stream_bias                           |    ?|    ?|    ?|    ?|   none  |
+        |grp_p_sc_stream_bias_fu_4132                           |p_sc_stream_bias                           |    ?|    ?|    ?|    ?|   none  |
+        |grp_p_sc_stream_bias_fu_4154                           |p_sc_stream_bias                           |    ?|    ?|    ?|    ?|   none  |
+        |grp_p_sc_stream_bias_fu_4176                           |p_sc_stream_bias                           |    ?|    ?|    ?|    ?|   none  |
+        |grp_p_sc_stream_bias_fu_4198                           |p_sc_stream_bias                           |    ?|    ?|    ?|    ?|   none  |
+        |grp_p_sc_stream_bias_fu_4220                           |p_sc_stream_bias                           |    ?|    ?|    ?|    ?|   none  |
+        |grp_p_sc_stream_bias_fu_4242                           |p_sc_stream_bias                           |    ?|    ?|    ?|    ?|   none  |
+        |grp_p_data_buffer_TWO_D_fu_4264                        |p_data_buffer_TWO_D                        |    ?|    ?|    ?|    ?|   none  |
+        |grp_p_sc_stream_splitter_clone_EOPinst_2_fu_4612       |p_sc_stream_splitter_clone_EOPinst_2       |    ?|    ?|    ?|    ?|   none  |
+        |grp_p_sc_pooling_fu_4724                               |p_sc_pooling                               |    ?|    ?|    ?|    ?|   none  |
+        |grp_p_sc_stream_resize_equal_inst_4_fu_4756            |p_sc_stream_resize_equal_inst_4            |    ?|    ?|    ?|    ?|   none  |
+        |grp_p_sc_stream_splitter_cloneinst_3_fu_4778           |p_sc_stream_splitter_cloneinst_3           |    0|    3|    0|    3|   none  |
+        |grp_p_PE_v2_fu_4822                                    |p_PE_v2                                    |    ?|    ?|    ?|    ?|   none  |
+        |grp_p_PE_v2_fu_4884                                    |p_PE_v2                                    |    ?|    ?|    ?|    ?|   none  |
+        |grp_p_PE_v2_fu_4946                                    |p_PE_v2                                    |    ?|    ?|    ?|    ?|   none  |
+        |grp_p_PE_v2_fu_5008                                    |p_PE_v2                                    |    ?|    ?|    ?|    ?|   none  |
+        |grp_p_PE_v2_fu_5070                                    |p_PE_v2                                    |    ?|    ?|    ?|    ?|   none  |
+        |grp_p_PE_v2_fu_5132                                    |p_PE_v2                                    |    ?|    ?|    ?|    ?|   none  |
+        |grp_p_PE_v2_fu_5194                                    |p_PE_v2                                    |    ?|    ?|    ?|    ?|   none  |
+        |grp_p_PE_v2_fu_5256                                    |p_PE_v2                                    |    ?|    ?|    ?|    ?|   none  |
+        |grp_p_PE_v2_fu_5318                                    |p_PE_v2                                    |    ?|    ?|    ?|    ?|   none  |
+        |grp_p_PE_v2_fu_5380                                    |p_PE_v2                                    |    ?|    ?|    ?|    ?|   none  |
+        |grp_p_PE_v2_fu_5442                                    |p_PE_v2                                    |    ?|    ?|    ?|    ?|   none  |
+        |grp_p_PE_v2_fu_5504                                    |p_PE_v2                                    |    ?|    ?|    ?|    ?|   none  |
+        |grp_p_PE_v2_fu_5566                                    |p_PE_v2                                    |    ?|    ?|    ?|    ?|   none  |
+        |grp_p_PE_v2_fu_5628                                    |p_PE_v2                                    |    ?|    ?|    ?|    ?|   none  |
+        |grp_p_PE_v2_fu_5690                                    |p_PE_v2                                    |    ?|    ?|    ?|    ?|   none  |
+        |grp_p_PE_v2_fu_5752                                    |p_PE_v2                                    |    ?|    ?|    ?|    ?|   none  |
+        |grp_p_sc_stream_merge_raw_fu_5814                      |p_sc_stream_merge_raw                      |    0|   19|    0|   19|   none  |
+        |grp_p_sc_stream_resize_equal_inst_2_fu_5926            |p_sc_stream_resize_equal_inst_2            |    ?|    ?|    ?|    ?|   none  |
+        |grp_p_sc_stream_router_merge_eop_fu_5948               |p_sc_stream_router_merge_eop               |    ?|    ?|    ?|    ?|   none  |
+        |grp_p_sc_stream_last_fixinst_1_fu_5978                 |p_sc_stream_last_fixinst_1                 |    ?|    ?|    ?|    ?|   none  |
+        |grp_p_sc_stream_stitchinginst_1_fu_6000                |p_sc_stream_stitchinginst_1                |    ?|    ?|    ?|    ?|   none  |
+        +-------------------------------------------------------+-------------------------------------------+-----+-----+-----+-----+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+--------+-----+
+|       Name      | BRAM_18K| DSP48E|   FF   |   LUT  | URAM|
++-----------------+---------+-------+--------+--------+-----+
+|DSP              |        -|      -|       -|       -|    -|
+|Expression       |        -|      -|       -|       -|    -|
+|FIFO             |        8|      -|    1653|   15986|    -|
+|Instance         |      189|     21|   95943|  116508|    0|
+|Memory           |        -|      -|       -|       -|    -|
+|Multiplexer      |        -|      -|       -|       -|    -|
+|Register         |        -|      -|       -|       -|    -|
++-----------------+---------+-------+--------+--------+-----+
+|Total            |      197|     21|   97596|  132494|    0|
++-----------------+---------+-------+--------+--------+-----+
+|Available        |      432|    360|  141120|   70560|    0|
++-----------------+---------+-------+--------+--------+-----+
+|Utilization (%)  |       45|      5|      69|     187|    0|
++-----------------+---------+-------+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    +-------------------------------------------------------+-------------------------------------------+---------+-------+-------+-------+-----+
+    |                        Instance                       |                   Module                  | BRAM_18K| DSP48E|   FF  |  LUT  | URAM|
+    +-------------------------------------------------------+-------------------------------------------+---------+-------+-------+-------+-----+
+    |grp_p_PE_v2_fu_4822                                    |p_PE_v2                                    |        0|      1|   3927|   4682|    0|
+    |grp_p_PE_v2_fu_4884                                    |p_PE_v2                                    |        0|      1|   3927|   4682|    0|
+    |grp_p_PE_v2_fu_4946                                    |p_PE_v2                                    |        0|      1|   3927|   4682|    0|
+    |grp_p_PE_v2_fu_5008                                    |p_PE_v2                                    |        0|      1|   3927|   4682|    0|
+    |grp_p_PE_v2_fu_5070                                    |p_PE_v2                                    |        0|      1|   3927|   4682|    0|
+    |grp_p_PE_v2_fu_5132                                    |p_PE_v2                                    |        0|      1|   3927|   4682|    0|
+    |grp_p_PE_v2_fu_5194                                    |p_PE_v2                                    |        0|      1|   3927|   4682|    0|
+    |grp_p_PE_v2_fu_5256                                    |p_PE_v2                                    |        0|      1|   3927|   4682|    0|
+    |grp_p_PE_v2_fu_5318                                    |p_PE_v2                                    |        0|      1|   3927|   4682|    0|
+    |grp_p_PE_v2_fu_5380                                    |p_PE_v2                                    |        0|      1|   3927|   4682|    0|
+    |grp_p_PE_v2_fu_5442                                    |p_PE_v2                                    |        0|      1|   3927|   4682|    0|
+    |grp_p_PE_v2_fu_5504                                    |p_PE_v2                                    |        0|      1|   3927|   4682|    0|
+    |grp_p_PE_v2_fu_5566                                    |p_PE_v2                                    |        0|      1|   3927|   4682|    0|
+    |grp_p_PE_v2_fu_5628                                    |p_PE_v2                                    |        0|      1|   3927|   4682|    0|
+    |grp_p_PE_v2_fu_5690                                    |p_PE_v2                                    |        0|      1|   3927|   4682|    0|
+    |grp_p_PE_v2_fu_5752                                    |p_PE_v2                                    |        0|      1|   3927|   4682|    0|
+    |grp_p_data_buffer_TWO_D_fu_4264                        |p_data_buffer_TWO_D                        |       42|      5|  14671|  16140|    0|
+    |grp_p_sc_pooling_fu_4724                               |p_sc_pooling                               |        3|      0|   2435|   5532|    0|
+    |grp_p_sc_stream_bias_fu_3912                           |p_sc_stream_bias                           |        0|      0|     12|    152|    0|
+    |grp_p_sc_stream_bias_fu_3934                           |p_sc_stream_bias                           |        0|      0|     12|    152|    0|
+    |grp_p_sc_stream_bias_fu_3956                           |p_sc_stream_bias                           |        0|      0|     12|    152|    0|
+    |grp_p_sc_stream_bias_fu_3978                           |p_sc_stream_bias                           |        0|      0|     12|    152|    0|
+    |grp_p_sc_stream_bias_fu_4000                           |p_sc_stream_bias                           |        0|      0|     12|    152|    0|
+    |grp_p_sc_stream_bias_fu_4022                           |p_sc_stream_bias                           |        0|      0|     12|    152|    0|
+    |grp_p_sc_stream_bias_fu_4044                           |p_sc_stream_bias                           |        0|      0|     12|    152|    0|
+    |grp_p_sc_stream_bias_fu_4066                           |p_sc_stream_bias                           |        0|      0|     12|    152|    0|
+    |grp_p_sc_stream_bias_fu_4088                           |p_sc_stream_bias                           |        0|      0|     12|    152|    0|
+    |grp_p_sc_stream_bias_fu_4110                           |p_sc_stream_bias                           |        0|      0|     12|    152|    0|
+    |grp_p_sc_stream_bias_fu_4132                           |p_sc_stream_bias                           |        0|      0|     12|    152|    0|
+    |grp_p_sc_stream_bias_fu_4154                           |p_sc_stream_bias                           |        0|      0|     12|    152|    0|
+    |grp_p_sc_stream_bias_fu_4176                           |p_sc_stream_bias                           |        0|      0|     12|    152|    0|
+    |grp_p_sc_stream_bias_fu_4198                           |p_sc_stream_bias                           |        0|      0|     12|    152|    0|
+    |grp_p_sc_stream_bias_fu_4220                           |p_sc_stream_bias                           |        0|      0|     12|    152|    0|
+    |grp_p_sc_stream_bias_fu_4242                           |p_sc_stream_bias                           |        0|      0|     12|    152|    0|
+    |grp_p_sc_stream_buffer_not_stream_while_write_fu_3432  |p_sc_stream_buffer_not_stream_while_write  |        9|      0|    747|    820|    0|
+    |grp_p_sc_stream_buffer_not_stream_while_write_fu_3462  |p_sc_stream_buffer_not_stream_while_write  |        9|      0|    747|    820|    0|
+    |grp_p_sc_stream_buffer_not_stream_while_write_fu_3492  |p_sc_stream_buffer_not_stream_while_write  |        9|      0|    747|    820|    0|
+    |grp_p_sc_stream_buffer_not_stream_while_write_fu_3522  |p_sc_stream_buffer_not_stream_while_write  |        9|      0|    747|    820|    0|
+    |grp_p_sc_stream_buffer_not_stream_while_write_fu_3552  |p_sc_stream_buffer_not_stream_while_write  |        9|      0|    747|    820|    0|
+    |grp_p_sc_stream_buffer_not_stream_while_write_fu_3582  |p_sc_stream_buffer_not_stream_while_write  |        9|      0|    747|    820|    0|
+    |grp_p_sc_stream_buffer_not_stream_while_write_fu_3612  |p_sc_stream_buffer_not_stream_while_write  |        9|      0|    747|    820|    0|
+    |grp_p_sc_stream_buffer_not_stream_while_write_fu_3642  |p_sc_stream_buffer_not_stream_while_write  |        9|      0|    747|    820|    0|
+    |grp_p_sc_stream_buffer_not_stream_while_write_fu_3672  |p_sc_stream_buffer_not_stream_while_write  |        9|      0|    747|    820|    0|
+    |grp_p_sc_stream_buffer_not_stream_while_write_fu_3702  |p_sc_stream_buffer_not_stream_while_write  |        9|      0|    747|    820|    0|
+    |grp_p_sc_stream_buffer_not_stream_while_write_fu_3732  |p_sc_stream_buffer_not_stream_while_write  |        9|      0|    747|    820|    0|
+    |grp_p_sc_stream_buffer_not_stream_while_write_fu_3762  |p_sc_stream_buffer_not_stream_while_write  |        9|      0|    747|    820|    0|
+    |grp_p_sc_stream_buffer_not_stream_while_write_fu_3792  |p_sc_stream_buffer_not_stream_while_write  |        9|      0|    747|    820|    0|
+    |grp_p_sc_stream_buffer_not_stream_while_write_fu_3822  |p_sc_stream_buffer_not_stream_while_write  |        9|      0|    747|    820|    0|
+    |grp_p_sc_stream_buffer_not_stream_while_write_fu_3852  |p_sc_stream_buffer_not_stream_while_write  |        9|      0|    747|    820|    0|
+    |grp_p_sc_stream_buffer_not_stream_while_write_fu_3882  |p_sc_stream_buffer_not_stream_while_write  |        9|      0|    747|    820|    0|
+    |grp_p_sc_stream_last_fixinst_1_fu_5978                 |p_sc_stream_last_fixinst_1                 |        0|      0|    296|    157|    0|
+    |grp_p_sc_stream_merge_raw_fu_5814                      |p_sc_stream_merge_raw                      |        0|      0|   3012|    936|    0|
+    |grp_p_sc_stream_resize_equal_inst_1_fu_3232            |p_sc_stream_resize_equal_inst_1            |        0|      0|      4|     81|    0|
+    |grp_p_sc_stream_resize_equal_inst_2_fu_5926            |p_sc_stream_resize_equal_inst_2            |        0|      0|      4|     81|    0|
+    |grp_p_sc_stream_resize_equal_inst_3_fu_3254            |p_sc_stream_resize_equal_inst_3            |        0|      0|      4|     81|    0|
+    |grp_p_sc_stream_resize_equal_inst_4_fu_4756            |p_sc_stream_resize_equal_inst_4            |        0|      0|      4|     81|    0|
+    |grp_p_sc_stream_router_merge_eop_fu_5948               |p_sc_stream_router_merge_eop               |        0|      0|    152|    226|    0|
+    |grp_p_sc_stream_splitter_clone_EOPinst_2_fu_4612       |p_sc_stream_splitter_clone_EOPinst_2       |        0|      0|      4|    529|    0|
+    |grp_p_sc_stream_splitter_cloneinst_1_fu_3388           |p_sc_stream_splitter_cloneinst_1           |        0|      0|      2|    164|    0|
+    |grp_p_sc_stream_splitter_cloneinst_3_fu_4778           |p_sc_stream_splitter_cloneinst_3           |        0|      0|      2|    164|    0|
+    |grp_p_sc_stream_splitter_fix_fu_3276                   |p_sc_stream_splitter_fix                   |        0|      0|    160|   1518|    0|
+    |grp_p_sc_stream_stitchinginst_1_fu_6000                |p_sc_stream_stitchinginst_1                |        0|      0|    217|    354|    0|
+    +-------------------------------------------------------+-------------------------------------------+---------+-------+-------+-------+-----+
+    |Total                                                  |                                           |      189|     21|  95943| 116508|    0|
+    +-------------------------------------------------------+-------------------------------------------+---------+-------+-------+-------+-----+
+
+    * DSP48E: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    +------------------------------------+---------+-----+----+-----+------+-----+---------+
+    |                Name                | BRAM_18K|  FF | LUT| URAM| Depth| Bits| Size:D*B|
+    +------------------------------------+---------+-----+----+-----+------+-----+---------+
+    |ctrl_acf_splitter_2_pe_1302_fifo_U  |        0|    5|   0|    -|     1|   16|       16|
+    |ctrl_acf_splitter_2_pe_1303_fifo_U  |        0|    5|   0|    -|     1|   16|       16|
+    |ctrl_acf_splitter_2_pe_1304_fifo_U  |        0|    5|   0|    -|     1|   16|       16|
+    |ctrl_acf_splitter_2_pe_1305_fifo_U  |        0|    5|   0|    -|     1|   16|       16|
+    |ctrl_acf_splitter_2_pe_1306_fifo_U  |        0|    5|   0|    -|     1|   16|       16|
+    |ctrl_acf_splitter_2_pe_1307_fifo_U  |        0|    5|   0|    -|     1|   16|       16|
+    |ctrl_acf_splitter_2_pe_1308_fifo_U  |        0|    5|   0|    -|     1|   16|       16|
+    |ctrl_acf_splitter_2_pe_1309_fifo_U  |        0|    5|   0|    -|     1|   16|       16|
+    |ctrl_acf_splitter_2_pe_1310_fifo_U  |        0|    5|   0|    -|     1|   16|       16|
+    |ctrl_acf_splitter_2_pe_1311_fifo_U  |        0|    5|   0|    -|     1|   16|       16|
+    |ctrl_acf_splitter_2_pe_1312_fifo_U  |        0|    5|   0|    -|     1|   16|       16|
+    |ctrl_acf_splitter_2_pe_1313_fifo_U  |        0|    5|   0|    -|     1|   16|       16|
+    |ctrl_acf_splitter_2_pe_1314_fifo_U  |        0|    5|   0|    -|     1|   16|       16|
+    |ctrl_acf_splitter_2_pe_1315_fifo_U  |        0|    5|   0|    -|     1|   16|       16|
+    |ctrl_acf_splitter_2_pe_1316_fifo_U  |        0|    5|   0|    -|     1|   16|       16|
+    |ctrl_acf_splitter_2_pe_1_fifo_U     |        0|    5|   0|    -|     1|   16|       16|
+    |sc_fifo_chn_179_fifo_U              |        0|    5|   0|    -|     1|   31|       31|
+    |sc_fifo_chn_180_fifo_U              |        0|    5|   0|    -|     1|   31|       31|
+    |sc_fifo_chn_181_fifo_U              |        0|    5|   0|    -|     1|   31|       31|
+    |sc_fifo_chn_182_fifo_U              |        0|    5|   0|    -|     1|   31|       31|
+    |sc_fifo_chn_183_fifo_U              |        0|    5|   0|    -|     1|   31|       31|
+    |sc_fifo_chn_184_fifo_U              |        0|    5|   0|    -|     1|   31|       31|
+    |sc_fifo_chn_185_fifo_U              |        0|    5|   0|    -|     1|   31|       31|
+    |sc_fifo_chn_186_fifo_U              |        0|    5|   0|    -|     1|   31|       31|
+    |sc_fifo_chn_187_fifo_U              |        0|    5|   0|    -|     1|   31|       31|
+    |sc_fifo_chn_188_fifo_U              |        0|    5|   0|    -|     1|   31|       31|
+    |sc_fifo_chn_189_fifo_U              |        0|    5|   0|    -|     1|   31|       31|
+    |sc_fifo_chn_190_fifo_U              |        0|    5|   0|    -|     1|   31|       31|
+    |sc_fifo_chn_191_fifo_U              |        0|    5|   0|    -|     1|   31|       31|
+    |sc_fifo_chn_192_fifo_U              |        0|    5|   0|    -|     1|   31|       31|
+    |sc_fifo_chn_193_fifo_U              |        0|    5|   0|    -|     1|   31|       31|
+    |sc_fifo_chn_1_fifo_U                |        0|    5|   0|    -|     1|   31|       31|
+    |sc_fifo_chn_3103_fifo_U             |        0|    5|   0|    -|     1|  128|      128|
+    |sc_fifo_chn_3107_fifo_U             |        0|    5|   0|    -|     1|  128|      128|
+    |sc_fifo_chn_3111_fifo_U             |        0|    5|   0|    -|     1|  128|      128|
+    |sc_fifo_chn_3115_fifo_U             |        0|    5|   0|    -|     1|  128|      128|
+    |sc_fifo_chn_3119_fifo_U             |        0|    5|   0|    -|     1|  128|      128|
+    |sc_fifo_chn_3123_fifo_U             |        0|    5|   0|    -|     1|  128|      128|
+    |sc_fifo_chn_3127_fifo_U             |        0|    5|   0|    -|     1|  128|      128|
+    |sc_fifo_chn_3131_fifo_U             |        0|    5|   0|    -|     1|  128|      128|
+    |sc_fifo_chn_3135_fifo_U             |        0|    5|   0|    -|     1|  128|      128|
+    |sc_fifo_chn_3139_fifo_U             |        0|    5|   0|    -|     1|  128|      128|
+    |sc_fifo_chn_3143_fifo_U             |        0|    5|   0|    -|     1|  128|      128|
+    |sc_fifo_chn_3147_fifo_U             |        0|    5|   0|    -|     1|  128|      128|
+    |sc_fifo_chn_3151_fifo_U             |        0|    5|   0|    -|     1|  128|      128|
+    |sc_fifo_chn_3155_fifo_U             |        0|    5|   0|    -|     1|  128|      128|
+    |sc_fifo_chn_3159_fifo_U             |        0|    5|   0|    -|     1|  136|      136|
+    |sc_fifo_chn_3163_fifo_U             |        0|    5|   0|    -|     1|  136|      136|
+    |sc_fifo_chn_3167_fifo_U             |        0|    5|   0|    -|     1|  136|      136|
+    |sc_fifo_chn_3171_fifo_U             |        0|    5|   0|    -|     1|  136|      136|
+    |sc_fifo_chn_3175_fifo_U             |        0|    5|   0|    -|     1|  136|      136|
+    |sc_fifo_chn_3179_fifo_U             |        0|    5|   0|    -|     1|  136|      136|
+    |sc_fifo_chn_3183_fifo_U             |        0|    5|   0|    -|     1|  136|      136|
+    |sc_fifo_chn_3187_fifo_U             |        0|    5|   0|    -|     1|  136|      136|
+    |sc_fifo_chn_3191_fifo_U             |        0|    5|   0|    -|     1|  136|      136|
+    |sc_fifo_chn_3195_fifo_U             |        0|    5|   0|    -|     1|  136|      136|
+    |sc_fifo_chn_3199_fifo_U             |        0|    5|   0|    -|     1|  136|      136|
+    |sc_fifo_chn_3203_fifo_U             |        0|    5|   0|    -|     1|  136|      136|
+    |sc_fifo_chn_3207_fifo_U             |        0|    5|   0|    -|     1|  136|      136|
+    |sc_fifo_chn_3211_fifo_U             |        0|    5|   0|    -|     1|  136|      136|
+    |sc_fifo_chn_3215_fifo_U             |        0|    5|   0|    -|     1|  136|      136|
+    |sc_fifo_chn_3219_fifo_U             |        0|    5|   0|    -|     1|  136|      136|
+    |sc_fifo_chn_3223_fifo_U             |        0|    5|   0|    -|     1|  128|      128|
+    |sc_fifo_chn_3227_fifo_U             |        0|    5|   0|    -|     1|  384|      384|
+    |sc_fifo_chn_3231_fifo_U             |        0|    5|   0|    -|     1|  128|      128|
+    |sc_fifo_chn_3235_fifo_U             |        0|    5|   0|    -|     1|  128|      128|
+    |sc_fifo_chn_3239_fifo_U             |        0|    5|   0|    -|     1|  128|      128|
+    |sc_fifo_chn_3243_fifo_U             |        0|    5|   0|    -|     1|  128|      128|
+    |sc_fifo_chn_3247_fifo_U             |        0|    5|   0|    -|     1|  128|      128|
+    |sc_fifo_chn_3251_fifo_U             |        0|    5|   0|    -|     1|  128|      128|
+    |sc_fifo_chn_3255_fifo_U             |        0|    5|   0|    -|     1|  128|      128|
+    |sc_fifo_chn_3259_fifo_U             |        0|    5|   0|    -|     1|  128|      128|
+    |sc_fifo_chn_3263_fifo_U             |        0|    5|   0|    -|     1|  128|      128|
+    |sc_fifo_chn_3267_fifo_U             |        0|    5|   0|    -|     1|  128|      128|
+    |sc_fifo_chn_3271_fifo_U             |        0|    5|   0|    -|     1|  128|      128|
+    |sc_fifo_chn_3275_fifo_U             |        0|    5|   0|    -|     1|  128|      128|
+    |sc_fifo_chn_3279_fifo_U             |        0|    5|   0|    -|     1|  128|      128|
+    |sc_fifo_chn_3283_fifo_U             |        0|    5|   0|    -|     1|  128|      128|
+    |sc_fifo_chn_3287_fifo_U             |        0|    5|   0|    -|     1|  128|      128|
+    |sc_fifo_chn_328_fifo_U              |        0|    5|   0|    -|     1|  128|      128|
+    |sc_fifo_chn_3291_fifo_U             |        0|    5|   0|    -|     1|  128|      128|
+    |sc_fifo_chn_3295_fifo_U             |        0|    5|   0|    -|     1|  128|      128|
+    |sc_fifo_chn_3299_fifo_U             |        0|    5|   0|    -|     1|  128|      128|
+    |sc_fifo_chn_3318_fifo_U             |        0|    5|   0|    -|     1|    8|        8|
+    |sc_fifo_chn_331_fifo_U              |        0|    5|   0|    -|     1|  128|      128|
+    |sc_fifo_chn_3322_fifo_U             |        0|    5|   0|    -|     1|    8|        8|
+    |sc_fifo_chn_3326_fifo_U             |        0|    5|   0|    -|     1|    8|        8|
+    |sc_fifo_chn_3330_fifo_U             |        0|    5|   0|    -|     1|    8|        8|
+    |sc_fifo_chn_3334_fifo_U             |        0|    5|   0|    -|     1|    8|        8|
+    |sc_fifo_chn_3338_fifo_U             |        0|    5|   0|    -|     1|    8|        8|
+    |sc_fifo_chn_3342_fifo_U             |        0|    5|   0|    -|     1|    8|        8|
+    |sc_fifo_chn_3346_fifo_U             |        0|    5|   0|    -|     1|    8|        8|
+    |sc_fifo_chn_334_fifo_U              |        0|    5|   0|    -|     1|  128|      128|
+    |sc_fifo_chn_3350_fifo_U             |        0|    5|   0|    -|     1|    8|        8|
+    |sc_fifo_chn_3354_fifo_U             |        0|    5|   0|    -|     1|    8|        8|
+    |sc_fifo_chn_3358_fifo_U             |        0|    5|   0|    -|     1|    8|        8|
+    |sc_fifo_chn_3362_fifo_U             |        0|    5|   0|    -|     1|    8|        8|
+    |sc_fifo_chn_3366_fifo_U             |        0|    5|   0|    -|     1|    8|        8|
+    |sc_fifo_chn_3370_fifo_U             |        0|    5|   0|    -|     1|    8|        8|
+    |sc_fifo_chn_3374_fifo_U             |        0|    5|   0|    -|     1|    8|        8|
+    |sc_fifo_chn_3378_fifo_U             |        0|    5|   0|    -|     1|    8|        8|
+    |sc_fifo_chn_337_fifo_U              |        0|    5|   0|    -|     1|  128|      128|
+    |sc_fifo_chn_3382_fifo_U             |        0|    5|   0|    -|     1|  128|      128|
+    |sc_fifo_chn_3386_fifo_U             |        0|    5|   0|    -|     1|  128|      128|
+    |sc_fifo_chn_3390_fifo_U             |        0|    5|   0|    -|     1|  128|      128|
+    |sc_fifo_chn_3394_fifo_U             |        8|  144|   0|    -|    16|  128|     2048|
+    |sc_fifo_chn_340_fifo_U              |        0|    5|   0|    -|     1|  128|      128|
+    |sc_fifo_chn_343_fifo_U              |        0|    5|   0|    -|     1|  128|      128|
+    |sc_fifo_chn_346_fifo_U              |        0|    5|   0|    -|     1|  128|      128|
+    |sc_fifo_chn_349_fifo_U              |        0|    5|   0|    -|     1|  128|      128|
+    |sc_fifo_chn_352_fifo_U              |        0|    5|   0|    -|     1|  128|      128|
+    |sc_fifo_chn_355_fifo_U              |        0|    5|   0|    -|     1|  128|      128|
+    |sc_fifo_chn_358_fifo_U              |        0|    5|   0|    -|     1|  128|      128|
+    |sc_fifo_chn_361_fifo_U              |        0|    5|   0|    -|     1|  128|      128|
+    |sc_fifo_chn_364_fifo_U              |        0|    5|   0|    -|     1|  128|      128|
+    |sc_fifo_chn_367_fifo_U              |        0|    5|   0|    -|     1|  128|      128|
+    |sc_fifo_chn_370_fifo_U              |        0|    5|   0|    -|     1|  128|      128|
+    |sc_fifo_chn_373_fifo_U              |        0|    5|   0|    -|     1|  128|      128|
+    |sc_fifo_chn_376_fifo_U              |        0|    5|   0|    -|     1|  128|      128|
+    |sc_fifo_chn_395_fifo_U              |        0|    5|   0|    -|     1|  128|      128|
+    |sc_fifo_chn_399_fifo_U              |        0|    5|   0|    -|     1|  128|      128|
+    |sc_fifo_chn_3_fifo_U                |        0|    5|   0|    -|     1|  128|      128|
+    |sc_fifo_chn_4100_fifo_U             |        0|    5|   0|    -|     1|    1|        1|
+    |sc_fifo_chn_4104_fifo_U             |        0|    5|   0|    -|     1|    1|        1|
+    |sc_fifo_chn_4108_fifo_U             |        0|    5|   0|    -|     1|    1|        1|
+    |sc_fifo_chn_4112_fifo_U             |        0|    5|   0|    -|     1|    1|        1|
+    |sc_fifo_chn_4116_fifo_U             |        0|    5|   0|    -|     1|    1|        1|
+    |sc_fifo_chn_4120_fifo_U             |        0|    5|   0|    -|     1|    1|        1|
+    |sc_fifo_chn_4124_fifo_U             |        0|    5|   0|    -|     1|    1|        1|
+    |sc_fifo_chn_4128_fifo_U             |        0|    5|   0|    -|     1|    1|        1|
+    |sc_fifo_chn_4132_fifo_U             |        0|    5|   0|    -|     1|    1|        1|
+    |sc_fifo_chn_4136_fifo_U             |        0|    5|   0|    -|     1|    1|        1|
+    |sc_fifo_chn_4140_fifo_U             |        0|    5|   0|    -|     1|    1|        1|
+    |sc_fifo_chn_4144_fifo_U             |        0|    5|   0|    -|     1|    1|        1|
+    |sc_fifo_chn_4148_fifo_U             |        0|    5|   0|    -|     1|    1|        1|
+    |sc_fifo_chn_4152_fifo_U             |        0|    5|   0|    -|     1|    1|        1|
+    |sc_fifo_chn_4156_fifo_U             |        0|    5|   0|    -|     1|    1|        1|
+    |sc_fifo_chn_4160_fifo_U             |        0|    5|   0|    -|     1|    1|        1|
+    |sc_fifo_chn_4164_fifo_U             |        0|    5|   0|    -|     1|    1|        1|
+    |sc_fifo_chn_4168_fifo_U             |        0|    5|   0|    -|     1|    1|        1|
+    |sc_fifo_chn_4172_fifo_U             |        0|    5|   0|    -|     1|    1|        1|
+    |sc_fifo_chn_4176_fifo_U             |        0|    5|   0|    -|     1|    1|        1|
+    |sc_fifo_chn_4180_fifo_U             |        0|    5|   0|    -|     1|    1|        1|
+    |sc_fifo_chn_4184_fifo_U             |        0|    5|   0|    -|     1|    1|        1|
+    |sc_fifo_chn_4188_fifo_U             |        0|    5|   0|    -|     1|    1|        1|
+    |sc_fifo_chn_4192_fifo_U             |        0|    5|   0|    -|     1|    1|        1|
+    |sc_fifo_chn_4196_fifo_U             |        0|    5|   0|    -|     1|    1|        1|
+    |sc_fifo_chn_4200_fifo_U             |        0|    5|   0|    -|     1|    1|        1|
+    |sc_fifo_chn_4204_fifo_U             |        0|    5|   0|    -|     1|    1|        1|
+    |sc_fifo_chn_4208_fifo_U             |        0|    5|   0|    -|     1|    1|        1|
+    |sc_fifo_chn_4212_fifo_U             |        0|    5|   0|    -|     1|    1|        1|
+    |sc_fifo_chn_4216_fifo_U             |        0|    5|   0|    -|     1|    1|        1|
+    |sc_fifo_chn_4220_fifo_U             |        0|    5|   0|    -|     1|    1|        1|
+    |sc_fifo_chn_4224_fifo_U             |        0|    5|   0|    -|     1|    1|        1|
+    |sc_fifo_chn_4228_fifo_U             |        0|    5|   0|    -|     1|    1|        1|
+    |sc_fifo_chn_4232_fifo_U             |        0|    5|   0|    -|     1|    1|        1|
+    |sc_fifo_chn_4236_fifo_U             |        0|    5|   0|    -|     1|    1|        1|
+    |sc_fifo_chn_4240_fifo_U             |        0|    5|   0|    -|     1|    1|        1|
+    |sc_fifo_chn_4244_fifo_U             |        0|    5|   0|    -|     1|    1|        1|
+    |sc_fifo_chn_4248_fifo_U             |        0|    5|   0|    -|     1|    1|        1|
+    |sc_fifo_chn_4252_fifo_U             |        0|    5|   0|    -|     1|    1|        1|
+    |sc_fifo_chn_4256_fifo_U             |        0|    5|   0|    -|     1|    1|        1|
+    |sc_fifo_chn_4260_fifo_U             |        0|    5|   0|    -|     1|    1|        1|
+    |sc_fifo_chn_4264_fifo_U             |        0|    5|   0|    -|     1|    1|        1|
+    |sc_fifo_chn_4268_fifo_U             |        0|    5|   0|    -|     1|    1|        1|
+    |sc_fifo_chn_4272_fifo_U             |        0|    5|   0|    -|     1|    1|        1|
+    |sc_fifo_chn_4276_fifo_U             |        0|    5|   0|    -|     1|    1|        1|
+    |sc_fifo_chn_4280_fifo_U             |        0|    5|   0|    -|     1|    1|        1|
+    |sc_fifo_chn_4284_fifo_U             |        0|    5|   0|    -|     1|    1|        1|
+    |sc_fifo_chn_4288_fifo_U             |        0|    5|   0|    -|     1|    1|        1|
+    |sc_fifo_chn_4292_fifo_U             |        0|    5|   0|    -|     1|    1|        1|
+    |sc_fifo_chn_4296_fifo_U             |        0|    5|   0|    -|     1|    1|        1|
+    |sc_fifo_chn_429_fifo_U              |        0|    5|   0|    -|     1|    1|        1|
+    |sc_fifo_chn_4300_fifo_U             |        0|    5|   0|    -|     1|    1|        1|
+    |sc_fifo_chn_4319_fifo_U             |        0|    5|   0|    -|     1|    1|        1|
+    |sc_fifo_chn_4323_fifo_U             |        0|    5|   0|    -|     1|    1|        1|
+    |sc_fifo_chn_4327_fifo_U             |        0|    5|   0|    -|     1|    1|        1|
+    |sc_fifo_chn_432_fifo_U              |        0|    5|   0|    -|     1|    1|        1|
+    |sc_fifo_chn_4331_fifo_U             |        0|    5|   0|    -|     1|    1|        1|
+    |sc_fifo_chn_4335_fifo_U             |        0|    5|   0|    -|     1|    1|        1|
+    |sc_fifo_chn_4339_fifo_U             |        0|    5|   0|    -|     1|    1|        1|
+    |sc_fifo_chn_4343_fifo_U             |        0|    5|   0|    -|     1|    1|        1|
+    |sc_fifo_chn_4347_fifo_U             |        0|    5|   0|    -|     1|    1|        1|
+    |sc_fifo_chn_4351_fifo_U             |        0|    5|   0|    -|     1|    1|        1|
+    |sc_fifo_chn_4355_fifo_U             |        0|    5|   0|    -|     1|    1|        1|
+    |sc_fifo_chn_4359_fifo_U             |        0|    5|   0|    -|     1|    1|        1|
+    |sc_fifo_chn_435_fifo_U              |        0|    5|   0|    -|     1|    1|        1|
+    |sc_fifo_chn_4363_fifo_U             |        0|    5|   0|    -|     1|    1|        1|
+    |sc_fifo_chn_4367_fifo_U             |        0|    5|   0|    -|     1|    1|        1|
+    |sc_fifo_chn_4371_fifo_U             |        0|    5|   0|    -|     1|    1|        1|
+    |sc_fifo_chn_4375_fifo_U             |        0|    5|   0|    -|     1|    1|        1|
+    |sc_fifo_chn_4379_fifo_U             |        0|    5|   0|    -|     1|    1|        1|
+    |sc_fifo_chn_4383_fifo_U             |        0|    5|   0|    -|     1|    1|        1|
+    |sc_fifo_chn_4387_fifo_U             |        0|    5|   0|    -|     1|    1|        1|
+    |sc_fifo_chn_438_fifo_U              |        0|    5|   0|    -|     1|    1|        1|
+    |sc_fifo_chn_4391_fifo_U             |        0|    5|   0|    -|     1|    1|        1|
+    |sc_fifo_chn_4395_fifo_U             |        0|    7|   0|    -|    16|    1|       16|
+    |sc_fifo_chn_441_fifo_U              |        0|    5|   0|    -|     1|    1|        1|
+    |sc_fifo_chn_444_fifo_U              |        0|    5|   0|    -|     1|    1|        1|
+    |sc_fifo_chn_447_fifo_U              |        0|    5|   0|    -|     1|    1|        1|
+    |sc_fifo_chn_450_fifo_U              |        0|    5|   0|    -|     1|    1|        1|
+    |sc_fifo_chn_453_fifo_U              |        0|    5|   0|    -|     1|    1|        1|
+    |sc_fifo_chn_456_fifo_U              |        0|    5|   0|    -|     1|    1|        1|
+    |sc_fifo_chn_459_fifo_U              |        0|    5|   0|    -|     1|    1|        1|
+    |sc_fifo_chn_462_fifo_U              |        0|    5|   0|    -|     1|    1|        1|
+    |sc_fifo_chn_465_fifo_U              |        0|    5|   0|    -|     1|    1|        1|
+    |sc_fifo_chn_468_fifo_U              |        0|    5|   0|    -|     1|    1|        1|
+    |sc_fifo_chn_471_fifo_U              |        0|    5|   0|    -|     1|    1|        1|
+    |sc_fifo_chn_474_fifo_U              |        0|    5|   0|    -|     1|    1|        1|
+    |sc_fifo_chn_477_fifo_U              |        0|    5|   0|    -|     1|    1|        1|
+    |sc_fifo_chn_496_fifo_U              |        0|    5|   0|    -|     1|    1|        1|
+    |sc_fifo_chn_4_fifo_U                |        0|    5|   0|    -|     1|    1|        1|
+    |sc_fifo_chn_5101_fifo_U             |        0|    5|   0|    -|     1|   16|       16|
+    |sc_fifo_chn_5105_fifo_U             |        0|    5|   0|    -|     1|   16|       16|
+    |sc_fifo_chn_5109_fifo_U             |        0|    5|   0|    -|     1|   16|       16|
+    |sc_fifo_chn_5113_fifo_U             |        0|    5|   0|    -|     1|   16|       16|
+    |sc_fifo_chn_5117_fifo_U             |        0|    5|   0|    -|     1|   16|       16|
+    |sc_fifo_chn_5121_fifo_U             |        0|    5|   0|    -|     1|   16|       16|
+    |sc_fifo_chn_5125_fifo_U             |        0|    5|   0|    -|     1|   16|       16|
+    |sc_fifo_chn_5129_fifo_U             |        0|    5|   0|    -|     1|   16|       16|
+    |sc_fifo_chn_5133_fifo_U             |        0|    5|   0|    -|     1|   16|       16|
+    |sc_fifo_chn_5137_fifo_U             |        0|    5|   0|    -|     1|   16|       16|
+    |sc_fifo_chn_5141_fifo_U             |        0|    5|   0|    -|     1|   16|       16|
+    |sc_fifo_chn_5145_fifo_U             |        0|    5|   0|    -|     1|   16|       16|
+    |sc_fifo_chn_5149_fifo_U             |        0|    5|   0|    -|     1|   16|       16|
+    |sc_fifo_chn_5153_fifo_U             |        0|    5|   0|    -|     1|   16|       16|
+    |sc_fifo_chn_5157_fifo_U             |        0|    5|   0|    -|     1|   16|       16|
+    |sc_fifo_chn_5161_fifo_U             |        0|    5|   0|    -|     1|   17|       17|
+    |sc_fifo_chn_5165_fifo_U             |        0|    5|   0|    -|     1|   17|       17|
+    |sc_fifo_chn_5169_fifo_U             |        0|    5|   0|    -|     1|   17|       17|
+    |sc_fifo_chn_5173_fifo_U             |        0|    5|   0|    -|     1|   17|       17|
+    |sc_fifo_chn_5177_fifo_U             |        0|    5|   0|    -|     1|   17|       17|
+    |sc_fifo_chn_5181_fifo_U             |        0|    5|   0|    -|     1|   17|       17|
+    |sc_fifo_chn_5185_fifo_U             |        0|    5|   0|    -|     1|   17|       17|
+    |sc_fifo_chn_5189_fifo_U             |        0|    5|   0|    -|     1|   17|       17|
+    |sc_fifo_chn_5193_fifo_U             |        0|    5|   0|    -|     1|   17|       17|
+    |sc_fifo_chn_5197_fifo_U             |        0|    5|   0|    -|     1|   17|       17|
+    |sc_fifo_chn_5201_fifo_U             |        0|    5|   0|    -|     1|   17|       17|
+    |sc_fifo_chn_5205_fifo_U             |        0|    5|   0|    -|     1|   17|       17|
+    |sc_fifo_chn_5209_fifo_U             |        0|    5|   0|    -|     1|   17|       17|
+    |sc_fifo_chn_5213_fifo_U             |        0|    5|   0|    -|     1|   17|       17|
+    |sc_fifo_chn_5217_fifo_U             |        0|    5|   0|    -|     1|   17|       17|
+    |sc_fifo_chn_5221_fifo_U             |        0|    5|   0|    -|     1|   17|       17|
+    |sc_fifo_chn_5225_fifo_U             |        0|    5|   0|    -|     1|   16|       16|
+    |sc_fifo_chn_5229_fifo_U             |        0|    5|   0|    -|     1|   48|       48|
+    |sc_fifo_chn_5233_fifo_U             |        0|    5|   0|    -|     1|   16|       16|
+    |sc_fifo_chn_5237_fifo_U             |        0|    5|   0|    -|     1|   16|       16|
+    |sc_fifo_chn_5241_fifo_U             |        0|    5|   0|    -|     1|   16|       16|
+    |sc_fifo_chn_5245_fifo_U             |        0|    5|   0|    -|     1|   16|       16|
+    |sc_fifo_chn_5249_fifo_U             |        0|    5|   0|    -|     1|   16|       16|
+    |sc_fifo_chn_5253_fifo_U             |        0|    5|   0|    -|     1|   16|       16|
+    |sc_fifo_chn_5257_fifo_U             |        0|    5|   0|    -|     1|   16|       16|
+    |sc_fifo_chn_5261_fifo_U             |        0|    5|   0|    -|     1|   16|       16|
+    |sc_fifo_chn_5265_fifo_U             |        0|    5|   0|    -|     1|   16|       16|
+    |sc_fifo_chn_5269_fifo_U             |        0|    5|   0|    -|     1|   16|       16|
+    |sc_fifo_chn_5273_fifo_U             |        0|    5|   0|    -|     1|   16|       16|
+    |sc_fifo_chn_5277_fifo_U             |        0|    5|   0|    -|     1|   16|       16|
+    |sc_fifo_chn_5281_fifo_U             |        0|    5|   0|    -|     1|   16|       16|
+    |sc_fifo_chn_5285_fifo_U             |        0|    5|   0|    -|     1|   16|       16|
+    |sc_fifo_chn_5289_fifo_U             |        0|    5|   0|    -|     1|   16|       16|
+    |sc_fifo_chn_5293_fifo_U             |        0|    5|   0|    -|     1|   16|       16|
+    |sc_fifo_chn_5297_fifo_U             |        0|    5|   0|    -|     1|   16|       16|
+    |sc_fifo_chn_5301_fifo_U             |        0|    5|   0|    -|     1|   16|       16|
+    |sc_fifo_chn_530_fifo_U              |        0|    5|   0|    -|     1|   16|       16|
+    |sc_fifo_chn_5320_fifo_U             |        0|    5|   0|    -|     1|    1|        1|
+    |sc_fifo_chn_5324_fifo_U             |        0|    5|   0|    -|     1|    1|        1|
+    |sc_fifo_chn_5328_fifo_U             |        0|    5|   0|    -|     1|    1|        1|
+    |sc_fifo_chn_5332_fifo_U             |        0|    5|   0|    -|     1|    1|        1|
+    |sc_fifo_chn_5336_fifo_U             |        0|    5|   0|    -|     1|    1|        1|
+    |sc_fifo_chn_533_fifo_U              |        0|    5|   0|    -|     1|   16|       16|
+    |sc_fifo_chn_5340_fifo_U             |        0|    5|   0|    -|     1|    1|        1|
+    |sc_fifo_chn_5344_fifo_U             |        0|    5|   0|    -|     1|    1|        1|
+    |sc_fifo_chn_5348_fifo_U             |        0|    5|   0|    -|     1|    1|        1|
+    |sc_fifo_chn_5352_fifo_U             |        0|    5|   0|    -|     1|    1|        1|
+    |sc_fifo_chn_5356_fifo_U             |        0|    5|   0|    -|     1|    1|        1|
+    |sc_fifo_chn_5360_fifo_U             |        0|    5|   0|    -|     1|    1|        1|
+    |sc_fifo_chn_5364_fifo_U             |        0|    5|   0|    -|     1|    1|        1|
+    |sc_fifo_chn_5368_fifo_U             |        0|    5|   0|    -|     1|    1|        1|
+    |sc_fifo_chn_536_fifo_U              |        0|    5|   0|    -|     1|   16|       16|
+    |sc_fifo_chn_5372_fifo_U             |        0|    5|   0|    -|     1|    1|        1|
+    |sc_fifo_chn_5376_fifo_U             |        0|    5|   0|    -|     1|    1|        1|
+    |sc_fifo_chn_5380_fifo_U             |        0|    5|   0|    -|     1|    1|        1|
+    |sc_fifo_chn_5384_fifo_U             |        0|    5|   0|    -|     1|   16|       16|
+    |sc_fifo_chn_5388_fifo_U             |        0|    5|   0|    -|     1|   16|       16|
+    |sc_fifo_chn_5392_fifo_U             |        0|    5|   0|    -|     1|   16|       16|
+    |sc_fifo_chn_5396_fifo_U             |        0|    7|   0|    -|    16|   16|      256|
+    |sc_fifo_chn_539_fifo_U              |        0|    5|   0|    -|     1|   16|       16|
+    |sc_fifo_chn_542_fifo_U              |        0|    5|   0|    -|     1|   16|       16|
+    |sc_fifo_chn_545_fifo_U              |        0|    5|   0|    -|     1|   16|       16|
+    |sc_fifo_chn_548_fifo_U              |        0|    5|   0|    -|     1|   16|       16|
+    |sc_fifo_chn_551_fifo_U              |        0|    5|   0|    -|     1|   16|       16|
+    |sc_fifo_chn_554_fifo_U              |        0|    5|   0|    -|     1|   16|       16|
+    |sc_fifo_chn_557_fifo_U              |        0|    5|   0|    -|     1|   16|       16|
+    |sc_fifo_chn_560_fifo_U              |        0|    5|   0|    -|     1|   16|       16|
+    |sc_fifo_chn_563_fifo_U              |        0|    5|   0|    -|     1|   16|       16|
+    |sc_fifo_chn_566_fifo_U              |        0|    5|   0|    -|     1|   16|       16|
+    |sc_fifo_chn_569_fifo_U              |        0|    5|   0|    -|     1|   16|       16|
+    |sc_fifo_chn_572_fifo_U              |        0|    5|   0|    -|     1|   16|       16|
+    |sc_fifo_chn_575_fifo_U              |        0|    5|   0|    -|     1|   16|       16|
+    |sc_fifo_chn_578_fifo_U              |        0|    5|   0|    -|     1|   16|       16|
+    |sc_fifo_chn_597_fifo_U              |        0|    5|   0|    -|     1|   16|       16|
+    |sc_fifo_chn_5_fifo_U                |        0|    5|   0|    -|     1|   16|       16|
+    +------------------------------------+---------+-----+----+-----+------+-----+---------+
+    |Total                               |        8| 1653|   0|    0|   347|12074|    14249|
+    +------------------------------------+---------+-----+----+-----+------+-----+---------+
+
+    * Expression: 
+    N/A
+
+    * Multiplexer: 
+    N/A
+
+    * Register: 
+    N/A
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-------------------------------+-----+-----+------------+-----------------------------------------------------------------------------+--------------+
+|           RTL Ports           | Dir | Bits|  Protocol  |                                Source Object                                |    C Type    |
++-------------------------------+-----+-----+------------+-----------------------------------------------------------------------------+--------------+
+|clk                            |  in |    1| ap_ctrl_hs | _top_cnn<8, 2, 16, 16, 16, 16, 798, 2048, 3, 96, 1, 1024, 1, 1>::_top_cnn.1 | return value |
+|reset                          |  in |    1| ap_ctrl_hs | _top_cnn<8, 2, 16, 16, 16, 16, 798, 2048, 3, 96, 1, 1024, 1, 1>::_top_cnn.1 | return value |
+|data_sink_0_dout               |  in |  128|   ap_fifo  |                                 data_sink_0                                 |    pointer   |
+|data_sink_0_empty_n            |  in |    1|   ap_fifo  |                                 data_sink_0                                 |    pointer   |
+|data_sink_0_read               | out |    1|   ap_fifo  |                                 data_sink_0                                 |    pointer   |
+|data_sink_1_dout               |  in |    1|   ap_fifo  |                                 data_sink_1                                 |    pointer   |
+|data_sink_1_empty_n            |  in |    1|   ap_fifo  |                                 data_sink_1                                 |    pointer   |
+|data_sink_1_read               | out |    1|   ap_fifo  |                                 data_sink_1                                 |    pointer   |
+|data_sink_2_dout               |  in |   16|   ap_fifo  |                                 data_sink_2                                 |    pointer   |
+|data_sink_2_empty_n            |  in |    1|   ap_fifo  |                                 data_sink_2                                 |    pointer   |
+|data_sink_2_read               | out |    1|   ap_fifo  |                                 data_sink_2                                 |    pointer   |
+|data_buf_sink_0_dout           |  in |  128|   ap_fifo  |                               data_buf_sink_0                               |    pointer   |
+|data_buf_sink_0_empty_n        |  in |    1|   ap_fifo  |                               data_buf_sink_0                               |    pointer   |
+|data_buf_sink_0_read           | out |    1|   ap_fifo  |                               data_buf_sink_0                               |    pointer   |
+|data_buf_sink_1_dout           |  in |    1|   ap_fifo  |                               data_buf_sink_1                               |    pointer   |
+|data_buf_sink_1_empty_n        |  in |    1|   ap_fifo  |                               data_buf_sink_1                               |    pointer   |
+|data_buf_sink_1_read           | out |    1|   ap_fifo  |                               data_buf_sink_1                               |    pointer   |
+|data_buf_sink_2_dout           |  in |   16|   ap_fifo  |                               data_buf_sink_2                               |    pointer   |
+|data_buf_sink_2_empty_n        |  in |    1|   ap_fifo  |                               data_buf_sink_2                               |    pointer   |
+|data_buf_sink_2_read           | out |    1|   ap_fifo  |                               data_buf_sink_2                               |    pointer   |
+|w_sink_0_dout                  |  in |  128|   ap_fifo  |                                   w_sink_0                                  |    pointer   |
+|w_sink_0_empty_n               |  in |    1|   ap_fifo  |                                   w_sink_0                                  |    pointer   |
+|w_sink_0_read                  | out |    1|   ap_fifo  |                                   w_sink_0                                  |    pointer   |
+|w_sink_1_dout                  |  in |    1|   ap_fifo  |                                   w_sink_1                                  |    pointer   |
+|w_sink_1_empty_n               |  in |    1|   ap_fifo  |                                   w_sink_1                                  |    pointer   |
+|w_sink_1_read                  | out |    1|   ap_fifo  |                                   w_sink_1                                  |    pointer   |
+|w_sink_2_dout                  |  in |   16|   ap_fifo  |                                   w_sink_2                                  |    pointer   |
+|w_sink_2_empty_n               |  in |    1|   ap_fifo  |                                   w_sink_2                                  |    pointer   |
+|w_sink_2_read                  | out |    1|   ap_fifo  |                                   w_sink_2                                  |    pointer   |
+|data_source_0_din              | out |  128|   ap_fifo  |                                data_source_0                                |    pointer   |
+|data_source_0_full_n           |  in |    1|   ap_fifo  |                                data_source_0                                |    pointer   |
+|data_source_0_write            | out |    1|   ap_fifo  |                                data_source_0                                |    pointer   |
+|data_source_1_din              | out |    1|   ap_fifo  |                                data_source_1                                |    pointer   |
+|data_source_1_full_n           |  in |    1|   ap_fifo  |                                data_source_1                                |    pointer   |
+|data_source_1_write            | out |    1|   ap_fifo  |                                data_source_1                                |    pointer   |
+|data_source_2_din              | out |   16|   ap_fifo  |                                data_source_2                                |    pointer   |
+|data_source_2_full_n           |  in |    1|   ap_fifo  |                                data_source_2                                |    pointer   |
+|data_source_2_write            | out |    1|   ap_fifo  |                                data_source_2                                |    pointer   |
+|weight_ctrls_in_dout           |  in |   31|   ap_fifo  |                               weight_ctrls_in                               |    pointer   |
+|weight_ctrls_in_empty_n        |  in |    1|   ap_fifo  |                               weight_ctrls_in                               |    pointer   |
+|weight_ctrls_in_read           | out |    1|   ap_fifo  |                               weight_ctrls_in                               |    pointer   |
+|ctrl_image_size_dout           |  in |   32|   ap_fifo  |                               ctrl_image_size                               |    pointer   |
+|ctrl_image_size_empty_n        |  in |    1|   ap_fifo  |                               ctrl_image_size                               |    pointer   |
+|ctrl_image_size_read           | out |    1|   ap_fifo  |                               ctrl_image_size                               |    pointer   |
+|ctrl_row_size_pkg_dout         |  in |   16|   ap_fifo  |                              ctrl_row_size_pkg                              |    pointer   |
+|ctrl_row_size_pkg_empty_n      |  in |    1|   ap_fifo  |                              ctrl_row_size_pkg                              |    pointer   |
+|ctrl_row_size_pkg_read         | out |    1|   ap_fifo  |                              ctrl_row_size_pkg                              |    pointer   |
+|ctrl_window_size_dout          |  in |   16|   ap_fifo  |                               ctrl_window_size                              |    pointer   |
+|ctrl_window_size_empty_n       |  in |    1|   ap_fifo  |                               ctrl_window_size                              |    pointer   |
+|ctrl_window_size_read          | out |    1|   ap_fifo  |                               ctrl_window_size                              |    pointer   |
+|ctrl_depth_dout                |  in |   16|   ap_fifo  |                                  ctrl_depth                                 |    pointer   |
+|ctrl_depth_empty_n             |  in |    1|   ap_fifo  |                                  ctrl_depth                                 |    pointer   |
+|ctrl_depth_read                | out |    1|   ap_fifo  |                                  ctrl_depth                                 |    pointer   |
+|ctrl_stride_dout               |  in |   16|   ap_fifo  |                                 ctrl_stride                                 |    pointer   |
+|ctrl_stride_empty_n            |  in |    1|   ap_fifo  |                                 ctrl_stride                                 |    pointer   |
+|ctrl_stride_read               | out |    1|   ap_fifo  |                                 ctrl_stride                                 |    pointer   |
+|ctrl_replay_dout               |  in |   16|   ap_fifo  |                                 ctrl_replay                                 |    pointer   |
+|ctrl_replay_empty_n            |  in |    1|   ap_fifo  |                                 ctrl_replay                                 |    pointer   |
+|ctrl_replay_read               | out |    1|   ap_fifo  |                                 ctrl_replay                                 |    pointer   |
+|ctrl_zeropad_dout              |  in |   16|   ap_fifo  |                                 ctrl_zeropad                                |    pointer   |
+|ctrl_zeropad_empty_n           |  in |    1|   ap_fifo  |                                 ctrl_zeropad                                |    pointer   |
+|ctrl_zeropad_read              | out |    1|   ap_fifo  |                                 ctrl_zeropad                                |    pointer   |
+|ctrl_db_output_dout            |  in |    1|   ap_fifo  |                                ctrl_db_output                               |    pointer   |
+|ctrl_db_output_empty_n         |  in |    1|   ap_fifo  |                                ctrl_db_output                               |    pointer   |
+|ctrl_db_output_read            | out |    1|   ap_fifo  |                                ctrl_db_output                               |    pointer   |
+|ctrl_image_data_dout           |  in |    1|   ap_fifo  |                               ctrl_image_data                               |    pointer   |
+|ctrl_image_data_empty_n        |  in |    1|   ap_fifo  |                               ctrl_image_data                               |    pointer   |
+|ctrl_image_data_read           | out |    1|   ap_fifo  |                               ctrl_image_data                               |    pointer   |
+|ctrl_row_N_dout                |  in |   16|   ap_fifo  |                                  ctrl_row_N                                 |    pointer   |
+|ctrl_row_N_empty_n             |  in |    1|   ap_fifo  |                                  ctrl_row_N                                 |    pointer   |
+|ctrl_row_N_read                | out |    1|   ap_fifo  |                                  ctrl_row_N                                 |    pointer   |
+|ctrl_acf_dout                  |  in |   16|   ap_fifo  |                                   ctrl_acf                                  |    pointer   |
+|ctrl_acf_empty_n               |  in |    1|   ap_fifo  |                                   ctrl_acf                                  |    pointer   |
+|ctrl_acf_read                  | out |    1|   ap_fifo  |                                   ctrl_acf                                  |    pointer   |
+|ctrl_pool_depth_dout           |  in |   16|   ap_fifo  |                               ctrl_pool_depth                               |    pointer   |
+|ctrl_pool_depth_empty_n        |  in |    1|   ap_fifo  |                               ctrl_pool_depth                               |    pointer   |
+|ctrl_pool_depth_read           | out |    1|   ap_fifo  |                               ctrl_pool_depth                               |    pointer   |
+|ctrl_pool_type_dout            |  in |   16|   ap_fifo  |                                ctrl_pool_type                               |    pointer   |
+|ctrl_pool_type_empty_n         |  in |    1|   ap_fifo  |                                ctrl_pool_type                               |    pointer   |
+|ctrl_pool_type_read            | out |    1|   ap_fifo  |                                ctrl_pool_type                               |    pointer   |
+|ctrl_pool_N_dout               |  in |   16|   ap_fifo  |                                 ctrl_pool_N                                 |    pointer   |
+|ctrl_pool_N_empty_n            |  in |    1|   ap_fifo  |                                 ctrl_pool_N                                 |    pointer   |
+|ctrl_pool_N_read               | out |    1|   ap_fifo  |                                 ctrl_pool_N                                 |    pointer   |
+|ctrl_pool_size_dout            |  in |   16|   ap_fifo  |                                ctrl_pool_size                               |    pointer   |
+|ctrl_pool_size_empty_n         |  in |    1|   ap_fifo  |                                ctrl_pool_size                               |    pointer   |
+|ctrl_pool_size_read            | out |    1|   ap_fifo  |                                ctrl_pool_size                               |    pointer   |
+|ctrl_output_channel_dout       |  in |    1|   ap_fifo  |                             ctrl_output_channel                             |    pointer   |
+|ctrl_output_channel_empty_n    |  in |    1|   ap_fifo  |                             ctrl_output_channel                             |    pointer   |
+|ctrl_output_channel_read       | out |    1|   ap_fifo  |                             ctrl_output_channel                             |    pointer   |
+|ctrl_stitch_depth_dout         |  in |   16|   ap_fifo  |                              ctrl_stitch_depth                              |    pointer   |
+|ctrl_stitch_depth_empty_n      |  in |    1|   ap_fifo  |                              ctrl_stitch_depth                              |    pointer   |
+|ctrl_stitch_depth_read         | out |    1|   ap_fifo  |                              ctrl_stitch_depth                              |    pointer   |
+|ctrl_stitch_buf_depth_dout     |  in |   16|   ap_fifo  |                            ctrl_stitch_buf_depth                            |    pointer   |
+|ctrl_stitch_buf_depth_empty_n  |  in |    1|   ap_fifo  |                            ctrl_stitch_buf_depth                            |    pointer   |
+|ctrl_stitch_buf_depth_read     | out |    1|   ap_fifo  |                            ctrl_stitch_buf_depth                            |    pointer   |
++-------------------------------+-----+-----+------------+-----------------------------------------------------------------------------+--------------+
+

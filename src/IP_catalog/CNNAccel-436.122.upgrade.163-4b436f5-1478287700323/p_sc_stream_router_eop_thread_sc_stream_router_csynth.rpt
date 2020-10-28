@@ -1,0 +1,200 @@
+
+
+================================================================
+== Vivado HLS Report for 'p_sc_stream_router_eop_thread_sc_stream_router'
+================================================================
+* Date:           Fri Jan 10 01:47:29 2020
+
+* Version:        2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)
+* Project:        CNNAccel
+* Solution:       default
+* Product family: zynquplus
+* Target device:  xczu3eg-sbva484-1-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     4.334|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    ?|    ?|    ?|    ?|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------+-----+-----+----------+-----------+-----------+------+----------+
+        |             |  Latency  | Iteration|  Initiation Interval  | Trip |          |
+        |  Loop Name  | min | max |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------+-----+-----+----------+-----------+-----------+------+----------+
+        |- Loop 1     |    ?|    ?|         ?|          -|          -|  inf |    no    |
+        | + Loop 1.1  |    ?|    ?|         1|          1|          1|     ?|    yes   |
+        +-------------+-----+-----+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+-----+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  | URAM|
++-----------------+---------+-------+--------+-------+-----+
+|DSP              |        -|      -|       -|      -|    -|
+|Expression       |        -|      -|       0|    127|    -|
+|FIFO             |        -|      -|       -|      -|    -|
+|Instance         |        -|      -|       -|      -|    -|
+|Memory           |        -|      -|       -|      -|    -|
+|Multiplexer      |        -|      -|       -|    234|    -|
+|Register         |        -|      -|     294|      -|    -|
++-----------------+---------+-------+--------+-------+-----+
+|Total            |        0|      0|     294|    361|    0|
++-----------------+---------+-------+--------+-------+-----+
+|Available        |      432|    360|  141120|  70560|    0|
++-----------------+---------+-------+--------+-------+-----+
+|Utilization (%)  |        0|      0|   ~0   |   ~0  |    0|
++-----------------+---------+-------+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP48E: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +--------------------------+----------+-------+---+----+------------+------------+
+    |       Variable Name      | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +--------------------------+----------+-------+---+----+------------+------------+
+    |packed_in_fu_291_p2       |     +    |      0|  0|  39|          32|           1|
+    |packed_out_A_fu_298_p2    |     +    |      0|  0|  39|          32|           1|
+    |packed_out_B_fu_306_p2    |     +    |      0|  0|  39|          32|           1|
+    |ap_condition_110          |    and   |      0|  0|   2|           1|           1|
+    |io_acc_block_signal_op56  |    and   |      0|  0|   2|           1|           1|
+    |io_acc_block_signal_op63  |    and   |      0|  0|   2|           1|           1|
+    |io_acc_block_signal_op67  |    and   |      0|  0|   2|           1|           1|
+    |ap_block_state4           |    or    |      0|  0|   2|           1|           1|
+    +--------------------------+----------+-------+---+----+------------+------------+
+    |Total                     |          |      0|  0| 127|         101|           8|
+    +--------------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +----------------------------------+----+-----------+-----+-----------+
+    |               Name               | LUT| Input Size| Bits| Total Bits|
+    +----------------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                         |  27|          5|    1|          5|
+    |ap_phi_mux_p_023_2_phi_fu_260_p4  |  15|          3|   32|         96|
+    |ap_phi_mux_p_047_2_phi_fu_247_p4  |  15|          3|   32|         96|
+    |ctrl_channel_blk_n                |   9|          2|    1|          2|
+    |din_0_blk_n                       |   9|          2|    1|          2|
+    |din_1_blk_n                       |   9|          2|    1|          2|
+    |din_2_blk_n                       |   9|          2|    1|          2|
+    |dout_a_0_blk_n                    |   9|          2|    1|          2|
+    |dout_a_1_blk_n                    |   9|          2|    1|          2|
+    |dout_a_2_blk_n                    |   9|          2|    1|          2|
+    |dout_b_0_blk_n                    |   9|          2|    1|          2|
+    |dout_b_1_blk_n                    |   9|          2|    1|          2|
+    |dout_b_2_blk_n                    |   9|          2|    1|          2|
+    |p_023_0_reg_200                   |   9|          2|   32|         64|
+    |p_023_1_reg_232                   |   9|          2|   32|         64|
+    |p_023_2_reg_255                   |   9|          2|   32|         64|
+    |p_047_0_reg_188                   |   9|          2|   32|         64|
+    |p_047_1_reg_222                   |   9|          2|   32|         64|
+    |p_047_2_reg_242                   |   9|          2|   32|         64|
+    |p_076_0_reg_176                   |   9|          2|   32|         64|
+    |p_076_1_reg_212                   |   9|          2|   32|         64|
+    |s_state                           |  15|          3|   32|         96|
+    +----------------------------------+----+-----------+-----+-----------+
+    |Total                             | 234|         50|  363|        825|
+    +----------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------------+----+----+-----+-----------+
+    |        Name       | FF | LUT| Bits| Const Bits|
+    +-------------------+----+----+-----+-----------+
+    |ap_CS_fsm          |   5|   0|    5|          0|
+    |p_023_0_reg_200    |  32|   0|   32|          0|
+    |p_023_1_reg_232    |  32|   0|   32|          0|
+    |p_023_2_reg_255    |  32|   0|   32|          0|
+    |p_047_0_reg_188    |  32|   0|   32|          0|
+    |p_047_1_reg_222    |  32|   0|   32|          0|
+    |p_047_2_reg_242    |  32|   0|   32|          0|
+    |p_076_0_reg_176    |  32|   0|   32|          0|
+    |p_076_1_reg_212    |  32|   0|   32|          0|
+    |packed_in_reg_333  |  32|   0|   32|          0|
+    |val_V_reg_326      |   1|   0|    1|          0|
+    +-------------------+----+----+-----+-----------+
+    |Total              | 294|   0|  294|          0|
+    +-------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-----------------------+-----+-----+------------+-----------------------------------------------------+--------------+
+|       RTL Ports       | Dir | Bits|  Protocol  |                    Source Object                    |    C Type    |
++-----------------------+-----+-----+------------+-----------------------------------------------------+--------------+
+|ap_clk                 |  in |    1| ap_ctrl_hs | _sc_stream_router_eop<384>::thread_sc_stream_router | return value |
+|ap_rst                 |  in |    1| ap_ctrl_hs | _sc_stream_router_eop<384>::thread_sc_stream_router | return value |
+|din_0_dout             |  in |  384|   ap_fifo  |                        din_0                        |    pointer   |
+|din_0_empty_n          |  in |    1|   ap_fifo  |                        din_0                        |    pointer   |
+|din_0_read             | out |    1|   ap_fifo  |                        din_0                        |    pointer   |
+|din_1_dout             |  in |    1|   ap_fifo  |                        din_1                        |    pointer   |
+|din_1_empty_n          |  in |    1|   ap_fifo  |                        din_1                        |    pointer   |
+|din_1_read             | out |    1|   ap_fifo  |                        din_1                        |    pointer   |
+|din_2_dout             |  in |   48|   ap_fifo  |                        din_2                        |    pointer   |
+|din_2_empty_n          |  in |    1|   ap_fifo  |                        din_2                        |    pointer   |
+|din_2_read             | out |    1|   ap_fifo  |                        din_2                        |    pointer   |
+|ctrl_channel_dout      |  in |    1|   ap_fifo  |                     ctrl_channel                    |    pointer   |
+|ctrl_channel_empty_n   |  in |    1|   ap_fifo  |                     ctrl_channel                    |    pointer   |
+|ctrl_channel_read      | out |    1|   ap_fifo  |                     ctrl_channel                    |    pointer   |
+|dout_a_0_din           | out |  384|   ap_fifo  |                       dout_a_0                      |    pointer   |
+|dout_a_0_full_n        |  in |    1|   ap_fifo  |                       dout_a_0                      |    pointer   |
+|dout_a_0_write         | out |    1|   ap_fifo  |                       dout_a_0                      |    pointer   |
+|dout_a_1_din           | out |    1|   ap_fifo  |                       dout_a_1                      |    pointer   |
+|dout_a_1_full_n        |  in |    1|   ap_fifo  |                       dout_a_1                      |    pointer   |
+|dout_a_1_write         | out |    1|   ap_fifo  |                       dout_a_1                      |    pointer   |
+|dout_a_2_din           | out |   48|   ap_fifo  |                       dout_a_2                      |    pointer   |
+|dout_a_2_full_n        |  in |    1|   ap_fifo  |                       dout_a_2                      |    pointer   |
+|dout_a_2_write         | out |    1|   ap_fifo  |                       dout_a_2                      |    pointer   |
+|dout_b_0_din           | out |  384|   ap_fifo  |                       dout_b_0                      |    pointer   |
+|dout_b_0_full_n        |  in |    1|   ap_fifo  |                       dout_b_0                      |    pointer   |
+|dout_b_0_write         | out |    1|   ap_fifo  |                       dout_b_0                      |    pointer   |
+|dout_b_1_din           | out |    1|   ap_fifo  |                       dout_b_1                      |    pointer   |
+|dout_b_1_full_n        |  in |    1|   ap_fifo  |                       dout_b_1                      |    pointer   |
+|dout_b_1_write         | out |    1|   ap_fifo  |                       dout_b_1                      |    pointer   |
+|dout_b_2_din           | out |   48|   ap_fifo  |                       dout_b_2                      |    pointer   |
+|dout_b_2_full_n        |  in |    1|   ap_fifo  |                       dout_b_2                      |    pointer   |
+|dout_b_2_write         | out |    1|   ap_fifo  |                       dout_b_2                      |    pointer   |
+|s_packed_in            | out |   32|   ap_vld   |                     s_packed_in                     |    pointer   |
+|s_packed_in_ap_vld     | out |    1|   ap_vld   |                     s_packed_in                     |    pointer   |
+|s_packed_out_A         | out |   32|   ap_vld   |                    s_packed_out_A                   |    pointer   |
+|s_packed_out_A_ap_vld  | out |    1|   ap_vld   |                    s_packed_out_A                   |    pointer   |
+|s_packed_out_B         | out |   32|   ap_vld   |                    s_packed_out_B                   |    pointer   |
+|s_packed_out_B_ap_vld  | out |    1|   ap_vld   |                    s_packed_out_B                   |    pointer   |
+|s_state                | out |   32|   ap_vld   |                       s_state                       |    pointer   |
+|s_state_ap_vld         | out |    1|   ap_vld   |                       s_state                       |    pointer   |
++-----------------------+-----+-----+------------+-----------------------------------------------------+--------------+
+

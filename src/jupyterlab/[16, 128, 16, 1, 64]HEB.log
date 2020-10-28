@@ -1,0 +1,200 @@
+make: Entering directory '/home/jonathan/git/CNNAccel/src'
+mkdir -p build/2785289545325/src/hwcore/tb/cnn/
+mkdir -p build/2785289545325/src/hwcore/cnn/
+g++ -g -I./src/ -MMD -MP -fprofile-arcs -ftest-coverage --coverage -DP_data_P=2 -DP_data_W=16 -DP_X_fifo_deep=1 -DP_Y_fifo_deep=1 -DP_BUF_fifo_deep=1 -DP_W_fifo_deep=1 -DHLS_DEBUG_LEVEL=0 -DP_input_width=128 -DP_output_width=128 -DP_pe_n=16 -DP_pe_bw_n=8 -DP_wbuf_size=2368 -DP_data_buf_clb_size=4096 -DP_data_buf_clb_n=3 -DP_data_buf_shift_size=192 -DP_data_out_n=1 -DP_PE_pipeline_II=1 -DP_pe_pre_fifo_deep=1 -DP_pool_size=1024 -I/usr/local/systemc-2.3.3/include -D__HLS_TRACE_LEVEL_PORT__ -D__SIM_FPO__ -DDEBUG_SYSTEMC -D__SIM_OPENCV__ -D__SIM_FFT__ -D__SIM_FIR__ -D__SIM_DDS__ -D__DSP48E1__  -c src/hwcore/tb/cnn/main_cnn.cpp -o build/2785289545325/src/hwcore/tb/cnn/main_cnn.cpp.o
+g++ -g -I./src/ -MMD -MP -fprofile-arcs -ftest-coverage --coverage -DP_data_P=2 -DP_data_W=16 -DP_X_fifo_deep=1 -DP_Y_fifo_deep=1 -DP_BUF_fifo_deep=1 -DP_W_fifo_deep=1 -DHLS_DEBUG_LEVEL=0 -DP_input_width=128 -DP_output_width=128 -DP_pe_n=16 -DP_pe_bw_n=8 -DP_wbuf_size=2368 -DP_data_buf_clb_size=4096 -DP_data_buf_clb_n=3 -DP_data_buf_shift_size=192 -DP_data_out_n=1 -DP_PE_pipeline_II=1 -DP_pe_pre_fifo_deep=1 -DP_pool_size=1024 -I/usr/local/systemc-2.3.3/include -D__HLS_TRACE_LEVEL_PORT__ -D__SIM_FPO__ -DDEBUG_SYSTEMC -D__SIM_OPENCV__ -D__SIM_FFT__ -D__SIM_FIR__ -D__SIM_DDS__ -D__DSP48E1__  -c src/hwcore/cnn/cnn.cpp -o build/2785289545325/src/hwcore/cnn/cnn.cpp.o
+src/hwcore/tb/cnn/main_cnn.cpp:8:0: warning: "DEBUG_SYSTEMC" redefined
+ #define DEBUG_SYSTEMC
+ 
+<command-line>:0:0: note: this is the location of the previous definition
+In file included from ./src/hwcore/cnn/data_buffer.h:13:0,
+                 from ./src/hwcore/cnn/cnn.h:7,
+                 from ./src/hwcore/tb/cnn/tb_cnn_2d.hpp:7,
+                 from src/hwcore/tb/cnn/main_cnn.cpp:15:
+./src/hwcore/pipes/streamimagedatafix.h:13:2: warning: #warning __tag not defined!!! [-Wcpp]
+ #warning __tag not defined!!!
+  ^~~~~~~
+./src/hwcore/pipes/streamimagedatafix.h:231:2: warning: #warning do only works if PE_BW is equal with DMA_BW [-Wcpp]
+ #warning do only works if PE_BW is equal with DMA_BW
+  ^~~~~~~
+In file included from ./src/hwcore/cnn/data_buffer.h:15:0,
+                 from ./src/hwcore/cnn/cnn.h:7,
+                 from ./src/hwcore/tb/cnn/tb_cnn_2d.hpp:7,
+                 from src/hwcore/tb/cnn/main_cnn.cpp:15:
+./src/hwcore/pipes/streambuffer.h:292:2: warning: #warning "replace with: not stream while write version" [-Wcpp]
+ #warning "replace with: not stream while write version"
+  ^~~~~~~
+In file included from ./src/hwcore/cnn/data_buffer.h:17:0,
+                 from ./src/hwcore/cnn/cnn.h:7,
+                 from ./src/hwcore/tb/cnn/tb_cnn_2d.hpp:7,
+                 from src/hwcore/tb/cnn/main_cnn.cpp:15:
+./src/hwcore/pipes/streamcircularlinebuffer.h:13:2: warning: #warning __tag not defined!!! [-Wcpp]
+ #warning __tag not defined!!!
+  ^~~~~~~
+In file included from ./src/hwcore/pipes/pipes.h:14:0,
+                 from ./src/hwcore/pipes/streamrouter.h:7,
+                 from ./src/hwcore/cnn/data_buffer.h:26,
+                 from ./src/hwcore/cnn/cnn.h:7,
+                 from ./src/hwcore/tb/cnn/tb_cnn_2d.hpp:7,
+                 from src/hwcore/tb/cnn/main_cnn.cpp:15:
+./src/hwcore/pipes/streamsplit.h:12:2: warning: #warning __tag not defined!!! [-Wcpp]
+ #warning __tag not defined!!!
+  ^~~~~~~
+In file included from ./src/hwcore/cnn/cnn.h:7:0,
+                 from ./src/hwcore/tb/cnn/tb_cnn_2d.hpp:7,
+                 from src/hwcore/tb/cnn/main_cnn.cpp:15:
+./src/hwcore/cnn/data_buffer.h:29:0: warning: "__tag" redefined
+ #define __tag inst_db_inst2
+ 
+In file included from ./src/hwcore/cnn/cnn.h:7:0,
+                 from ./src/hwcore/tb/cnn/tb_cnn_2d.hpp:7,
+                 from src/hwcore/tb/cnn/main_cnn.cpp:15:
+./src/hwcore/cnn/data_buffer.h:27:0: note: this is the location of the previous definition
+ #define __tag inst_db
+ 
+In file included from ./src/hwcore/cnn/data_buffer.h:13:0,
+                 from ./src/hwcore/cnn/cnn.h:7,
+                 from src/hwcore/cnn/cnn.cpp:7:
+./src/hwcore/pipes/streamimagedatafix.h:13:2: warning: #warning __tag not defined!!! [-Wcpp]
+ #warning __tag not defined!!!
+  ^~~~~~~
+./src/hwcore/pipes/streamimagedatafix.h:231:2: warning: #warning do only works if PE_BW is equal with DMA_BW [-Wcpp]
+ #warning do only works if PE_BW is equal with DMA_BW
+  ^~~~~~~
+In file included from ./src/hwcore/cnn/data_buffer.h:15:0,
+                 from ./src/hwcore/cnn/cnn.h:7,
+                 from src/hwcore/cnn/cnn.cpp:7:
+./src/hwcore/pipes/streambuffer.h:292:2: warning: #warning "replace with: not stream while write version" [-Wcpp]
+ #warning "replace with: not stream while write version"
+  ^~~~~~~
+In file included from ./src/hwcore/cnn/data_buffer.h:17:0,
+                 from ./src/hwcore/cnn/cnn.h:7,
+                 from src/hwcore/cnn/cnn.cpp:7:
+./src/hwcore/pipes/streamcircularlinebuffer.h:13:2: warning: #warning __tag not defined!!! [-Wcpp]
+ #warning __tag not defined!!!
+  ^~~~~~~
+In file included from ./src/hwcore/pipes/pipes.h:14:0,
+                 from ./src/hwcore/pipes/streamrouter.h:7,
+                 from ./src/hwcore/cnn/data_buffer.h:26,
+                 from ./src/hwcore/cnn/cnn.h:7,
+                 from src/hwcore/cnn/cnn.cpp:7:
+./src/hwcore/pipes/streamsplit.h:12:2: warning: #warning __tag not defined!!! [-Wcpp]
+ #warning __tag not defined!!!
+  ^~~~~~~
+In file included from ./src/hwcore/cnn/cnn.h:7:0,
+                 from src/hwcore/cnn/cnn.cpp:7:
+./src/hwcore/cnn/data_buffer.h:29:0: warning: "__tag" redefined
+ #define __tag inst_db_inst2
+ 
+In file included from ./src/hwcore/cnn/cnn.h:7:0,
+                 from src/hwcore/cnn/cnn.cpp:7:
+./src/hwcore/cnn/data_buffer.h:27:0: note: this is the location of the previous definition
+ #define __tag inst_db
+ 
+In file included from ./src/hwcore/cnn/top_cnn.h:26:0,
+                 from ./src/hwcore/cnn/cnn.h:9,
+                 from ./src/hwcore/tb/cnn/tb_cnn_2d.hpp:7,
+                 from src/hwcore/tb/cnn/main_cnn.cpp:15:
+./src/hwcore/pipes/streamresize.h: In instantiation of ‘struct _sc_stream_resize_down_inst_2<256, 128, 2>’:
+./src/hwcore/cnn/top_cnn.h:163:81:   required from ‘struct _top_cnn<16, 2, 8, 8, 16, 8, 2368, 4096, 3, 192, 1, 1024, 1, 1>’
+./src/hwcore/cnn/cnn.h:236:6:   required from here
+./src/hwcore/pipes/streamresize.h:31:20: warning: enumeral mismatch in conditional expression: ‘hwcore::hf::const_float<256, 128, 1000>::<unnamed enum>’ vs ‘hwcore::hf::const_float<128, 256, 1000>::<unnamed enum>’ [-Wenum-compare]
+       (Win >= Wout ? hwcore::hf::const_float<Win, Wout>::CEIL : hwcore::hf::const_float<Wout, Win>::CEIL)
+       ~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from ./src/hwcore/tb/cnn/tb_cnn_2d.hpp:3:0,
+                 from src/hwcore/tb/cnn/main_cnn.cpp:15:
+./src/hwcore/tb/cnn/tb_cnn_2d.hpp: In member function ‘void tb_cnn_2d::dma_source_thread()’:
+./src/hwcore/hf/helperlib.h:137:22: warning: format ‘%d’ expects argument of type ‘int’, but argument 3 has type ‘sc_dt::uint64 {aka long long unsigned int}’ [-Wformat=]
+    printf(__VA_ARGS__);                                                                                       \
+                      ^
+./src/hwcore/tb/cnn/tb_cnn_2d.hpp:1334:5: note: in expansion of macro ‘HLS_DEBUG’
+     HLS_DEBUG(1, 1, 0, "dma_x_source sending new data[%d,%d]: %s.", i + 1, tmp.size,
+     ^~~~~~~~~
+./src/hwcore/tb/cnn/tb_cnn_2d.hpp: In member function ‘void tb_cnn_2d::dma_source_buf_thread()’:
+./src/hwcore/hf/helperlib.h:137:22: warning: format ‘%d’ expects argument of type ‘int’, but argument 3 has type ‘sc_dt::uint64 {aka long long unsigned int}’ [-Wformat=]
+    printf(__VA_ARGS__);                                                                                       \
+                      ^
+./src/hwcore/tb/cnn/tb_cnn_2d.hpp:1355:5: note: in expansion of macro ‘HLS_DEBUG’
+     HLS_DEBUG(1, 1, 0, "dma_buf_source sending new data[%d,%d]: %s.", i + 1, tmp.size,
+     ^~~~~~~~~
+./src/hwcore/tb/cnn/tb_cnn_2d.hpp: In member function ‘void tb_cnn_2d::dma_source_w_thread()’:
+./src/hwcore/hf/helperlib.h:137:22: warning: format ‘%d’ expects argument of type ‘int’, but argument 3 has type ‘sc_dt::uint64 {aka long long unsigned int}’ [-Wformat=]
+    printf(__VA_ARGS__);                                                                                       \
+                      ^
+./src/hwcore/tb/cnn/tb_cnn_2d.hpp:1376:5: note: in expansion of macro ‘HLS_DEBUG’
+     HLS_DEBUG(1, 1, 0, "dma_w_source sending new data[%d,%d]: %s.", i + 1, tmp.size,
+     ^~~~~~~~~
+./src/hwcore/tb/cnn/tb_cnn_2d.hpp: In member function ‘void tb_cnn_2d::dma_sink_thread()’:
+./src/hwcore/hf/helperlib.h:137:22: warning: format ‘%d’ expects argument of type ‘int’, but argument 3 has type ‘sc_dt::uint64 {aka long long unsigned int}’ [-Wformat=]
+    printf(__VA_ARGS__);                                                                                       \
+                      ^
+./src/hwcore/tb/cnn/tb_cnn_2d.hpp:1425:5: note: in expansion of macro ‘HLS_DEBUG’
+     HLS_DEBUG(1, 1, 0, "dma_sink got new data[%d,%d]: %s.", i + 1, tmp.size,
+     ^~~~~~~~~
+In file included from ./src/hwcore/cnn/top_cnn.h:26:0,
+                 from ./src/hwcore/cnn/cnn.h:9,
+                 from src/hwcore/cnn/cnn.cpp:7:
+./src/hwcore/pipes/streamresize.h: In instantiation of ‘struct _sc_stream_resize_down_inst_2<256, 128, 2>’:
+./src/hwcore/cnn/top_cnn.h:163:81:   required from ‘struct _top_cnn<16, 2, 8, 8, 16, 8, 2368, 4096, 3, 192, 1, 1024, 1, 1>’
+./src/hwcore/cnn/cnn.h:236:6:   required from here
+./src/hwcore/pipes/streamresize.h:31:20: warning: enumeral mismatch in conditional expression: ‘hwcore::hf::const_float<256, 128, 1000>::<unnamed enum>’ vs ‘hwcore::hf::const_float<128, 256, 1000>::<unnamed enum>’ [-Wenum-compare]
+       (Win >= Wout ? hwcore::hf::const_float<Win, Wout>::CEIL : hwcore::hf::const_float<Wout, Win>::CEIL)
+       ~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from ./src/hwcore/pipes/data_types.h:7:0,
+                 from ./src/hwcore/cnn/data_buffer.h:11,
+                 from ./src/hwcore/cnn/cnn.h:7,
+                 from src/hwcore/cnn/cnn.cpp:7:
+./src/hwcore/cnn/pe.h: In instantiation of ‘void _PE_v2<W, P, N, pipeline_II, unroll_factor, sum_exstra_bit>::PE_thread() [with int W = 16; int P = 2; int N = 8; int pipeline_II = 1; int unroll_factor = 8; int sum_exstra_bit = 0]’:
+./src/hwcore/cnn/pe.h:415:3:   required from ‘_PE_v2<W, P, N, pipeline_II, unroll_factor, sum_exstra_bit>::_PE_v2(sc_core::sc_module_name) [with int W = 16; int P = 2; int N = 8; int pipeline_II = 1; int unroll_factor = 8; int sum_exstra_bit = 0]’
+./src/hwcore/hf/helperlib.h:377:105:   required from ‘hwcore::hf::sc_static_list2<T, N, _cur_indx>::sc_static_list2(const char*) [with T = _PE_v2<16, 2, 8, 1, 8, 0>; int N = 16; int _cur_indx = 0]’
+./src/hwcore/cnn/top_cnn.h:233:64:   required from ‘_top_cnn<data_W, data_P, input_BW_N, output_BW_N, T_pe_n, T_pe_bw_n, T_wbuf_size, T_data_buf_clb_size, T_data_buf_clb_n, T_data_buf_shift_size, T_data_out_n, T_pool_size_param, T_PE_pipeline_II, T_pe_pre_fifo_deep>::_top_cnn(sc_core::sc_module_name) [with int data_W = 16; int data_P = 2; int input_BW_N = 8; int output_BW_N = 8; int T_pe_n = 16; int T_pe_bw_n = 8; int T_wbuf_size = 2368; int T_data_buf_clb_size = 4096; int T_data_buf_clb_n = 3; int T_data_buf_shift_size = 192; int T_data_out_n = 1; int T_pool_size_param = 1024; int T_PE_pipeline_II = 1; int T_pe_pre_fifo_deep = 1]’
+./src/hwcore/cnn/cnn.h:250:62:   required from here
+./src/hwcore/hf/helperlib.h:137:10: warning: format ‘%f’ expects argument of type ‘double’, but argument 7 has type ‘sc_dt::sc_fixed<32, 4, (sc_dt::sc_q_mode)0, (sc_dt::sc_o_mode)0, 0>’ [-Wformat=]
+    printf(__VA_ARGS__);                                                                                       \
+    ~~~~~~^~~~~~~~~~~~~
+./src/hwcore/cnn/pe.h:459:6: note: in expansion of macro ‘HLS_DEBUG’
+      HLS_DEBUG(10, 1, 32, "PE[%d] -- calculation : W: %f, X:(%s) %f, prod[%d]: %f", 0,
+      ^~~~~~~~~
+./src/hwcore/hf/helperlib.h:137:10: warning: format ‘%d’ expects a matching ‘int’ argument [-Wformat=]
+    printf(__VA_ARGS__);                                                                                       \
+    ~~~~~~^~~~~~~~~~~~~
+./src/hwcore/cnn/pe.h:474:5: note: in expansion of macro ‘HLS_DEBUG’
+     HLS_DEBUG(1, 1, 32, "PE[%d] -- write -- done");
+     ^~~~~~~~~
+./src/hwcore/cnn/pe.h: In instantiation of ‘void _PE_v2<W, P, N, pipeline_II, unroll_factor, sum_exstra_bit>::PE_thread() [with int W = 16; int P = 2; int N = 8; int pipeline_II = 1; int unroll_factor = 8; int sum_exstra_bit = 0]’:
+./src/hwcore/cnn/pe.h:415:3:   required from ‘_PE_v2<W, P, N, pipeline_II, unroll_factor, sum_exstra_bit>::_PE_v2(sc_core::sc_module_name) [with int W = 16; int P = 2; int N = 8; int pipeline_II = 1; int unroll_factor = 8; int sum_exstra_bit = 0]’
+./src/hwcore/hf/helperlib.h:377:105:   required from ‘hwcore::hf::sc_static_list2<T, N, _cur_indx>::sc_static_list2(const char*) [with T = _PE_v2<16, 2, 8, 1, 8, 0>; int N = 16; int _cur_indx = 0]’
+./src/hwcore/cnn/top_cnn.h:233:64:   required from ‘_top_cnn<data_W, data_P, input_BW_N, output_BW_N, T_pe_n, T_pe_bw_n, T_wbuf_size, T_data_buf_clb_size, T_data_buf_clb_n, T_data_buf_shift_size, T_data_out_n, T_pool_size_param, T_PE_pipeline_II, T_pe_pre_fifo_deep>::_top_cnn(sc_core::sc_module_name) [with int data_W = 16; int data_P = 2; int input_BW_N = 8; int output_BW_N = 8; int T_pe_n = 16; int T_pe_bw_n = 8; int T_wbuf_size = 2368; int T_data_buf_clb_size = 4096; int T_data_buf_clb_n = 3; int T_data_buf_shift_size = 192; int T_data_out_n = 1; int T_pool_size_param = 1024; int T_PE_pipeline_II = 1; int T_pe_pre_fifo_deep = 1]’
+./src/hwcore/cnn/cnn.h:250:62:   required from here
+./src/hwcore/hf/helperlib.h:137:10: warning: format ‘%f’ expects argument of type ‘double’, but argument 7 has type ‘sc_dt::sc_fixed<32, 4, (sc_dt::sc_q_mode)0, (sc_dt::sc_o_mode)0, 0>’ [-Wformat=]
+    printf(__VA_ARGS__);                                                                                       \
+    ~~~~~~^~~~~~~~~~~~~
+./src/hwcore/cnn/pe.h:459:6: note: in expansion of macro ‘HLS_DEBUG’
+      HLS_DEBUG(10, 1, 32, "PE[%d] -- calculation : W: %f, X:(%s) %f, prod[%d]: %f", 0,
+      ^~~~~~~~~
+./src/hwcore/hf/helperlib.h:137:10: warning: format ‘%d’ expects a matching ‘int’ argument [-Wformat=]
+    printf(__VA_ARGS__);                                                                                       \
+    ~~~~~~^~~~~~~~~~~~~
+./src/hwcore/cnn/pe.h:474:5: note: in expansion of macro ‘HLS_DEBUG’
+     HLS_DEBUG(1, 1, 32, "PE[%d] -- write -- done");
+     ^~~~~~~~~
+g++ build/2785289545325/src/hwcore/tb/cnn/main_cnn.cpp.o ./build/2785289545325/src/hwcore/cnn/cnn.cpp.o -o build/2785289545325/src/hwcore/tb/cnn/main_cnn.cpp.run -g -I./src/ -fprofile-arcs -ftest-coverage --coverage -L/usr/local/systemc-2.3.3/lib-linux64 -lsystemc
+export LD_LIBRARY_PATH=/usr/local/systemc-2.3.3/lib-linux64/:;cd build/2785289545325/src/hwcore/tb/cnn/; /home/jonathan/git/CNNAccel/src/build/2785289545325/src/hwcore/tb/cnn/main_cnn.cpp.run > /home/jonathan/git/CNNAccel/src/build/2785289545325/src/hwcore/tb/cnn/main_cnn.cpp.run.log; RET=$?;if [ $RET -eq 0 ]; then tail -n10 /home/jonathan/git/CNNAccel/src/build/2785289545325/src/hwcore/tb/cnn/main_cnn.cpp.run.log; echo "[FINISH - OK] build/2785289545325/src/hwcore/tb/cnn/main_cnn.cpp.ok"; else tail -n100 /home/jonathan/git/CNNAccel/src/build/2785289545325/src/hwcore/tb/cnn/main_cnn.cpp.run.log; echo "[FINISH - ERROR] build/2785289545325/src/hwcore/tb/cnn/main_cnn.cpp.ok"; fi; echo "See full log at: build/2785289545325/src/hwcore/tb/cnn/main_cnn.cpp.run.log" ;sleep 0.01;return $RET
+
+        SystemC 2.3.3-Accellera --- Sep 29 2019 13:59:20
+        Copyright (c) 1996-2018 by all Contributors,
+        ALL RIGHTS RESERVED
+[0,13] : [exp <==> got] = [-2.59645 <==> -2]
+[0,14] : [exp <==> got] = [-9.74188 <==> -2]
+[0,15] : [exp <==> got] = [-1.83006 <==> -1.83008]
+mse: 4.72503
+done
+
+Info: /OSCI/SystemC: Simulation stopped by user.
+INFO: end time is: 6084253125 ps, and max time is: 250 ms
+INFO: Post-processing tb_CNN
+INFO: Simulation tb_CNN PASSED with 0 errors
+[FINISH - OK] build/2785289545325/src/hwcore/tb/cnn/main_cnn.cpp.ok
+See full log at: build/2785289545325/src/hwcore/tb/cnn/main_cnn.cpp.run.log
+touch build/2785289545325/src/hwcore/tb/cnn/main_cnn.cpp.ok
+make: Leaving directory '/home/jonathan/git/CNNAccel/src'

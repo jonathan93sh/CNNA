@@ -1,0 +1,8 @@
+#pragma once
+#define HWCORE_DSP_PARAM_ENABLE HWCORE_DSP_PARAM_ENABLE
+#define HWCORE_P1 4
+#define HWCORE_P2 20
+#define HWCORE_P3 4
+#define HWCORE_P4 4
+#define HWCORE_P5 5
+#define HWCORE_P6 25

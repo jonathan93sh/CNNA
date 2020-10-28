@@ -1,0 +1,1187 @@
+{
+  "Top": "cnna_dma",
+  "RtlTop": "cnna_dma",
+  "PcoreTop": "cnna_dma_top",
+  "RtlPrefix": "",
+  "SourceLanguage": "systemc",
+  "ResetStyle": "control",
+  "GenerateBdFiles": "1",
+  "HostMachineBits": "64",
+  "Target": {
+    "Family": "zynquplus",
+    "Device": "xczu3eg",
+    "Package": "-sbva484",
+    "Speed": "-1-e"
+  },
+  "HlsSolution": {
+    
+  },
+  "Args": {
+    "clk": {
+      "index": "0",
+      "type": {
+        "kinds": ["array"],
+        "dataType": "sc_in",
+        "dataWidth": "1",
+        "arraySizes": [
+          "1",
+          "0"
+        ],
+        "interfaceRef": "clk"
+      }
+    },
+    "reset": {
+      "index": "1",
+      "type": {
+        "kinds": ["array"],
+        "dataType": "sc_in",
+        "dataWidth": "1",
+        "arraySizes": [
+          "0",
+          "1"
+        ],
+        "interfaceRef": "reset"
+      }
+    },
+    "Xmem": {
+      "index": "2",
+      "type": {
+        "kinds": ["array"],
+        "dataType": "AXI4M_bus_port",
+        "dataWidth": "128",
+        "arraySizes": [
+          "0",
+          "0"
+        ],
+        "multiInterfaceRef": [
+          "Xmem_address",
+          "Xmem_datain",
+          "Xmem_dataout",
+          "Xmem_req_din",
+          "Xmem_req_full_n",
+          "Xmem_req_write",
+          "Xmem_rsp_empty_n",
+          "Xmem_rsp_read",
+          "Xmem_size"
+        ]
+      }
+    },
+    "Ymem": {
+      "index": "3",
+      "type": {
+        "kinds": ["array"],
+        "dataType": "AXI4M_bus_port",
+        "dataWidth": "128",
+        "arraySizes": [
+          "0",
+          "0"
+        ],
+        "multiInterfaceRef": [
+          "Ymem_address",
+          "Ymem_datain",
+          "Ymem_dataout",
+          "Ymem_req_din",
+          "Ymem_req_full_n",
+          "Ymem_req_write",
+          "Ymem_rsp_empty_n",
+          "Ymem_rsp_read",
+          "Ymem_size"
+        ]
+      }
+    },
+    "Wmem": {
+      "index": "4",
+      "type": {
+        "kinds": ["array"],
+        "dataType": "AXI4M_bus_port",
+        "dataWidth": "128",
+        "arraySizes": [
+          "0",
+          "0"
+        ],
+        "multiInterfaceRef": [
+          "Wmem_address",
+          "Wmem_datain",
+          "Wmem_dataout",
+          "Wmem_req_din",
+          "Wmem_req_full_n",
+          "Wmem_req_write",
+          "Wmem_rsp_empty_n",
+          "Wmem_rsp_read",
+          "Wmem_size"
+        ]
+      }
+    },
+    "Xbufmem": {
+      "index": "5",
+      "type": {
+        "kinds": ["array"],
+        "dataType": "AXI4M_bus_port",
+        "dataWidth": "128",
+        "arraySizes": [
+          "0",
+          "0"
+        ],
+        "multiInterfaceRef": [
+          "Xbufmem_address",
+          "Xbufmem_datain",
+          "Xbufmem_dataout",
+          "Xbufmem_req_din",
+          "Xbufmem_req_full_n",
+          "Xbufmem_req_write",
+          "Xbufmem_rsp_empty_n",
+          "Xbufmem_rsp_read",
+          "Xbufmem_size"
+        ]
+      }
+    },
+    "Xs": {
+      "index": "6",
+      "type": {
+        "kinds": ["array"],
+        "dataType": "sc_fifo_out",
+        "dataWidth": "128",
+        "arraySizes": [
+          "0",
+          "0"
+        ],
+        "interfaceRef": "Xs"
+      }
+    },
+    "Ws": {
+      "index": "7",
+      "type": {
+        "kinds": ["array"],
+        "dataType": "sc_fifo_out",
+        "dataWidth": "128",
+        "arraySizes": [
+          "0",
+          "0"
+        ],
+        "interfaceRef": "Ws"
+      }
+    },
+    "Xbufs": {
+      "index": "8",
+      "type": {
+        "kinds": ["array"],
+        "dataType": "sc_fifo_out",
+        "dataWidth": "128",
+        "arraySizes": [
+          "0",
+          "0"
+        ],
+        "interfaceRef": "Xbufs"
+      }
+    },
+    "Ys": {
+      "index": "9",
+      "type": {
+        "kinds": ["array"],
+        "dataType": "sc_fifo_in",
+        "dataWidth": "128",
+        "arraySizes": [
+          "0",
+          "0"
+        ],
+        "interfaceRef": "Ys"
+      }
+    },
+    "address": {
+      "index": "10",
+      "type": {
+        "kinds": ["array"],
+        "dataType": "sc_in",
+        "dataWidth": "32",
+        "arraySizes": [
+          "0",
+          "0"
+        ],
+        "interfaceRef": "address"
+      }
+    },
+    "length": {
+      "index": "11",
+      "type": {
+        "kinds": ["array"],
+        "dataType": "sc_in",
+        "arraySizes": [
+          "0",
+          "0"
+        ]
+      }
+    },
+    "select": {
+      "index": "12",
+      "type": {
+        "kinds": ["array"],
+        "dataType": "sc_in",
+        "arraySizes": [
+          "0",
+          "0"
+        ]
+      }
+    },
+    "add": {
+      "index": "13",
+      "type": {
+        "kinds": ["array"],
+        "dataType": "sc_in",
+        "dataWidth": "1",
+        "arraySizes": [
+          "0",
+          "0"
+        ],
+        "interfaceRef": "add"
+      }
+    },
+    "fire": {
+      "index": "14",
+      "type": {
+        "kinds": ["array"],
+        "dataType": "sc_in",
+        "dataWidth": "1",
+        "arraySizes": [
+          "0",
+          "0"
+        ],
+        "interfaceRef": "fire"
+      }
+    },
+    "clean": {
+      "index": "15",
+      "type": {
+        "kinds": ["array"],
+        "dataType": "sc_in",
+        "dataWidth": "1",
+        "arraySizes": [
+          "0",
+          "0"
+        ],
+        "interfaceRef": "clean"
+      }
+    }
+  },
+  "Return": {
+    
+  },
+  "ClockInfo": {
+    "ClockName": "ap_clk",
+    "PcoreClockName": "aclk",
+    "ClockPeriod": "10",
+    "IsCombLogic": "0",
+    "II": "x",
+    "Latency": "0",
+    "Uncertainty": "1.25"
+  },
+  "Xdc": {
+    "OocClocks": ["create_clock -name ap_clk -period 10.000 [get_ports ap_clk]"],
+    "PcoreOocClocks": ["create_clock -name aclk -period 10.000 [get_ports aclk]"]
+  },
+  "Ipx": {
+    "Vendor": "xilinx.com",
+    "Library": "hls",
+    "Name": "cnna_dma",
+    "Version": "1.0",
+    "DisplayName": "Cnna_dma",
+    "Revision": "",
+    "Description": "An IP generated by Vivado HLS",
+    "Taxonomy": "\/VIVADO_HLS_IP",
+    "AutoFamilySupport": ""
+  },
+  "Files": {
+    "SCSource": ["cnnadma.cpp"],
+    "Vhdl": [
+      "impl\/vhdl\/cnna_dma_Xthread.vhd",
+      "impl\/vhdl\/cnna_dma.vhd"
+    ],
+    "Verilog": [
+      "impl\/verilog\/cnna_dma_Xthread.v",
+      "impl\/verilog\/cnna_dma.v"
+    ],
+    "PcoreVerilog": [
+      "impl\/verilog.pcore\/cnna_dma.vhd",
+      "impl\/verilog.pcore\/cnna_dma_reset_if.vhd",
+      "impl\/verilog.pcore\/cnna_dma_top.vhd",
+      "impl\/verilog.pcore\/cnna_dma_Xmem_if.v",
+      "impl\/verilog.pcore\/cnna_dma_Xthread.vhd"
+    ],
+    "Misc": ["impl\/misc\/logo.png"],
+    "DesignXml": "\/home\/jonathan\/git\/CNNAccel\/src\/IP\/CNNAccelDMA\/solution1\/.autopilot\/db\/cnna_dma.design.xml",
+    "DebugDir": "\/home\/jonathan\/git\/CNNAccel\/src\/IP\/CNNAccelDMA\/solution1\/.debug",
+    "ProtoInst": ["\/home\/jonathan\/git\/CNNAccel\/src\/IP\/CNNAccelDMA\/solution1\/.debug\/cnna_dma.protoinst"]
+  },
+  "SubcoreInfo": {
+    "HasXpmMemory": false,
+    "HasClockedDsp": false,
+    "IP": []
+  },
+  "Interfaces": {
+    "add": {
+      "type": "data",
+      "dir": "in",
+      "width": "1",
+      "ctype": {"DATA": {
+          "Type": "null",
+          "Width": "1"
+        }},
+      "bundle_name": "add",
+      "bundle_role": "default"
+    },
+    "address": {
+      "type": "data",
+      "dir": "in",
+      "width": "32",
+      "ctype": {"DATA": {
+          "Type": "null",
+          "Width": "32"
+        }},
+      "bundle_name": "address",
+      "bundle_role": "default"
+    },
+    "clean": {
+      "type": "data",
+      "dir": "in",
+      "width": "1",
+      "ctype": {"DATA": {
+          "Type": "null",
+          "Width": "1"
+        }},
+      "bundle_name": "clean",
+      "bundle_role": "default"
+    },
+    "clk": {
+      "type": "clock",
+      "ctype": {"CLK": {"Type": "bool"}},
+      "bundle_name": "clk",
+      "bundle_role": "default",
+      "reset": ""
+    },
+    "fire": {
+      "type": "data",
+      "dir": "in",
+      "width": "1",
+      "ctype": {"DATA": {
+          "Type": "null",
+          "Width": "1"
+        }},
+      "bundle_name": "fire",
+      "bundle_role": "default"
+    },
+    "length_r": {
+      "type": "data",
+      "dir": "in",
+      "width": "32",
+      "ctype": {"DATA": {
+          "Type": "null",
+          "Width": "32"
+        }},
+      "bundle_name": "length_r",
+      "bundle_role": "default"
+    },
+    "reset": {
+      "type": "reset",
+      "ctype": {"RST": {"Type": "bool"}},
+      "bundle_name": "reset",
+      "bundle_role": "default"
+    },
+    "select_r": {
+      "type": "data",
+      "dir": "in",
+      "width": "32",
+      "ctype": {"DATA": {
+          "Type": "null",
+          "Width": "32"
+        }},
+      "bundle_name": "select_r",
+      "bundle_role": "default"
+    },
+    "Wmem_address": {
+      "type": "data",
+      "dir": "out",
+      "width": "32",
+      "ctype": {"DATA": {
+          "Type": "integer unsigned",
+          "Width": "32"
+        }},
+      "bundle_name": "Wmem",
+      "bundle_role": "address"
+    },
+    "Wmem_datain": {
+      "type": "data",
+      "dir": "in",
+      "width": "128",
+      "ctype": {"DATA": {
+          "Type": "null",
+          "Width": "128"
+        }},
+      "bundle_name": "Wmem",
+      "bundle_role": "datain"
+    },
+    "Wmem_dataout": {
+      "type": "data",
+      "dir": "out",
+      "width": "128",
+      "ctype": {"DATA": {
+          "Type": "null",
+          "Width": "128"
+        }},
+      "bundle_name": "Wmem",
+      "bundle_role": "dataout"
+    },
+    "Wmem_req_din": {
+      "type": "data",
+      "dir": "out",
+      "width": "1",
+      "ctype": {"DATA": {
+          "Type": "null",
+          "Width": "1"
+        }},
+      "bundle_name": "Wmem",
+      "bundle_role": "req_din"
+    },
+    "Wmem_req_full_n": {
+      "type": "data",
+      "dir": "in",
+      "width": "1",
+      "ctype": {"DATA": {
+          "Type": "null",
+          "Width": "1"
+        }},
+      "bundle_name": "Wmem",
+      "bundle_role": "req_full_n"
+    },
+    "Wmem_req_write": {
+      "type": "data",
+      "dir": "out",
+      "width": "1",
+      "ctype": {"DATA": {
+          "Type": "null",
+          "Width": "1"
+        }},
+      "bundle_name": "Wmem",
+      "bundle_role": "req_write"
+    },
+    "Wmem_rsp_empty_n": {
+      "type": "data",
+      "dir": "in",
+      "width": "1",
+      "ctype": {"DATA": {
+          "Type": "null",
+          "Width": "1"
+        }},
+      "bundle_name": "Wmem",
+      "bundle_role": "rsp_empty_n"
+    },
+    "Wmem_rsp_read": {
+      "type": "data",
+      "dir": "out",
+      "width": "1",
+      "ctype": {"DATA": {
+          "Type": "null",
+          "Width": "1"
+        }},
+      "bundle_name": "Wmem",
+      "bundle_role": "rsp_read"
+    },
+    "Wmem_size": {
+      "type": "data",
+      "dir": "out",
+      "width": "32",
+      "ctype": {"DATA": {
+          "Type": "integer unsigned",
+          "Width": "32"
+        }},
+      "bundle_name": "Wmem",
+      "bundle_role": "size"
+    },
+    "Ws": {
+      "type": "ap_fifo",
+      "fifo_width": "128",
+      "fifo_type": "write",
+      "ctype": {
+        "WR_DATA": {
+          "Type": "null",
+          "Width": "128"
+        },
+        "FULL_N": {"Type": "bool"},
+        "WR_EN": {"Type": "bool"}
+      }
+    },
+    "Xbufmem_address": {
+      "type": "data",
+      "dir": "out",
+      "width": "32",
+      "ctype": {"DATA": {
+          "Type": "integer unsigned",
+          "Width": "32"
+        }},
+      "bundle_name": "Xbufmem",
+      "bundle_role": "address"
+    },
+    "Xbufmem_datain": {
+      "type": "data",
+      "dir": "in",
+      "width": "128",
+      "ctype": {"DATA": {
+          "Type": "null",
+          "Width": "128"
+        }},
+      "bundle_name": "Xbufmem",
+      "bundle_role": "datain"
+    },
+    "Xbufmem_dataout": {
+      "type": "data",
+      "dir": "out",
+      "width": "128",
+      "ctype": {"DATA": {
+          "Type": "null",
+          "Width": "128"
+        }},
+      "bundle_name": "Xbufmem",
+      "bundle_role": "dataout"
+    },
+    "Xbufmem_req_din": {
+      "type": "data",
+      "dir": "out",
+      "width": "1",
+      "ctype": {"DATA": {
+          "Type": "null",
+          "Width": "1"
+        }},
+      "bundle_name": "Xbufmem",
+      "bundle_role": "req_din"
+    },
+    "Xbufmem_req_full_n": {
+      "type": "data",
+      "dir": "in",
+      "width": "1",
+      "ctype": {"DATA": {
+          "Type": "null",
+          "Width": "1"
+        }},
+      "bundle_name": "Xbufmem",
+      "bundle_role": "req_full_n"
+    },
+    "Xbufmem_req_write": {
+      "type": "data",
+      "dir": "out",
+      "width": "1",
+      "ctype": {"DATA": {
+          "Type": "null",
+          "Width": "1"
+        }},
+      "bundle_name": "Xbufmem",
+      "bundle_role": "req_write"
+    },
+    "Xbufmem_rsp_empty_n": {
+      "type": "data",
+      "dir": "in",
+      "width": "1",
+      "ctype": {"DATA": {
+          "Type": "null",
+          "Width": "1"
+        }},
+      "bundle_name": "Xbufmem",
+      "bundle_role": "rsp_empty_n"
+    },
+    "Xbufmem_rsp_read": {
+      "type": "data",
+      "dir": "out",
+      "width": "1",
+      "ctype": {"DATA": {
+          "Type": "null",
+          "Width": "1"
+        }},
+      "bundle_name": "Xbufmem",
+      "bundle_role": "rsp_read"
+    },
+    "Xbufmem_size": {
+      "type": "data",
+      "dir": "out",
+      "width": "32",
+      "ctype": {"DATA": {
+          "Type": "integer unsigned",
+          "Width": "32"
+        }},
+      "bundle_name": "Xbufmem",
+      "bundle_role": "size"
+    },
+    "Xbufs": {
+      "type": "ap_fifo",
+      "fifo_width": "128",
+      "fifo_type": "write",
+      "ctype": {
+        "WR_DATA": {
+          "Type": "null",
+          "Width": "128"
+        },
+        "FULL_N": {"Type": "bool"},
+        "WR_EN": {"Type": "bool"}
+      }
+    },
+    "Xmem_address": {
+      "type": "data",
+      "dir": "out",
+      "width": "32",
+      "ctype": {"DATA": {
+          "Type": "integer unsigned",
+          "Width": "32"
+        }},
+      "bundle_name": "Xmem",
+      "bundle_role": "address"
+    },
+    "Xmem_datain": {
+      "type": "data",
+      "dir": "in",
+      "width": "128",
+      "ctype": {"DATA": {
+          "Type": "null",
+          "Width": "128"
+        }},
+      "bundle_name": "Xmem",
+      "bundle_role": "datain"
+    },
+    "Xmem_dataout": {
+      "type": "data",
+      "dir": "out",
+      "width": "128",
+      "ctype": {"DATA": {
+          "Type": "null",
+          "Width": "128"
+        }},
+      "bundle_name": "Xmem",
+      "bundle_role": "dataout"
+    },
+    "Xmem_req_din": {
+      "type": "data",
+      "dir": "out",
+      "width": "1",
+      "ctype": {"DATA": {
+          "Type": "null",
+          "Width": "1"
+        }},
+      "bundle_name": "Xmem",
+      "bundle_role": "req_din"
+    },
+    "Xmem_req_full_n": {
+      "type": "data",
+      "dir": "in",
+      "width": "1",
+      "ctype": {"DATA": {
+          "Type": "null",
+          "Width": "1"
+        }},
+      "bundle_name": "Xmem",
+      "bundle_role": "req_full_n"
+    },
+    "Xmem_req_write": {
+      "type": "data",
+      "dir": "out",
+      "width": "1",
+      "ctype": {"DATA": {
+          "Type": "null",
+          "Width": "1"
+        }},
+      "bundle_name": "Xmem",
+      "bundle_role": "req_write"
+    },
+    "Xmem_rsp_empty_n": {
+      "type": "data",
+      "dir": "in",
+      "width": "1",
+      "ctype": {"DATA": {
+          "Type": "null",
+          "Width": "1"
+        }},
+      "bundle_name": "Xmem",
+      "bundle_role": "rsp_empty_n"
+    },
+    "Xmem_rsp_read": {
+      "type": "data",
+      "dir": "out",
+      "width": "1",
+      "ctype": {"DATA": {
+          "Type": "null",
+          "Width": "1"
+        }},
+      "bundle_name": "Xmem",
+      "bundle_role": "rsp_read"
+    },
+    "Xmem_size": {
+      "type": "data",
+      "dir": "out",
+      "width": "32",
+      "ctype": {"DATA": {
+          "Type": "integer unsigned",
+          "Width": "32"
+        }},
+      "bundle_name": "Xmem",
+      "bundle_role": "size"
+    },
+    "Xs": {
+      "type": "ap_fifo",
+      "fifo_width": "128",
+      "fifo_type": "write",
+      "ctype": {
+        "WR_DATA": {
+          "Type": "null",
+          "Width": "128"
+        },
+        "FULL_N": {"Type": "bool"},
+        "WR_EN": {"Type": "bool"}
+      }
+    },
+    "Ymem_address": {
+      "type": "data",
+      "dir": "out",
+      "width": "32",
+      "ctype": {"DATA": {
+          "Type": "integer unsigned",
+          "Width": "32"
+        }},
+      "bundle_name": "Ymem",
+      "bundle_role": "address"
+    },
+    "Ymem_datain": {
+      "type": "data",
+      "dir": "in",
+      "width": "128",
+      "ctype": {"DATA": {
+          "Type": "null",
+          "Width": "128"
+        }},
+      "bundle_name": "Ymem",
+      "bundle_role": "datain"
+    },
+    "Ymem_dataout": {
+      "type": "data",
+      "dir": "out",
+      "width": "128",
+      "ctype": {"DATA": {
+          "Type": "null",
+          "Width": "128"
+        }},
+      "bundle_name": "Ymem",
+      "bundle_role": "dataout"
+    },
+    "Ymem_req_din": {
+      "type": "data",
+      "dir": "out",
+      "width": "1",
+      "ctype": {"DATA": {
+          "Type": "null",
+          "Width": "1"
+        }},
+      "bundle_name": "Ymem",
+      "bundle_role": "req_din"
+    },
+    "Ymem_req_full_n": {
+      "type": "data",
+      "dir": "in",
+      "width": "1",
+      "ctype": {"DATA": {
+          "Type": "null",
+          "Width": "1"
+        }},
+      "bundle_name": "Ymem",
+      "bundle_role": "req_full_n"
+    },
+    "Ymem_req_write": {
+      "type": "data",
+      "dir": "out",
+      "width": "1",
+      "ctype": {"DATA": {
+          "Type": "null",
+          "Width": "1"
+        }},
+      "bundle_name": "Ymem",
+      "bundle_role": "req_write"
+    },
+    "Ymem_rsp_empty_n": {
+      "type": "data",
+      "dir": "in",
+      "width": "1",
+      "ctype": {"DATA": {
+          "Type": "null",
+          "Width": "1"
+        }},
+      "bundle_name": "Ymem",
+      "bundle_role": "rsp_empty_n"
+    },
+    "Ymem_rsp_read": {
+      "type": "data",
+      "dir": "out",
+      "width": "1",
+      "ctype": {"DATA": {
+          "Type": "null",
+          "Width": "1"
+        }},
+      "bundle_name": "Ymem",
+      "bundle_role": "rsp_read"
+    },
+    "Ymem_size": {
+      "type": "data",
+      "dir": "out",
+      "width": "32",
+      "ctype": {"DATA": {
+          "Type": "integer unsigned",
+          "Width": "32"
+        }},
+      "bundle_name": "Ymem",
+      "bundle_role": "size"
+    },
+    "Ys": {
+      "type": "ap_fifo",
+      "fifo_width": "128",
+      "fifo_type": "read",
+      "ctype": {
+        "RD_DATA": {
+          "Type": "null",
+          "Width": "128"
+        },
+        "EMPTY_N": {"Type": "bool"},
+        "RD_EN": {"Type": "bool"}
+      }
+    }
+  },
+  "PcoreInterfaces": {
+    "aclk": {
+      "type": "clock",
+      "buses": "M_AXI_XMEM",
+      "is_pcore_adaptor": "1"
+    },
+    "aresetn": {
+      "type": "reset",
+      "is_pcore_adaptor": "1"
+    },
+    "M_AXI_XMEM": {
+      "type": "pcore_axi4",
+      "mode": "master",
+      "data_width": "128",
+      "port_prefix": "m_axi_Xmem",
+      "param_prefix": "C_M_AXI_XMEM",
+      "is_pcore_adaptor": "1"
+    }
+  },
+  "RtlPorts": {
+    "clk": {
+      "dir": "in",
+      "width": "1"
+    },
+    "reset": {
+      "dir": "in",
+      "width": "1"
+    },
+    "Xmem_req_din": {
+      "dir": "out",
+      "width": "1"
+    },
+    "Xmem_req_full_n": {
+      "dir": "in",
+      "width": "1"
+    },
+    "Xmem_req_write": {
+      "dir": "out",
+      "width": "1"
+    },
+    "Xmem_rsp_empty_n": {
+      "dir": "in",
+      "width": "1"
+    },
+    "Xmem_rsp_read": {
+      "dir": "out",
+      "width": "1"
+    },
+    "Xmem_address": {
+      "dir": "out",
+      "width": "32"
+    },
+    "Xmem_datain": {
+      "dir": "in",
+      "width": "128"
+    },
+    "Xmem_dataout": {
+      "dir": "out",
+      "width": "128"
+    },
+    "Xmem_size": {
+      "dir": "out",
+      "width": "32"
+    },
+    "Ymem_req_din": {
+      "dir": "out",
+      "width": "1"
+    },
+    "Ymem_req_full_n": {
+      "dir": "in",
+      "width": "1"
+    },
+    "Ymem_req_write": {
+      "dir": "out",
+      "width": "1"
+    },
+    "Ymem_rsp_empty_n": {
+      "dir": "in",
+      "width": "1"
+    },
+    "Ymem_rsp_read": {
+      "dir": "out",
+      "width": "1"
+    },
+    "Ymem_address": {
+      "dir": "out",
+      "width": "32"
+    },
+    "Ymem_datain": {
+      "dir": "in",
+      "width": "128"
+    },
+    "Ymem_dataout": {
+      "dir": "out",
+      "width": "128"
+    },
+    "Ymem_size": {
+      "dir": "out",
+      "width": "32"
+    },
+    "Wmem_req_din": {
+      "dir": "out",
+      "width": "1"
+    },
+    "Wmem_req_full_n": {
+      "dir": "in",
+      "width": "1"
+    },
+    "Wmem_req_write": {
+      "dir": "out",
+      "width": "1"
+    },
+    "Wmem_rsp_empty_n": {
+      "dir": "in",
+      "width": "1"
+    },
+    "Wmem_rsp_read": {
+      "dir": "out",
+      "width": "1"
+    },
+    "Wmem_address": {
+      "dir": "out",
+      "width": "32"
+    },
+    "Wmem_datain": {
+      "dir": "in",
+      "width": "128"
+    },
+    "Wmem_dataout": {
+      "dir": "out",
+      "width": "128"
+    },
+    "Wmem_size": {
+      "dir": "out",
+      "width": "32"
+    },
+    "Xbufmem_req_din": {
+      "dir": "out",
+      "width": "1"
+    },
+    "Xbufmem_req_full_n": {
+      "dir": "in",
+      "width": "1"
+    },
+    "Xbufmem_req_write": {
+      "dir": "out",
+      "width": "1"
+    },
+    "Xbufmem_rsp_empty_n": {
+      "dir": "in",
+      "width": "1"
+    },
+    "Xbufmem_rsp_read": {
+      "dir": "out",
+      "width": "1"
+    },
+    "Xbufmem_address": {
+      "dir": "out",
+      "width": "32"
+    },
+    "Xbufmem_datain": {
+      "dir": "in",
+      "width": "128"
+    },
+    "Xbufmem_dataout": {
+      "dir": "out",
+      "width": "128"
+    },
+    "Xbufmem_size": {
+      "dir": "out",
+      "width": "32"
+    },
+    "Xs_din": {
+      "dir": "out",
+      "width": "128"
+    },
+    "Xs_full_n": {
+      "dir": "in",
+      "width": "1"
+    },
+    "Xs_write": {
+      "dir": "out",
+      "width": "1"
+    },
+    "Ws_din": {
+      "dir": "out",
+      "width": "128"
+    },
+    "Ws_full_n": {
+      "dir": "in",
+      "width": "1"
+    },
+    "Ws_write": {
+      "dir": "out",
+      "width": "1"
+    },
+    "Xbufs_din": {
+      "dir": "out",
+      "width": "128"
+    },
+    "Xbufs_full_n": {
+      "dir": "in",
+      "width": "1"
+    },
+    "Xbufs_write": {
+      "dir": "out",
+      "width": "1"
+    },
+    "Ys_dout": {
+      "dir": "in",
+      "width": "128"
+    },
+    "Ys_empty_n": {
+      "dir": "in",
+      "width": "1"
+    },
+    "Ys_read": {
+      "dir": "out",
+      "width": "1"
+    },
+    "address": {
+      "dir": "in",
+      "width": "32"
+    },
+    "length_r": {
+      "dir": "in",
+      "width": "32"
+    },
+    "select_r": {
+      "dir": "in",
+      "width": "32"
+    },
+    "add": {
+      "dir": "in",
+      "width": "1"
+    },
+    "fire": {
+      "dir": "in",
+      "width": "1"
+    },
+    "clean": {
+      "dir": "in",
+      "width": "1"
+    }
+  },
+  "ModuleInfo": {
+    "Hierarchy": {
+      "ModuleName": "cnna_dma",
+      "Instances": [{
+          "ModuleName": "cnna_dma_Xthread",
+          "InstanceName": "grp_cnna_dma_Xthread_fu_118"
+        }]
+    },
+    "Info": {
+      "cnna_dma_Xthread": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "1",
+        "isPipelined": "0",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      },
+      "cnna_dma": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "1",
+        "isPipelined": "0",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      }
+    },
+    "Metrics": {
+      "cnna_dma_Xthread": {
+        "Latency": {
+          "LatencyBest": "8",
+          "LatencyAvg": "8",
+          "LatencyWorst": "8",
+          "PipelineII": "8",
+          "PipelineDepth": "",
+          "PipelineType": "none"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "1.25",
+          "Estimate": "8.750"
+        },
+        "Loops": [{
+            "Name": "X_ctrl_loop",
+            "TripCount": "inf",
+            "Latency": "7",
+            "PipelineII": "",
+            "PipelineDepth": "7"
+          }],
+        "Area": {
+          "FF": "8",
+          "LUT": "41",
+          "BRAM_18K": "0",
+          "DSP48E": "0",
+          "URAM": "0"
+        }
+      },
+      "cnna_dma": {
+        "Latency": {
+          "LatencyBest": "0",
+          "LatencyAvg": "5",
+          "LatencyWorst": "9",
+          "PipelineIIMin": "1",
+          "PipelineIIMax": "10",
+          "PipelineII": "1 ~ 10",
+          "PipelineDepth": "",
+          "PipelineType": "none"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "1.25",
+          "Estimate": "8.750"
+        },
+        "Area": {
+          "FF": "8",
+          "LUT": "41",
+          "BRAM_18K": "0",
+          "DSP48E": "0",
+          "URAM": "0"
+        }
+      }
+    }
+  },
+  "Sdx": {
+    "Target": "none",
+    "ProfileOption": "0",
+    "ProfileType": "none",
+    "XO": "",
+    "KernelName": "cnna_dma",
+    "EnableXoSwEmu": "1"
+  },
+  "GenData": {
+    "DataVersion": "0.2",
+    "Time": "2019-11-01 13:49:19 CET",
+    "ToolName": "vivado_hls",
+    "ToolVersion": "2019.1"
+  }
+}

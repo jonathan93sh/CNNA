@@ -1,0 +1,268 @@
+
+
+================================================================
+== Vivado HLS Report for 'p_sc_stream_merge_raw_thread_sc_stream_merge_raw'
+================================================================
+* Date:           Fri Jan 10 01:55:13 2020
+
+* Version:        2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)
+* Project:        CNNAccel
+* Solution:       default
+* Product family: zynquplus
+* Target device:  xczu3eg-sbva484-1-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     8.091|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    3|    3|    3|    3|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+        |          |  Latency  | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name| min | max |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+        |- Loop 1  |    2|    2|         2|          -|          -|  inf |    no    |
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+-----+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  | URAM|
++-----------------+---------+-------+--------+-------+-----+
+|DSP              |        -|      -|       -|      -|    -|
+|Expression       |        -|      -|       0|     41|    -|
+|FIFO             |        -|      -|       -|      -|    -|
+|Instance         |        -|      -|       -|      -|    -|
+|Memory           |        -|      -|       -|      -|    -|
+|Multiplexer      |        -|      -|       -|    627|    -|
+|Register         |        -|      -|     325|      -|    -|
++-----------------+---------+-------+--------+-------+-----+
+|Total            |        0|      0|     325|    668|    0|
++-----------------+---------+-------+--------+-------+-----+
+|Available        |      432|    360|  141120|  70560|    0|
++-----------------+---------+-------+--------+-------+-----+
+|Utilization (%)  |        0|      0|   ~0   |   ~0  |    0|
++-----------------+---------+-------+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP48E: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-------------------------------+----------+-------+---+----+------------+------------+
+    |         Variable Name         | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-------------------------------+----------+-------+---+----+------------+------------+
+    |ap_block_state3                |    and   |      0|  0|   2|           1|           1|
+    |io_acc_block_signal_op227      |    and   |      0|  0|   2|           1|           1|
+    |p_emptyn_0_nbread_fu_186_p4_0  |    and   |      0|  0|   2|           1|           1|
+    |p_emptyn_1_nbread_fu_196_p4_0  |    and   |      0|  0|   2|           1|           1|
+    |p_emptyn_2_nbread_fu_206_p4_0  |    and   |      0|  0|   2|           1|           1|
+    |p_emptyn_3_nbread_fu_216_p4_0  |    and   |      0|  0|   2|           1|           1|
+    |p_emptyn_4_nbread_fu_226_p4_0  |    and   |      0|  0|   2|           1|           1|
+    |p_emptyn_5_nbread_fu_236_p4_0  |    and   |      0|  0|   2|           1|           1|
+    |p_emptyn_6_nbread_fu_246_p4_0  |    and   |      0|  0|   2|           1|           1|
+    |p_emptyn_7_nbread_fu_256_p4_0  |    and   |      0|  0|   2|           1|           1|
+    |icmp_ln883_fu_1775_p2          |   icmp   |      0|  0|  11|           8|           2|
+    |or_ln57_fu_1073_p2             |    or    |      0|  0|   2|           1|           1|
+    |p_Val2_s_fu_1781_p3            |  select  |      0|  0|   8|           1|           1|
+    +-------------------------------+----------+-------+---+----+------------+------------+
+    |Total                          |          |      0|  0|  41|          20|          14|
+    +-------------------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +----------------------------------------+----+-----------+-----+-----------+
+    |                  Name                  | LUT| Input Size| Bits| Total Bits|
+    +----------------------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                               |  15|          3|    1|          3|
+    |ap_phi_mux_p_085_1_be_phi_fu_875_p4     |  15|          3|    8|         24|
+    |ap_phi_mux_p_085_5_0_phi_fu_383_p8      |  15|          3|    8|         24|
+    |ap_phi_mux_p_085_5_1_phi_fu_463_p8      |  15|          3|    8|         24|
+    |ap_phi_mux_p_085_5_2_phi_fu_525_p8      |  15|          3|    8|         24|
+    |ap_phi_mux_p_085_5_3_phi_fu_590_p8      |  15|          3|    8|         24|
+    |ap_phi_mux_p_085_5_5_phi_fu_715_p8      |  15|          3|    8|         24|
+    |ap_phi_mux_p_085_5_6_phi_fu_777_p8      |  15|          3|    8|         24|
+    |ap_phi_mux_p_085_5_7_phi_fu_845_p8      |  15|          3|    8|         24|
+    |ap_phi_mux_p_095_1_be_phi_fu_862_p4     |  15|          3|    8|         24|
+    |ap_phi_mux_p_095_5_0_phi_fu_368_p8      |  15|          3|    8|         24|
+    |ap_phi_mux_p_095_5_1_phi_fu_448_p8      |  15|          3|    8|         24|
+    |ap_phi_mux_p_095_5_2_phi_fu_510_p8      |  15|          3|    8|         24|
+    |ap_phi_mux_p_095_5_3_phi_fu_574_p8      |  15|          3|    8|         24|
+    |ap_phi_mux_p_095_5_5_phi_fu_700_p8      |  15|          3|    8|         24|
+    |ap_phi_mux_p_095_5_6_phi_fu_762_p8      |  15|          3|    8|         24|
+    |ap_phi_mux_p_095_5_7_phi_fu_830_p8      |  15|          3|    8|         24|
+    |ap_phi_mux_tlast_0_be_phi_fu_887_p4     |  15|          3|    1|          3|
+    |ap_phi_mux_tmp_data_V_phi_fu_812_p8     |  15|          3|  128|        384|
+    |ap_phi_mux_tmp_out_0_2_0_phi_fu_352_p8  |  15|          3|  128|        384|
+    |ap_phi_mux_tmp_out_0_2_1_phi_fu_432_p8  |  15|          3|  128|        384|
+    |ap_phi_mux_tmp_out_0_2_2_phi_fu_494_p8  |  15|          3|  128|        384|
+    |ap_phi_mux_tmp_out_0_2_3_phi_fu_557_p8  |  15|          3|  128|        384|
+    |ap_phi_mux_tmp_out_0_2_5_phi_fu_684_p8  |  15|          3|  128|        384|
+    |ap_phi_mux_tmp_out_0_2_6_phi_fu_746_p8  |  15|          3|  128|        384|
+    |ap_phi_mux_tmp_out_2_4_0_phi_fu_337_p8  |  21|          4|   16|         64|
+    |ap_phi_mux_tmp_out_2_4_1_phi_fu_417_p8  |  21|          4|   16|         64|
+    |ap_phi_mux_tmp_out_2_4_2_phi_fu_479_p8  |  21|          4|   16|         64|
+    |ap_phi_mux_tmp_out_2_4_3_phi_fu_541_p8  |  21|          4|   16|         64|
+    |ap_phi_mux_tmp_out_2_4_5_phi_fu_669_p8  |  21|          4|   16|         64|
+    |ap_phi_mux_tmp_out_2_4_6_phi_fu_731_p8  |  21|          4|   16|         64|
+    |ap_phi_mux_tmp_tkeep_V_phi_fu_794_p8    |  21|          4|   16|         64|
+    |dout_0_blk_n                            |   9|          2|    1|          2|
+    |dout_1_blk_n                            |   9|          2|    1|          2|
+    |dout_2_blk_n                            |   9|          2|    1|          2|
+    |p_085_1_reg_312                         |   9|          2|    8|         16|
+    |p_085_5_4_reg_650                       |   9|          2|    8|         16|
+    |p_095_1_reg_301                         |   9|          2|    8|         16|
+    |p_095_5_4_reg_635                       |   9|          2|    8|         16|
+    |tlast_0_reg_323                         |   9|          2|    1|          2|
+    |tmp_out_0_2_4_reg_619                   |   9|          2|  128|        256|
+    |tmp_out_2_4_4_reg_604                   |  15|          3|   16|         48|
+    |tmp_tlast_V_reg_396                     |   9|          2|    1|          2|
+    +----------------------------------------+----+-----------+-----+-----------+
+    |Total                                   | 627|        126| 1319|       3904|
+    +----------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-----------------------+-----+----+-----+-----------+
+    |          Name         |  FF | LUT| Bits| Const Bits|
+    +-----------------------+-----+----+-----+-----------+
+    |ap_CS_fsm              |    3|   0|    3|          0|
+    |p_085_1_reg_312        |    8|   0|    8|          0|
+    |p_085_5_4_reg_650      |    8|   0|    8|          0|
+    |p_095_1_reg_301        |    8|   0|    8|          0|
+    |p_095_5_4_reg_635      |    8|   0|    8|          0|
+    |tlast_0_reg_323        |    1|   0|    1|          0|
+    |tmp_out_0_07_reg_290   |  128|   0|  128|          0|
+    |tmp_out_0_2_4_reg_619  |  128|   0|  128|          0|
+    |tmp_out_2_0_reg_279    |   16|   0|   16|          0|
+    |tmp_out_2_4_4_reg_604  |   16|   0|   16|          0|
+    |tmp_tlast_V_reg_396    |    1|   0|    1|          0|
+    +-----------------------+-----+----+-----+-----------+
+    |Total                  |  325|   0|  325|          0|
+    +-----------------------+-----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++----------------+-----+-----+------------+---------------------------------------------------------+--------------+
+|    RTL Ports   | Dir | Bits|  Protocol  |                      Source Object                      |    C Type    |
++----------------+-----+-----+------------+---------------------------------------------------------+--------------+
+|ap_clk          |  in |    1| ap_ctrl_hs | _sc_stream_merge_raw<16, 8>::thread_sc_stream_merge_raw | return value |
+|ap_rst          |  in |    1| ap_ctrl_hs | _sc_stream_merge_raw<16, 8>::thread_sc_stream_merge_raw | return value |
+|din_0_dout      |  in |   16|   ap_fifo  |                          din_0                          |    pointer   |
+|din_0_empty_n   |  in |    1|   ap_fifo  |                          din_0                          |    pointer   |
+|din_0_read      | out |    1|   ap_fifo  |                          din_0                          |    pointer   |
+|din_1_dout      |  in |   16|   ap_fifo  |                          din_1                          |    pointer   |
+|din_1_empty_n   |  in |    1|   ap_fifo  |                          din_1                          |    pointer   |
+|din_1_read      | out |    1|   ap_fifo  |                          din_1                          |    pointer   |
+|din_2_dout      |  in |   16|   ap_fifo  |                          din_2                          |    pointer   |
+|din_2_empty_n   |  in |    1|   ap_fifo  |                          din_2                          |    pointer   |
+|din_2_read      | out |    1|   ap_fifo  |                          din_2                          |    pointer   |
+|din_3_dout      |  in |   16|   ap_fifo  |                          din_3                          |    pointer   |
+|din_3_empty_n   |  in |    1|   ap_fifo  |                          din_3                          |    pointer   |
+|din_3_read      | out |    1|   ap_fifo  |                          din_3                          |    pointer   |
+|din_4_dout      |  in |   16|   ap_fifo  |                          din_4                          |    pointer   |
+|din_4_empty_n   |  in |    1|   ap_fifo  |                          din_4                          |    pointer   |
+|din_4_read      | out |    1|   ap_fifo  |                          din_4                          |    pointer   |
+|din_5_dout      |  in |   16|   ap_fifo  |                          din_5                          |    pointer   |
+|din_5_empty_n   |  in |    1|   ap_fifo  |                          din_5                          |    pointer   |
+|din_5_read      | out |    1|   ap_fifo  |                          din_5                          |    pointer   |
+|din_6_dout      |  in |   16|   ap_fifo  |                          din_6                          |    pointer   |
+|din_6_empty_n   |  in |    1|   ap_fifo  |                          din_6                          |    pointer   |
+|din_6_read      | out |    1|   ap_fifo  |                          din_6                          |    pointer   |
+|din_7_dout      |  in |   16|   ap_fifo  |                          din_7                          |    pointer   |
+|din_7_empty_n   |  in |    1|   ap_fifo  |                          din_7                          |    pointer   |
+|din_7_read      | out |    1|   ap_fifo  |                          din_7                          |    pointer   |
+|din_8_dout      |  in |    1|   ap_fifo  |                          din_8                          |    pointer   |
+|din_8_empty_n   |  in |    1|   ap_fifo  |                          din_8                          |    pointer   |
+|din_8_read      | out |    1|   ap_fifo  |                          din_8                          |    pointer   |
+|din_9_dout      |  in |    1|   ap_fifo  |                          din_9                          |    pointer   |
+|din_9_empty_n   |  in |    1|   ap_fifo  |                          din_9                          |    pointer   |
+|din_9_read      | out |    1|   ap_fifo  |                          din_9                          |    pointer   |
+|din_10_dout     |  in |    1|   ap_fifo  |                          din_10                         |    pointer   |
+|din_10_empty_n  |  in |    1|   ap_fifo  |                          din_10                         |    pointer   |
+|din_10_read     | out |    1|   ap_fifo  |                          din_10                         |    pointer   |
+|din_11_dout     |  in |    1|   ap_fifo  |                          din_11                         |    pointer   |
+|din_11_empty_n  |  in |    1|   ap_fifo  |                          din_11                         |    pointer   |
+|din_11_read     | out |    1|   ap_fifo  |                          din_11                         |    pointer   |
+|din_12_dout     |  in |    1|   ap_fifo  |                          din_12                         |    pointer   |
+|din_12_empty_n  |  in |    1|   ap_fifo  |                          din_12                         |    pointer   |
+|din_12_read     | out |    1|   ap_fifo  |                          din_12                         |    pointer   |
+|din_13_dout     |  in |    1|   ap_fifo  |                          din_13                         |    pointer   |
+|din_13_empty_n  |  in |    1|   ap_fifo  |                          din_13                         |    pointer   |
+|din_13_read     | out |    1|   ap_fifo  |                          din_13                         |    pointer   |
+|din_14_dout     |  in |    1|   ap_fifo  |                          din_14                         |    pointer   |
+|din_14_empty_n  |  in |    1|   ap_fifo  |                          din_14                         |    pointer   |
+|din_14_read     | out |    1|   ap_fifo  |                          din_14                         |    pointer   |
+|din_15_dout     |  in |    1|   ap_fifo  |                          din_15                         |    pointer   |
+|din_15_empty_n  |  in |    1|   ap_fifo  |                          din_15                         |    pointer   |
+|din_15_read     | out |    1|   ap_fifo  |                          din_15                         |    pointer   |
+|din_16_dout     |  in |    2|   ap_fifo  |                          din_16                         |    pointer   |
+|din_16_empty_n  |  in |    1|   ap_fifo  |                          din_16                         |    pointer   |
+|din_16_read     | out |    1|   ap_fifo  |                          din_16                         |    pointer   |
+|din_17_dout     |  in |    2|   ap_fifo  |                          din_17                         |    pointer   |
+|din_17_empty_n  |  in |    1|   ap_fifo  |                          din_17                         |    pointer   |
+|din_17_read     | out |    1|   ap_fifo  |                          din_17                         |    pointer   |
+|din_18_dout     |  in |    2|   ap_fifo  |                          din_18                         |    pointer   |
+|din_18_empty_n  |  in |    1|   ap_fifo  |                          din_18                         |    pointer   |
+|din_18_read     | out |    1|   ap_fifo  |                          din_18                         |    pointer   |
+|din_19_dout     |  in |    2|   ap_fifo  |                          din_19                         |    pointer   |
+|din_19_empty_n  |  in |    1|   ap_fifo  |                          din_19                         |    pointer   |
+|din_19_read     | out |    1|   ap_fifo  |                          din_19                         |    pointer   |
+|din_20_dout     |  in |    2|   ap_fifo  |                          din_20                         |    pointer   |
+|din_20_empty_n  |  in |    1|   ap_fifo  |                          din_20                         |    pointer   |
+|din_20_read     | out |    1|   ap_fifo  |                          din_20                         |    pointer   |
+|din_21_dout     |  in |    2|   ap_fifo  |                          din_21                         |    pointer   |
+|din_21_empty_n  |  in |    1|   ap_fifo  |                          din_21                         |    pointer   |
+|din_21_read     | out |    1|   ap_fifo  |                          din_21                         |    pointer   |
+|din_22_dout     |  in |    2|   ap_fifo  |                          din_22                         |    pointer   |
+|din_22_empty_n  |  in |    1|   ap_fifo  |                          din_22                         |    pointer   |
+|din_22_read     | out |    1|   ap_fifo  |                          din_22                         |    pointer   |
+|din_23_dout     |  in |    2|   ap_fifo  |                          din_23                         |    pointer   |
+|din_23_empty_n  |  in |    1|   ap_fifo  |                          din_23                         |    pointer   |
+|din_23_read     | out |    1|   ap_fifo  |                          din_23                         |    pointer   |
+|dout_0_din      | out |  128|   ap_fifo  |                          dout_0                         |    pointer   |
+|dout_0_full_n   |  in |    1|   ap_fifo  |                          dout_0                         |    pointer   |
+|dout_0_write    | out |    1|   ap_fifo  |                          dout_0                         |    pointer   |
+|dout_1_din      | out |    1|   ap_fifo  |                          dout_1                         |    pointer   |
+|dout_1_full_n   |  in |    1|   ap_fifo  |                          dout_1                         |    pointer   |
+|dout_1_write    | out |    1|   ap_fifo  |                          dout_1                         |    pointer   |
+|dout_2_din      | out |   16|   ap_fifo  |                          dout_2                         |    pointer   |
+|dout_2_full_n   |  in |    1|   ap_fifo  |                          dout_2                         |    pointer   |
+|dout_2_write    | out |    1|   ap_fifo  |                          dout_2                         |    pointer   |
++----------------+-----+-----+------------+---------------------------------------------------------+--------------+
+

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [XFORM 203-542] Cannot flatten a loop nest 'imfilter_thread_loop' (../hwcore/dsp/imfilter.cpp:34:2) in function 'imfilter::imfilter_thread' : &#xD;&#xA;&#xD;&#xA;the outer loop is not a perfect loop because there is nontrivial logic in the loop header." projectName="hls_imfilter" solutionName="solution1" date="2019-04-28T13:44:02.643+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] 'imfilter_thread_loop' (../hwcore/dsp/imfilter.cpp:34:2) in function 'imfilter::imfilter_thread' is an infinite loop." projectName="hls_imfilter" solutionName="solution1" date="2019-04-28T13:44:01.963+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-503] Ignored unroll directive 'Loop-2' (./../.\hwcore/hw/circularlinebuffer.h:49) in function 'imfilter::imfilter_thread': multiple loop unroll directives in one loop, use the first one and ignore the rest." projectName="hls_imfilter" solutionName="solution1" date="2019-04-28T13:44:00.451+0200" type="Warning"/>
+        <logs message="WARNING: [SYNCHK 200-23] ./../.\hwcore/hf/helperlib.h:146: variable-indexed range selection may cause suboptimal QoR." projectName="hls_imfilter" solutionName="solution1" date="2019-04-28T13:44:00.063+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-503] Ignored unroll directive 'window_sliding_loop' (../hwcore/dsp/imfilter.cpp:97) in function 'imfilter::imfilter_thread()': multiple loop unroll directives in one loop, use the first one and ignore the rest." projectName="hls_imfilter" solutionName="solution1" date="2019-04-28T13:43:59.499+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-503] Ignored unroll directive 'Loop-4.2.1.3' (../hwcore/dsp/imfilter.cpp:86) in function 'imfilter::imfilter_thread()': multiple loop unroll directives in one loop, use the first one and ignore the rest." projectName="hls_imfilter" solutionName="solution1" date="2019-04-28T13:43:59.232+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-503] Ignored unroll directive 'Loop-4.2.1.2' (../hwcore/dsp/imfilter.cpp:79) in function 'imfilter::imfilter_thread()': multiple loop unroll directives in one loop, use the first one and ignore the rest." projectName="hls_imfilter" solutionName="solution1" date="2019-04-28T13:43:59.226+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-503] Ignored unroll directive 'Loop-4.2.1.1' (../hwcore/dsp/imfilter.cpp:64) in function 'imfilter::imfilter_thread()': multiple loop unroll directives in one loop, use the first one and ignore the rest." projectName="hls_imfilter" solutionName="solution1" date="2019-04-28T13:43:59.221+0200" type="Warning"/>
+        <logs message="WARNING: [HLS 200-41] Resource core 'AXI4LiteS' on port 'Win' is deprecated. Please use the interface directive to specify the AXI interface." projectName="hls_imfilter" solutionName="solution1" date="2019-04-28T13:43:58.045+0200" type="Warning"/>
+        <logs message="WARNING: [HLS 200-41] Resource core 'AXI4Stream' on port '&amp;dout' is deprecated. Please use the interface directive to specify the AXI interface." projectName="hls_imfilter" solutionName="solution1" date="2019-04-28T13:43:35.335+0200" type="Warning"/>
+        <logs message="WARNING: [HLS 200-41] Resource core 'AXI4Stream' on port '&amp;din' is deprecated. Please use the interface directive to specify the AXI interface." projectName="hls_imfilter" solutionName="solution1" date="2019-04-28T13:43:35.330+0200" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] In file included from ../hwcore/dsp/imfilter.cpp:1:&#xD;&#xA;In file included from ../hwcore/dsp/imfilter.cpp:3:&#xD;&#xA;In file included from ./../.\hwcore/dsp/imfilter.h:7:&#xD;&#xA;In file included from ./../.\hwcore/pipes/pipes.h:4:&#xD;&#xA;./../.\hwcore/pipes/data_types.h:116:23: warning: default template arguments for a function template are a C++11 extension [-Wc++11-extensions]&#xD;&#xA;  template&lt;int pW,int pkeepW=8>&#xD;&#xA;                      ^      ~&#xD;&#xA;./../.\hwcore/pipes/data_types.h:342:26: warning: alias declarations are a C++11 extension [-Wc++11-extensions]&#xD;&#xA;using sc_data_stream_t = typename SC_DATA_STREAM_T_trait&lt;W>::interface_T;&#xD;&#xA;                         ^&#xD;&#xA;In file included from ../hwcore/dsp/imfilter.cpp:1:&#xD;&#xA;In file included from ../hwcore/dsp/imfilter.cpp:3:&#xD;&#xA;./../.\hwcore/dsp/imfilter.h:51:10: warning: 'typename' occurs outside of a template [-Wc++11-extensions]&#xD;&#xA; typedef typename hwcore::pipes::sc_data_stream_t&lt;32> data_t;&#xD;&#xA;         ^~~~~~~~&#xD;&#xA;In file included from ../hwcore/dsp/imfilter.cpp:1:&#xD;&#xA;../hwcore/dsp/imfilter.cpp:74:13: warning: 'template' keyword outside of a template [-Wc++11-extensions]&#xD;&#xA;     buffer.template exec_fixed&lt;16>((fixed_X_t)tmp_in, c, window_tmp);&#xD;&#xA;            ^~~~~~~~&#xD;&#xA;4 warnings generated." projectName="hls_imfilter" solutionName="solution1" date="2019-04-28T13:43:35.324+0200" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

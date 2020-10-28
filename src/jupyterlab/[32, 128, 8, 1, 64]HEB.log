@@ -1,0 +1,20 @@
+make: Entering directory '/home/jonathan/git/CNNAccel/src'
+export LD_LIBRARY_PATH=/usr/local/systemc-2.3.3/lib-linux64/:;cd build/3178538767324/src/hwcore/tb/cnn/; /home/jonathan/git/CNNAccel/src/build/3178538767324/src/hwcore/tb/cnn/main_cnn.cpp.run > /home/jonathan/git/CNNAccel/src/build/3178538767324/src/hwcore/tb/cnn/main_cnn.cpp.run.log; RET=$?;if [ $RET -eq 0 ]; then tail -n10 /home/jonathan/git/CNNAccel/src/build/3178538767324/src/hwcore/tb/cnn/main_cnn.cpp.run.log; echo "[FINISH - OK] build/3178538767324/src/hwcore/tb/cnn/main_cnn.cpp.ok"; else tail -n100 /home/jonathan/git/CNNAccel/src/build/3178538767324/src/hwcore/tb/cnn/main_cnn.cpp.run.log; echo "[FINISH - ERROR] build/3178538767324/src/hwcore/tb/cnn/main_cnn.cpp.ok"; fi; echo "See full log at: build/3178538767324/src/hwcore/tb/cnn/main_cnn.cpp.run.log" ;sleep 0.01;return $RET
+
+        SystemC 2.3.3-Accellera --- Sep 29 2019 13:59:20
+        Copyright (c) 1996-2018 by all Contributors,
+        ALL RIGHTS RESERVED
+[0,5] : [exp <==> got] = [-2.29843 <==> -2]
+[0,6] : [exp <==> got] = [-9.45307 <==> -2]
+[0,7] : [exp <==> got] = [-1.53159 <==> -1.53159]
+mse: 5.19632
+done
+
+Info: /OSCI/SystemC: Simulation stopped by user.
+INFO: end time is: 12531757500 ps, and max time is: 250 ms
+INFO: Post-processing tb_CNN
+INFO: Simulation tb_CNN PASSED with 0 errors
+[FINISH - OK] build/3178538767324/src/hwcore/tb/cnn/main_cnn.cpp.ok
+See full log at: build/3178538767324/src/hwcore/tb/cnn/main_cnn.cpp.run.log
+touch build/3178538767324/src/hwcore/tb/cnn/main_cnn.cpp.ok
+make: Leaving directory '/home/jonathan/git/CNNAccel/src'

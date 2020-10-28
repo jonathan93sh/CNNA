@@ -1,0 +1,13 @@
+pool512_start:110 ns
+pool512_end:3748400 ns
+conv_start-16-64-64:3748400 ns
+mse: 0.000000
+conv_end-16-64-64:4378160 ns
+conv_start:4378160 ns
+mse: 0.046432
+conv_end:5123720 ns
+pool_start:5123720 ns
+pool_end:5758290 ns
+fc_start:5758290 ns
+mse: 4.725028
+fc_end:8397740 ns

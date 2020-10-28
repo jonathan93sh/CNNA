@@ -1,0 +1,550 @@
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xczu3eg-sbva484-1-e'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'CNNAccelDMA/solution1/cnnadma.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:01:42 ; elapsed = 00:00:47 . Memory (MB): peak = 903.191 ; gain = 194.969 ; free physical = 1357 ; free virtual = 8891
+INFO: [HLS 200-10] Validating synthesis directives ...
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:01:42 ; elapsed = 00:00:47 . Memory (MB): peak = 903.191 ; gain = 194.969 ; free physical = 1357 ; free virtual = 8891
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:01:44 ; elapsed = 00:00:48 . Memory (MB): peak = 903.191 ; gain = 194.969 ; free physical = 1350 ; free virtual = 8886
+INFO: [HLS 200-10] Checking synthesizability ...
+WARNING: [SYNCHK 200-77] The top function 'cnna_dma' (CNNAccelDMA/solution1/cnnadma.h:35) has no outputs. Possible cause(s) are: (1) Output parameters are passed by value; (2) intended outputs (parameters or global variables) are never written; (3) there are infinite loops.
+INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:01:44 ; elapsed = 00:00:48 . Memory (MB): peak = 903.191 ; gain = 194.969 ; free physical = 1347 ; free virtual = 8883
+INFO: [HLS 200-489] Unrolling loop with tag "__ssdm_reset__"(CNNAccelDMA/solution1/cnnadma.h:48) in function 'cnna_dma::Xthread' completely with a factor of 119.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:01:45 ; elapsed = 00:00:49 . Memory (MB): peak = 903.191 ; gain = 194.969 ; free physical = 1324 ; free virtual = 8861
+WARNING: [XFORM 203-561] 'Loop-1' (CNNAccelDMA/solution1/cnnadma.h:58:8) in function 'cnna_dma::Xthread' is an infinite loop.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:01:45 ; elapsed = 00:00:49 . Memory (MB): peak = 903.191 ; gain = 194.969 ; free physical = 1322 ; free virtual = 8860
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [SCA 200-201] Elaborating SystemC module 'cnna_dma'.
+INFO: [SCA 200-201] Performing SystemC synthesis linting.
+INFO: [SCA 200-201] Analyzing ports and processes.
+INFO: [SCA 200-201] Found the clock port of process 'cnna_dma::Xthread': 'clk'.
+INFO: [SCA 200-201] Found the reset port of process 'cnna_dma::Xthread': 'reset'.
+INFO: [HLS 200-10] Synthesizing SystemC module 'cnna_dma'
+INFO: [HLS 200-10] Found SystemC process: 'cnna_dma_Xthread' 
+INFO: [HLS 200-10] Synthesizing 'cnna_dma_Xthread' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'cnna_dma_Xthread' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 49.41 seconds; current allocated memory: 125.891 MB.
+INFO: [HLS 200-434] Only 0 loops out of a total 1 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.01 seconds; current allocated memory: 126.097 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'cnna_dma_Xthread' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'cnna_dma_Xthread'.
+INFO: [HLS 200-111]  Elapsed time: 0.02 seconds; current allocated memory: 126.255 MB.
+INFO: [HLS 200-10] Synthesizing 'cnna_dma' ...
+WARNING: [SYN 201-107] Renaming port name 'cnna_dma::cnna_dma/length' to 'cnna_dma::cnna_dma/length_r' to avoid the conflict with HDL keywords or other object names.
+WARNING: [SYN 201-107] Renaming port name 'cnna_dma::cnna_dma/select' to 'cnna_dma::cnna_dma/select_r' to avoid the conflict with HDL keywords or other object names.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'cnna_dma' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.04 seconds; current allocated memory: 126.694 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.02 seconds; current allocated memory: 126.961 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'cnna_dma' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'cnna_dma/clk' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'cnna_dma/reset' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'cnna_dma/Xmem' to 'ap_bus'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'cnna_dma/Ymem' to 'ap_bus'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'cnna_dma/Wmem' to 'ap_bus'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'cnna_dma/Xbufmem' to 'ap_bus'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'cnna_dma/Xs' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'cnna_dma/Ws' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'cnna_dma/Xbufs' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'cnna_dma/Ys' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'cnna_dma/address' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'cnna_dma/length_r' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'cnna_dma/select_r' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'cnna_dma/add' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'cnna_dma/fire' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'cnna_dma/clean' to 'ap_none'.
+WARNING: [RTGEN 206-101] Port 'cnna_dma/Xmem_req_din' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'cnna_dma/Xmem_req_din' to 0.
+WARNING: [RTGEN 206-101] Port 'cnna_dma/Xmem_req_full_n' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'cnna_dma/Xmem_req_write' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'cnna_dma/Xmem_req_write' to 0.
+WARNING: [RTGEN 206-101] Port 'cnna_dma/Xmem_rsp_empty_n' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'cnna_dma/Xmem_rsp_read' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'cnna_dma/Xmem_rsp_read' to 0.
+WARNING: [RTGEN 206-101] Port 'cnna_dma/Xmem_address' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'cnna_dma/Xmem_address' to 0.
+WARNING: [RTGEN 206-101] Port 'cnna_dma/Xmem_datain' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'cnna_dma/Xmem_dataout' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'cnna_dma/Xmem_dataout' to 0.
+WARNING: [RTGEN 206-101] Port 'cnna_dma/Xmem_size' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'cnna_dma/Xmem_size' to 0.
+WARNING: [RTGEN 206-101] Port 'cnna_dma/Ymem_req_din' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'cnna_dma/Ymem_req_din' to 0.
+WARNING: [RTGEN 206-101] Port 'cnna_dma/Ymem_req_full_n' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'cnna_dma/Ymem_req_write' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'cnna_dma/Ymem_req_write' to 0.
+WARNING: [RTGEN 206-101] Port 'cnna_dma/Ymem_rsp_empty_n' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'cnna_dma/Ymem_rsp_read' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'cnna_dma/Ymem_rsp_read' to 0.
+WARNING: [RTGEN 206-101] Port 'cnna_dma/Ymem_address' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'cnna_dma/Ymem_address' to 0.
+WARNING: [RTGEN 206-101] Port 'cnna_dma/Ymem_datain' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'cnna_dma/Ymem_dataout' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'cnna_dma/Ymem_dataout' to 0.
+WARNING: [RTGEN 206-101] Port 'cnna_dma/Ymem_size' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'cnna_dma/Ymem_size' to 0.
+WARNING: [RTGEN 206-101] Port 'cnna_dma/Wmem_req_din' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'cnna_dma/Wmem_req_din' to 0.
+WARNING: [RTGEN 206-101] Port 'cnna_dma/Wmem_req_full_n' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'cnna_dma/Wmem_req_write' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'cnna_dma/Wmem_req_write' to 0.
+WARNING: [RTGEN 206-101] Port 'cnna_dma/Wmem_rsp_empty_n' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'cnna_dma/Wmem_rsp_read' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'cnna_dma/Wmem_rsp_read' to 0.
+WARNING: [RTGEN 206-101] Port 'cnna_dma/Wmem_address' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'cnna_dma/Wmem_address' to 0.
+WARNING: [RTGEN 206-101] Port 'cnna_dma/Wmem_datain' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'cnna_dma/Wmem_dataout' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'cnna_dma/Wmem_dataout' to 0.
+WARNING: [RTGEN 206-101] Port 'cnna_dma/Wmem_size' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'cnna_dma/Wmem_size' to 0.
+WARNING: [RTGEN 206-101] Port 'cnna_dma/Xbufmem_req_din' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'cnna_dma/Xbufmem_req_din' to 0.
+WARNING: [RTGEN 206-101] Port 'cnna_dma/Xbufmem_req_full_n' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'cnna_dma/Xbufmem_req_write' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'cnna_dma/Xbufmem_req_write' to 0.
+WARNING: [RTGEN 206-101] Port 'cnna_dma/Xbufmem_rsp_empty_n' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'cnna_dma/Xbufmem_rsp_read' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'cnna_dma/Xbufmem_rsp_read' to 0.
+WARNING: [RTGEN 206-101] Port 'cnna_dma/Xbufmem_address' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'cnna_dma/Xbufmem_address' to 0.
+WARNING: [RTGEN 206-101] Port 'cnna_dma/Xbufmem_datain' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'cnna_dma/Xbufmem_dataout' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'cnna_dma/Xbufmem_dataout' to 0.
+WARNING: [RTGEN 206-101] Port 'cnna_dma/Xbufmem_size' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'cnna_dma/Xbufmem_size' to 0.
+WARNING: [RTGEN 206-101] Port 'cnna_dma/Xs_din' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'cnna_dma/Xs_din' to 0.
+WARNING: [RTGEN 206-101] Port 'cnna_dma/Xs_full_n' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xczu3eg-sbva484-1-e'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'CNNAccelDMA/solution1/cnnadma.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:01:33 ; elapsed = 00:00:42 . Memory (MB): peak = 903.191 ; gain = 194.969 ; free physical = 2680 ; free virtual = 10387
+INFO: [HLS 200-10] Validating synthesis directives ...
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:01:33 ; elapsed = 00:00:42 . Memory (MB): peak = 903.191 ; gain = 194.969 ; free physical = 2680 ; free virtual = 10387
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:01:34 ; elapsed = 00:00:44 . Memory (MB): peak = 903.191 ; gain = 194.969 ; free physical = 2675 ; free virtual = 10383
+INFO: [HLS 200-10] Checking synthesizability ...
+WARNING: [SYNCHK 200-77] The top function 'cnna_dma' (CNNAccelDMA/solution1/cnnadma.h:35) has no outputs. Possible cause(s) are: (1) Output parameters are passed by value; (2) intended outputs (parameters or global variables) are never written; (3) there are infinite loops.
+INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:01:35 ; elapsed = 00:00:44 . Memory (MB): peak = 903.191 ; gain = 194.969 ; free physical = 2671 ; free virtual = 10381
+INFO: [HLS 200-489] Unrolling loop with tag "__ssdm_reset__"(CNNAccelDMA/solution1/cnnadma.h:48) in function 'cnna_dma::Xthread' completely with a factor of 119.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:01:35 ; elapsed = 00:00:44 . Memory (MB): peak = 903.191 ; gain = 194.969 ; free physical = 2648 ; free virtual = 10358
+WARNING: [XFORM 203-561] 'X_ctrl_loop' (CNNAccelDMA/solution1/cnnadma.h:57:5) in function 'cnna_dma::Xthread' is an infinite loop.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:01:36 ; elapsed = 00:00:45 . Memory (MB): peak = 903.191 ; gain = 194.969 ; free physical = 2648 ; free virtual = 10358
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [SCA 200-201] Elaborating SystemC module 'cnna_dma'.
+INFO: [SCA 200-201] Performing SystemC synthesis linting.
+INFO: [SCA 200-201] Analyzing ports and processes.
+INFO: [SCA 200-201] Found the clock port of process 'cnna_dma::Xthread': 'clk'.
+INFO: [SCA 200-201] Found the reset port of process 'cnna_dma::Xthread': 'reset'.
+INFO: [HLS 200-10] Synthesizing SystemC module 'cnna_dma'
+INFO: [HLS 200-10] Found SystemC process: 'cnna_dma_Xthread' 
+INFO: [HLS 200-10] Synthesizing 'cnna_dma_Xthread' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'cnna_dma_Xthread' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 44.8 seconds; current allocated memory: 125.876 MB.
+INFO: [HLS 200-434] Only 0 loops out of a total 1 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.01 seconds; current allocated memory: 126.079 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'cnna_dma_Xthread' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'cnna_dma_Xthread'.
+INFO: [HLS 200-111]  Elapsed time: 0.01 seconds; current allocated memory: 126.234 MB.
+INFO: [HLS 200-10] Synthesizing 'cnna_dma' ...
+WARNING: [SYN 201-107] Renaming port name 'cnna_dma::cnna_dma/length' to 'cnna_dma::cnna_dma/length_r' to avoid the conflict with HDL keywords or other object names.
+WARNING: [SYN 201-107] Renaming port name 'cnna_dma::cnna_dma/select' to 'cnna_dma::cnna_dma/select_r' to avoid the conflict with HDL keywords or other object names.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'cnna_dma' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.05 seconds; current allocated memory: 126.671 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.01 seconds; current allocated memory: 126.937 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'cnna_dma' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'cnna_dma/clk' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'cnna_dma/reset' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'cnna_dma/Xmem' to 'ap_bus'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'cnna_dma/Ymem' to 'ap_bus'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'cnna_dma/Wmem' to 'ap_bus'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'cnna_dma/Xbufmem' to 'ap_bus'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'cnna_dma/Xs' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'cnna_dma/Ws' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'cnna_dma/Xbufs' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'cnna_dma/Ys' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'cnna_dma/address' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'cnna_dma/length_r' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'cnna_dma/select_r' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'cnna_dma/add' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'cnna_dma/fire' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'cnna_dma/clean' to 'ap_none'.
+WARNING: [RTGEN 206-101] Port 'cnna_dma/Xmem_req_din' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'cnna_dma/Xmem_req_din' to 0.
+WARNING: [RTGEN 206-101] Port 'cnna_dma/Xmem_req_full_n' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'cnna_dma/Xmem_req_write' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'cnna_dma/Xmem_req_write' to 0.
+WARNING: [RTGEN 206-101] Port 'cnna_dma/Xmem_rsp_empty_n' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'cnna_dma/Xmem_rsp_read' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'cnna_dma/Xmem_rsp_read' to 0.
+WARNING: [RTGEN 206-101] Port 'cnna_dma/Xmem_address' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'cnna_dma/Xmem_address' to 0.
+WARNING: [RTGEN 206-101] Port 'cnna_dma/Xmem_datain' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'cnna_dma/Xmem_dataout' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'cnna_dma/Xmem_dataout' to 0.
+WARNING: [RTGEN 206-101] Port 'cnna_dma/Xmem_size' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'cnna_dma/Xmem_size' to 0.
+WARNING: [RTGEN 206-101] Port 'cnna_dma/Ymem_req_din' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'cnna_dma/Ymem_req_din' to 0.
+WARNING: [RTGEN 206-101] Port 'cnna_dma/Ymem_req_full_n' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'cnna_dma/Ymem_req_write' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'cnna_dma/Ymem_req_write' to 0.
+WARNING: [RTGEN 206-101] Port 'cnna_dma/Ymem_rsp_empty_n' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'cnna_dma/Ymem_rsp_read' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'cnna_dma/Ymem_rsp_read' to 0.
+WARNING: [RTGEN 206-101] Port 'cnna_dma/Ymem_address' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'cnna_dma/Ymem_address' to 0.
+WARNING: [RTGEN 206-101] Port 'cnna_dma/Ymem_datain' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'cnna_dma/Ymem_dataout' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'cnna_dma/Ymem_dataout' to 0.
+WARNING: [RTGEN 206-101] Port 'cnna_dma/Ymem_size' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'cnna_dma/Ymem_size' to 0.
+WARNING: [RTGEN 206-101] Port 'cnna_dma/Wmem_req_din' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'cnna_dma/Wmem_req_din' to 0.
+WARNING: [RTGEN 206-101] Port 'cnna_dma/Wmem_req_full_n' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'cnna_dma/Wmem_req_write' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'cnna_dma/Wmem_req_write' to 0.
+WARNING: [RTGEN 206-101] Port 'cnna_dma/Wmem_rsp_empty_n' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'cnna_dma/Wmem_rsp_read' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'cnna_dma/Wmem_rsp_read' to 0.
+WARNING: [RTGEN 206-101] Port 'cnna_dma/Wmem_address' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'cnna_dma/Wmem_address' to 0.
+WARNING: [RTGEN 206-101] Port 'cnna_dma/Wmem_datain' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'cnna_dma/Wmem_dataout' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'cnna_dma/Wmem_dataout' to 0.
+WARNING: [RTGEN 206-101] Port 'cnna_dma/Wmem_size' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'cnna_dma/Wmem_size' to 0.
+WARNING: [RTGEN 206-101] Port 'cnna_dma/Xbufmem_req_din' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'cnna_dma/Xbufmem_req_din' to 0.
+WARNING: [RTGEN 206-101] Port 'cnna_dma/Xbufmem_req_full_n' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'cnna_dma/Xbufmem_req_write' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'cnna_dma/Xbufmem_req_write' to 0.
+WARNING: [RTGEN 206-101] Port 'cnna_dma/Xbufmem_rsp_empty_n' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'cnna_dma/Xbufmem_rsp_read' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'cnna_dma/Xbufmem_rsp_read' to 0.
+WARNING: [RTGEN 206-101] Port 'cnna_dma/Xbufmem_address' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'cnna_dma/Xbufmem_address' to 0.
+WARNING: [RTGEN 206-101] Port 'cnna_dma/Xbufmem_datain' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'cnna_dma/Xbufmem_dataout' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'cnna_dma/Xbufmem_dataout' to 0.
+WARNING: [RTGEN 206-101] Port 'cnna_dma/Xbufmem_size' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'cnna_dma/Xbufmem_size' to 0.
+WARNING: [RTGEN 206-101] Port 'cnna_dma/Xs_din' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'cnna_dma/Xs_din' to 0.
+WARNING: [RTGEN 206-101] Port 'cnna_dma/Xs_full_n' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xczu3eg-sbva484-1-e'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'CNNAccelDMA/solution1/cnnadma.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:01:31 ; elapsed = 00:00:42 . Memory (MB): peak = 903.191 ; gain = 194.969 ; free physical = 2619 ; free virtual = 10328
+INFO: [HLS 200-10] Validating synthesis directives ...
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:01:31 ; elapsed = 00:00:42 . Memory (MB): peak = 903.191 ; gain = 194.969 ; free physical = 2619 ; free virtual = 10328
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:01:33 ; elapsed = 00:00:43 . Memory (MB): peak = 903.191 ; gain = 194.969 ; free physical = 2612 ; free virtual = 10322
+INFO: [HLS 200-10] Checking synthesizability ...
+WARNING: [SYNCHK 200-77] The top function 'cnna_dma' (CNNAccelDMA/solution1/cnnadma.h:35) has no outputs. Possible cause(s) are: (1) Output parameters are passed by value; (2) intended outputs (parameters or global variables) are never written; (3) there are infinite loops.
+INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:01:33 ; elapsed = 00:00:43 . Memory (MB): peak = 903.191 ; gain = 194.969 ; free physical = 2609 ; free virtual = 10319
+INFO: [HLS 200-489] Unrolling loop with tag "__ssdm_reset__"(CNNAccelDMA/solution1/cnnadma.h:48) in function 'cnna_dma::Xthread' completely with a factor of 119.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:01:34 ; elapsed = 00:00:44 . Memory (MB): peak = 903.191 ; gain = 194.969 ; free physical = 2586 ; free virtual = 10297
+WARNING: [XFORM 203-561] 'X_ctrl_loop' (CNNAccelDMA/solution1/cnnadma.h:58:5) in function 'cnna_dma::Xthread' is an infinite loop.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:01:34 ; elapsed = 00:00:44 . Memory (MB): peak = 903.191 ; gain = 194.969 ; free physical = 2584 ; free virtual = 10296
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [SCA 200-201] Elaborating SystemC module 'cnna_dma'.
+INFO: [SCA 200-201] Performing SystemC synthesis linting.
+INFO: [SCA 200-201] Analyzing ports and processes.
+INFO: [SCA 200-201] Found the clock port of process 'cnna_dma::Xthread': 'clk'.
+INFO: [SCA 200-201] Found the reset port of process 'cnna_dma::Xthread': 'reset'.
+INFO: [HLS 200-10] Synthesizing SystemC module 'cnna_dma'
+INFO: [HLS 200-10] Found SystemC process: 'cnna_dma_Xthread' 
+INFO: [HLS 200-10] Synthesizing 'cnna_dma_Xthread' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'cnna_dma_Xthread' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 44.36 seconds; current allocated memory: 125.981 MB.
+INFO: [HLS 200-434] Only 0 loops out of a total 1 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.02 seconds; current allocated memory: 126.195 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'cnna_dma_Xthread' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Setting dangling out port 'cnna_dma_Xthread/Xmem_dataout' to 0.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'cnna_dma_Xthread'.
+INFO: [HLS 200-111]  Elapsed time: 0.02 seconds; current allocated memory: 126.411 MB.
+INFO: [HLS 200-10] Synthesizing 'cnna_dma' ...
+WARNING: [SYN 201-107] Renaming port name 'cnna_dma::cnna_dma/length' to 'cnna_dma::cnna_dma/length_r' to avoid the conflict with HDL keywords or other object names.
+WARNING: [SYN 201-107] Renaming port name 'cnna_dma::cnna_dma/select' to 'cnna_dma::cnna_dma/select_r' to avoid the conflict with HDL keywords or other object names.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'cnna_dma' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.05 seconds; current allocated memory: 126.872 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.02 seconds; current allocated memory: 127.138 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'cnna_dma' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'cnna_dma/clk' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'cnna_dma/reset' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'cnna_dma/Xmem' to 'ap_bus'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'cnna_dma/Ymem' to 'ap_bus'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'cnna_dma/Wmem' to 'ap_bus'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'cnna_dma/Xbufmem' to 'ap_bus'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'cnna_dma/Xs' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'cnna_dma/Ws' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'cnna_dma/Xbufs' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'cnna_dma/Ys' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'cnna_dma/address' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'cnna_dma/length_r' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'cnna_dma/select_r' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'cnna_dma/add' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'cnna_dma/fire' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'cnna_dma/clean' to 'ap_none'.
+WARNING: [RTGEN 206-101] Port 'cnna_dma/Ymem_req_din' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'cnna_dma/Ymem_req_din' to 0.
+WARNING: [RTGEN 206-101] Port 'cnna_dma/Ymem_req_full_n' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'cnna_dma/Ymem_req_write' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'cnna_dma/Ymem_req_write' to 0.
+WARNING: [RTGEN 206-101] Port 'cnna_dma/Ymem_rsp_empty_n' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'cnna_dma/Ymem_rsp_read' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'cnna_dma/Ymem_rsp_read' to 0.
+WARNING: [RTGEN 206-101] Port 'cnna_dma/Ymem_address' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'cnna_dma/Ymem_address' to 0.
+WARNING: [RTGEN 206-101] Port 'cnna_dma/Ymem_datain' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'cnna_dma/Ymem_dataout' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'cnna_dma/Ymem_dataout' to 0.
+WARNING: [RTGEN 206-101] Port 'cnna_dma/Ymem_size' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'cnna_dma/Ymem_size' to 0.
+WARNING: [RTGEN 206-101] Port 'cnna_dma/Wmem_req_din' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'cnna_dma/Wmem_req_din' to 0.
+WARNING: [RTGEN 206-101] Port 'cnna_dma/Wmem_req_full_n' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'cnna_dma/Wmem_req_write' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'cnna_dma/Wmem_req_write' to 0.
+WARNING: [RTGEN 206-101] Port 'cnna_dma/Wmem_rsp_empty_n' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'cnna_dma/Wmem_rsp_read' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'cnna_dma/Wmem_rsp_read' to 0.
+WARNING: [RTGEN 206-101] Port 'cnna_dma/Wmem_address' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'cnna_dma/Wmem_address' to 0.
+WARNING: [RTGEN 206-101] Port 'cnna_dma/Wmem_datain' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'cnna_dma/Wmem_dataout' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'cnna_dma/Wmem_dataout' to 0.
+WARNING: [RTGEN 206-101] Port 'cnna_dma/Wmem_size' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'cnna_dma/Wmem_size' to 0.
+WARNING: [RTGEN 206-101] Port 'cnna_dma/Xbufmem_req_din' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'cnna_dma/Xbufmem_req_din' to 0.
+WARNING: [RTGEN 206-101] Port 'cnna_dma/Xbufmem_req_full_n' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'cnna_dma/Xbufmem_req_write' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'cnna_dma/Xbufmem_req_write' to 0.
+WARNING: [RTGEN 206-101] Port 'cnna_dma/Xbufmem_rsp_empty_n' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'cnna_dma/Xbufmem_rsp_read' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'cnna_dma/Xbufmem_rsp_read' to 0.
+WARNING: [RTGEN 206-101] Port 'cnna_dma/Xbufmem_address' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'cnna_dma/Xbufmem_address' to 0.
+WARNING: [RTGEN 206-101] Port 'cnna_dma/Xbufmem_datain' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'cnna_dma/Xbufmem_dataout' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'cnna_dma/Xbufmem_dataout' to 0.
+WARNING: [RTGEN 206-101] Port 'cnna_dma/Xbufmem_size' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'cnna_dma/Xbufmem_size' to 0.
+WARNING: [RTGEN 206-101] Port 'cnna_dma/Xs_din' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'cnna_dma/Xs_din' to 0.
+WARNING: [RTGEN 206-101] Port 'cnna_dma/Xs_full_n' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'cnna_dma/Xs_write' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'cnna_dma/Xs_write' to 0.
+WARNING: [RTGEN 206-101] Port 'cnna_dma/Ws_din' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'cnna_dma/Ws_din' to 0.
+WARNING: [RTGEN 206-101] Port 'cnna_dma/Ws_full_n' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'cnna_dma/Ws_write' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'cnna_dma/Ws_write' to 0.
+WARNING: [RTGEN 206-101] Port 'cnna_dma/Xbufs_din' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'cnna_dma/Xbufs_din' to 0.
+WARNING: [RTGEN 206-101] Port 'cnna_dma/Xbufs_full_n' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'cnna_dma/Xbufs_write' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'cnna_dma/Xbufs_write' to 0.
+WARNING: [RTGEN 206-101] Port 'cnna_dma/Ys_dout' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'cnna_dma/Ys_empty_n' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.

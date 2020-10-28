@@ -1,0 +1,245 @@
+
+
+================================================================
+== Vivado HLS Report for 'cnn_thread_cnn_ctrl'
+================================================================
+* Date:           Sun Mar  1 15:32:43 2020
+
+* Version:        2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)
+* Project:        CNNAccel
+* Solution:       default
+* Product family: zynquplus
+* Target device:  xczu3eg-sbva484-1-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   5.00|     2.481|        0.62|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    ?|    ?|    ?|    ?|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------+-----+-----+----------+-----------+-----------+------+----------+
+        |             |  Latency  | Iteration|  Initiation Interval  | Trip |          |
+        |  Loop Name  | min | max |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------+-----+-----+----------+-----------+-----------+------+----------+
+        |- Loop 1     |    ?|    ?|         ?|          -|          -|  inf |    no    |
+        | + Loop 1.1  |    ?|    ?|         2|          1|          1|     ?|    yes   |
+        +-------------+-----+-----+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+-----+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  | URAM|
++-----------------+---------+-------+--------+-------+-----+
+|DSP              |        -|      -|       -|      -|    -|
+|Expression       |        -|      -|       0|     21|    -|
+|FIFO             |        -|      -|       -|      -|    -|
+|Instance         |        -|      -|       -|      -|    -|
+|Memory           |        -|      -|       -|      -|    -|
+|Multiplexer      |        -|      -|       -|    243|    -|
+|Register         |        -|      -|      78|      -|    -|
++-----------------+---------+-------+--------+-------+-----+
+|Total            |        0|      0|      78|    264|    0|
++-----------------+---------+-------+--------+-------+-----+
+|Available        |      432|    360|  141120|  70560|    0|
++-----------------+---------+-------+--------+-------+-----+
+|Utilization (%)  |        0|      0|   ~0   |   ~0  |    0|
++-----------------+---------+-------+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP48E: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------------------+----------+-------+---+----+------------+------------+
+    |           Variable Name          | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------------------+----------+-------+---+----+------------+------------+
+    |ap_condition_310                  |    and   |      0|  0|   2|           1|           1|
+    |io_acc_block_signal_op1974        |    and   |      0|  0|   2|           1|           1|
+    |icmp_ln879_fu_2824_p2             |   icmp   |      0|  0|  11|           8|           1|
+    |ap_block_pp0_stage0_01001         |    or    |      0|  0|   2|           1|           1|
+    |ap_block_state4_pp0_stage0_iter1  |    or    |      0|  0|   2|           1|           1|
+    |ap_enable_pp0                     |    xor   |      0|  0|   2|           1|           2|
+    +----------------------------------+----------+-------+---+----+------------+------------+
+    |Total                             |          |      0|  0|  21|          13|           7|
+    +----------------------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------+----+-----------+-----+-----------+
+    |           Name          | LUT| Input Size| Bits| Total Bits|
+    +-------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                |  21|          4|    1|          4|
+    |ap_enable_reg_pp0_iter1  |   9|          2|    1|          2|
+    |ctrl_sink_0_blk_n        |   9|          2|    1|          2|
+    |ctrl_sink_1_blk_n        |   9|          2|    1|          2|
+    |ctrl_sink_2_blk_n        |   9|          2|    1|          2|
+    |p_072_0_reg_2801         |  15|          3|    8|         24|
+    |sc_fifo_chn_110_blk_n    |   9|          2|    1|          2|
+    |sc_fifo_chn_111_blk_n    |   9|          2|    1|          2|
+    |sc_fifo_chn_112_blk_n    |   9|          2|    1|          2|
+    |sc_fifo_chn_113_blk_n    |   9|          2|    1|          2|
+    |sc_fifo_chn_114_blk_n    |   9|          2|    1|          2|
+    |sc_fifo_chn_115_blk_n    |   9|          2|    1|          2|
+    |sc_fifo_chn_116_blk_n    |   9|          2|    1|          2|
+    |sc_fifo_chn_117_blk_n    |   9|          2|    1|          2|
+    |sc_fifo_chn_118_blk_n    |   9|          2|    1|          2|
+    |sc_fifo_chn_119_blk_n    |   9|          2|    1|          2|
+    |sc_fifo_chn_120_blk_n    |   9|          2|    1|          2|
+    |sc_fifo_chn_121_blk_n    |   9|          2|    1|          2|
+    |sc_fifo_chn_122_blk_n    |   9|          2|    1|          2|
+    |sc_fifo_chn_123_blk_n    |   9|          2|    1|          2|
+    |sc_fifo_chn_124_blk_n    |   9|          2|    1|          2|
+    |sc_fifo_chn_125_blk_n    |   9|          2|    1|          2|
+    |sc_fifo_chn_126_blk_n    |   9|          2|    1|          2|
+    |sc_fifo_chn_127_blk_n    |   9|          2|    1|          2|
+    |sc_fifo_chn_1_blk_n      |   9|          2|    1|          2|
+    +-------------------------+----+-----------+-----+-----------+
+    |Total                    | 243|         53|   32|         74|
+    +-------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------------------+----+----+-----+-----------+
+    |           Name          | FF | LUT| Bits| Const Bits|
+    +-------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                |   4|   0|    4|          0|
+    |ap_enable_reg_pp0_iter0  |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1  |   1|   0|    1|          0|
+    |p_072_0_reg_2801         |   8|   0|    8|          0|
+    |val_data_V_reg_2917      |  64|   0|   64|          0|
+    +-------------------------+----+----+-----+-----------+
+    |Total                    |  78|   0|   78|          0|
+    +-------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++---------------------------------------+-----+-----+------------+--------------------------------+--------------+
+|               RTL Ports               | Dir | Bits|  Protocol  |          Source Object         |    C Type    |
++---------------------------------------+-----+-----+------------+--------------------------------+--------------+
+|ap_clk                                 |  in |    1| ap_ctrl_hs |      cnn::thread_cnn_ctrl      | return value |
+|ap_rst                                 |  in |    1| ap_ctrl_hs |      cnn::thread_cnn_ctrl      | return value |
+|ctrl_sink_0_dout                       |  in |   64|   ap_fifo  |           ctrl_sink_0          |    pointer   |
+|ctrl_sink_0_empty_n                    |  in |    1|   ap_fifo  |           ctrl_sink_0          |    pointer   |
+|ctrl_sink_0_read                       | out |    1|   ap_fifo  |           ctrl_sink_0          |    pointer   |
+|ctrl_sink_1_dout                       |  in |    1|   ap_fifo  |           ctrl_sink_1          |    pointer   |
+|ctrl_sink_1_empty_n                    |  in |    1|   ap_fifo  |           ctrl_sink_1          |    pointer   |
+|ctrl_sink_1_read                       | out |    1|   ap_fifo  |           ctrl_sink_1          |    pointer   |
+|ctrl_sink_2_dout                       |  in |    8|   ap_fifo  |           ctrl_sink_2          |    pointer   |
+|ctrl_sink_2_empty_n                    |  in |    1|   ap_fifo  |           ctrl_sink_2          |    pointer   |
+|ctrl_sink_2_read                       | out |    1|   ap_fifo  |           ctrl_sink_2          |    pointer   |
+|r2_data_W_status                       | out |   32|   ap_vld   |        r2_data_W_status        |    pointer   |
+|r2_data_W_status_ap_vld                | out |    1|   ap_vld   |        r2_data_W_status        |    pointer   |
+|r3_data_P_status                       | out |   32|   ap_vld   |        r3_data_P_status        |    pointer   |
+|r3_data_P_status_ap_vld                | out |    1|   ap_vld   |        r3_data_P_status        |    pointer   |
+|r4_input_BW_N_status                   | out |   32|   ap_vld   |      r4_input_BW_N_status      |    pointer   |
+|r4_input_BW_N_status_ap_vld            | out |    1|   ap_vld   |      r4_input_BW_N_status      |    pointer   |
+|r5_output_BW_N_status                  | out |   32|   ap_vld   |      r5_output_BW_N_status     |    pointer   |
+|r5_output_BW_N_status_ap_vld           | out |    1|   ap_vld   |      r5_output_BW_N_status     |    pointer   |
+|r6_pe_n_status                         | out |   32|   ap_vld   |         r6_pe_n_status         |    pointer   |
+|r6_pe_n_status_ap_vld                  | out |    1|   ap_vld   |         r6_pe_n_status         |    pointer   |
+|r7_pe_bw_n_status                      | out |   32|   ap_vld   |        r7_pe_bw_n_status       |    pointer   |
+|r7_pe_bw_n_status_ap_vld               | out |    1|   ap_vld   |        r7_pe_bw_n_status       |    pointer   |
+|r8_wbuf_size_status                    | out |   32|   ap_vld   |       r8_wbuf_size_status      |    pointer   |
+|r8_wbuf_size_status_ap_vld             | out |    1|   ap_vld   |       r8_wbuf_size_status      |    pointer   |
+|r9_data_buf_clb_size_status            | out |   32|   ap_vld   |   r9_data_buf_clb_size_status  |    pointer   |
+|r9_data_buf_clb_size_status_ap_vld     | out |    1|   ap_vld   |   r9_data_buf_clb_size_status  |    pointer   |
+|r10_data_buf_clb_n_status              | out |   32|   ap_vld   |    r10_data_buf_clb_n_status   |    pointer   |
+|r10_data_buf_clb_n_status_ap_vld       | out |    1|   ap_vld   |    r10_data_buf_clb_n_status   |    pointer   |
+|r11_data_buf_shift_size_status         | out |   32|   ap_vld   | r11_data_buf_shift_size_status |    pointer   |
+|r11_data_buf_shift_size_status_ap_vld  | out |    1|   ap_vld   | r11_data_buf_shift_size_status |    pointer   |
+|r12_data_out_n_status                  | out |   32|   ap_vld   |      r12_data_out_n_status     |    pointer   |
+|r12_data_out_n_status_ap_vld           | out |    1|   ap_vld   |      r12_data_out_n_status     |    pointer   |
+|sc_fifo_chn_1_din                      | out |   31|   ap_fifo  |          sc_fifo_chn_1         |    pointer   |
+|sc_fifo_chn_1_full_n                   |  in |    1|   ap_fifo  |          sc_fifo_chn_1         |    pointer   |
+|sc_fifo_chn_1_write                    | out |    1|   ap_fifo  |          sc_fifo_chn_1         |    pointer   |
+|sc_fifo_chn_110_din                    | out |   32|   ap_fifo  |         sc_fifo_chn_110        |    pointer   |
+|sc_fifo_chn_110_full_n                 |  in |    1|   ap_fifo  |         sc_fifo_chn_110        |    pointer   |
+|sc_fifo_chn_110_write                  | out |    1|   ap_fifo  |         sc_fifo_chn_110        |    pointer   |
+|sc_fifo_chn_111_din                    | out |   16|   ap_fifo  |         sc_fifo_chn_111        |    pointer   |
+|sc_fifo_chn_111_full_n                 |  in |    1|   ap_fifo  |         sc_fifo_chn_111        |    pointer   |
+|sc_fifo_chn_111_write                  | out |    1|   ap_fifo  |         sc_fifo_chn_111        |    pointer   |
+|sc_fifo_chn_112_din                    | out |   16|   ap_fifo  |         sc_fifo_chn_112        |    pointer   |
+|sc_fifo_chn_112_full_n                 |  in |    1|   ap_fifo  |         sc_fifo_chn_112        |    pointer   |
+|sc_fifo_chn_112_write                  | out |    1|   ap_fifo  |         sc_fifo_chn_112        |    pointer   |
+|sc_fifo_chn_113_din                    | out |   16|   ap_fifo  |         sc_fifo_chn_113        |    pointer   |
+|sc_fifo_chn_113_full_n                 |  in |    1|   ap_fifo  |         sc_fifo_chn_113        |    pointer   |
+|sc_fifo_chn_113_write                  | out |    1|   ap_fifo  |         sc_fifo_chn_113        |    pointer   |
+|sc_fifo_chn_114_din                    | out |   16|   ap_fifo  |         sc_fifo_chn_114        |    pointer   |
+|sc_fifo_chn_114_full_n                 |  in |    1|   ap_fifo  |         sc_fifo_chn_114        |    pointer   |
+|sc_fifo_chn_114_write                  | out |    1|   ap_fifo  |         sc_fifo_chn_114        |    pointer   |
+|sc_fifo_chn_115_din                    | out |   16|   ap_fifo  |         sc_fifo_chn_115        |    pointer   |
+|sc_fifo_chn_115_full_n                 |  in |    1|   ap_fifo  |         sc_fifo_chn_115        |    pointer   |
+|sc_fifo_chn_115_write                  | out |    1|   ap_fifo  |         sc_fifo_chn_115        |    pointer   |
+|sc_fifo_chn_116_din                    | out |   16|   ap_fifo  |         sc_fifo_chn_116        |    pointer   |
+|sc_fifo_chn_116_full_n                 |  in |    1|   ap_fifo  |         sc_fifo_chn_116        |    pointer   |
+|sc_fifo_chn_116_write                  | out |    1|   ap_fifo  |         sc_fifo_chn_116        |    pointer   |
+|sc_fifo_chn_117_din                    | out |    1|   ap_fifo  |         sc_fifo_chn_117        |    pointer   |
+|sc_fifo_chn_117_full_n                 |  in |    1|   ap_fifo  |         sc_fifo_chn_117        |    pointer   |
+|sc_fifo_chn_117_write                  | out |    1|   ap_fifo  |         sc_fifo_chn_117        |    pointer   |
+|sc_fifo_chn_118_din                    | out |   16|   ap_fifo  |         sc_fifo_chn_118        |    pointer   |
+|sc_fifo_chn_118_full_n                 |  in |    1|   ap_fifo  |         sc_fifo_chn_118        |    pointer   |
+|sc_fifo_chn_118_write                  | out |    1|   ap_fifo  |         sc_fifo_chn_118        |    pointer   |
+|sc_fifo_chn_119_din                    | out |   16|   ap_fifo  |         sc_fifo_chn_119        |    pointer   |
+|sc_fifo_chn_119_full_n                 |  in |    1|   ap_fifo  |         sc_fifo_chn_119        |    pointer   |
+|sc_fifo_chn_119_write                  | out |    1|   ap_fifo  |         sc_fifo_chn_119        |    pointer   |
+|sc_fifo_chn_120_din                    | out |    1|   ap_fifo  |         sc_fifo_chn_120        |    pointer   |
+|sc_fifo_chn_120_full_n                 |  in |    1|   ap_fifo  |         sc_fifo_chn_120        |    pointer   |
+|sc_fifo_chn_120_write                  | out |    1|   ap_fifo  |         sc_fifo_chn_120        |    pointer   |
+|sc_fifo_chn_121_din                    | out |    1|   ap_fifo  |         sc_fifo_chn_121        |    pointer   |
+|sc_fifo_chn_121_full_n                 |  in |    1|   ap_fifo  |         sc_fifo_chn_121        |    pointer   |
+|sc_fifo_chn_121_write                  | out |    1|   ap_fifo  |         sc_fifo_chn_121        |    pointer   |
+|sc_fifo_chn_122_din                    | out |   16|   ap_fifo  |         sc_fifo_chn_122        |    pointer   |
+|sc_fifo_chn_122_full_n                 |  in |    1|   ap_fifo  |         sc_fifo_chn_122        |    pointer   |
+|sc_fifo_chn_122_write                  | out |    1|   ap_fifo  |         sc_fifo_chn_122        |    pointer   |
+|sc_fifo_chn_123_din                    | out |   16|   ap_fifo  |         sc_fifo_chn_123        |    pointer   |
+|sc_fifo_chn_123_full_n                 |  in |    1|   ap_fifo  |         sc_fifo_chn_123        |    pointer   |
+|sc_fifo_chn_123_write                  | out |    1|   ap_fifo  |         sc_fifo_chn_123        |    pointer   |
+|sc_fifo_chn_124_din                    | out |   16|   ap_fifo  |         sc_fifo_chn_124        |    pointer   |
+|sc_fifo_chn_124_full_n                 |  in |    1|   ap_fifo  |         sc_fifo_chn_124        |    pointer   |
+|sc_fifo_chn_124_write                  | out |    1|   ap_fifo  |         sc_fifo_chn_124        |    pointer   |
+|sc_fifo_chn_125_din                    | out |   16|   ap_fifo  |         sc_fifo_chn_125        |    pointer   |
+|sc_fifo_chn_125_full_n                 |  in |    1|   ap_fifo  |         sc_fifo_chn_125        |    pointer   |
+|sc_fifo_chn_125_write                  | out |    1|   ap_fifo  |         sc_fifo_chn_125        |    pointer   |
+|sc_fifo_chn_126_din                    | out |   16|   ap_fifo  |         sc_fifo_chn_126        |    pointer   |
+|sc_fifo_chn_126_full_n                 |  in |    1|   ap_fifo  |         sc_fifo_chn_126        |    pointer   |
+|sc_fifo_chn_126_write                  | out |    1|   ap_fifo  |         sc_fifo_chn_126        |    pointer   |
+|sc_fifo_chn_127_din                    | out |   16|   ap_fifo  |         sc_fifo_chn_127        |    pointer   |
+|sc_fifo_chn_127_full_n                 |  in |    1|   ap_fifo  |         sc_fifo_chn_127        |    pointer   |
+|sc_fifo_chn_127_write                  | out |    1|   ap_fifo  |         sc_fifo_chn_127        |    pointer   |
++---------------------------------------+-----+-----+------------+--------------------------------+--------------+
+

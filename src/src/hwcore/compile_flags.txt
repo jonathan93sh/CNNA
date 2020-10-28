@@ -1,0 +1,8 @@
+-std=c++14
+-I/home/jonathan/git/CNNAccel/src/src
+-DDEBUG_SYSTEMC
+-ferror-limit=0
+-I/usr/local/systemc-2.3.3/include
+-I/usr/include
+-I/usr/include/c++/7
+-std=c++14 -I/home/jonathan/git/CNNAccel/src/src -DDEBUG_SYSTEMC -ferror-limit=0 -I/usr/local/systemc-2.3.3/include

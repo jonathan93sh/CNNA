@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'stream_resize/dout_47' to 0." projectName="streamresize" solutionName="solution1" date="2019-05-14T09:29:01.730+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'stream_resize/dout_46' to 0." projectName="streamresize" solutionName="solution1" date="2019-05-14T09:29:01.712+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'stream_resize/dout_45' to 0." projectName="streamresize" solutionName="solution1" date="2019-05-14T09:29:01.700+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'stream_resize/dout_44' to 0." projectName="streamresize" solutionName="solution1" date="2019-05-14T09:29:01.686+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'stream_resize/dout_43' to 0." projectName="streamresize" solutionName="solution1" date="2019-05-14T09:29:01.673+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'stream_resize/dout_42' to 0." projectName="streamresize" solutionName="solution1" date="2019-05-14T09:29:01.664+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'stream_resize/dout_41' to 0." projectName="streamresize" solutionName="solution1" date="2019-05-14T09:29:01.651+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'stream_resize/dout_40' to 0." projectName="streamresize" solutionName="solution1" date="2019-05-14T09:29:01.642+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'stream_resize/dout_39' to 0." projectName="streamresize" solutionName="solution1" date="2019-05-14T09:29:01.631+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'stream_resize/dout_38' to 0." projectName="streamresize" solutionName="solution1" date="2019-05-14T09:29:01.621+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'stream_resize/dout_37' to 0." projectName="streamresize" solutionName="solution1" date="2019-05-14T09:29:01.612+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'stream_resize/dout_36' to 0." projectName="streamresize" solutionName="solution1" date="2019-05-14T09:29:01.602+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'stream_resize/dout_35' to 0." projectName="streamresize" solutionName="solution1" date="2019-05-14T09:29:01.594+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'stream_resize/dout_34' to 0." projectName="streamresize" solutionName="solution1" date="2019-05-14T09:29:01.583+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'stream_resize/dout_33' to 0." projectName="streamresize" solutionName="solution1" date="2019-05-14T09:29:01.572+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'stream_resize/dout_32' to 0." projectName="streamresize" solutionName="solution1" date="2019-05-14T09:29:01.563+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'stream_resize/dout_31' to 0." projectName="streamresize" solutionName="solution1" date="2019-05-14T09:29:01.554+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'stream_resize/dout_30' to 0." projectName="streamresize" solutionName="solution1" date="2019-05-14T09:29:01.543+0200" type="Warning"/>
+      </synLog>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

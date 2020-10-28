@@ -1,0 +1,21 @@
+#!/bin/bash
+#https://yosefk.com/blog/passing-shell-script-arguments-to-a-subprocess.html
+args=
+for arg in "$@";
+do
+  args="$args '$arg'"
+done
+
+
+USER_LOGIN=jonathan
+USER=thinker
+REMOTE=25.38.54.74
+PORT=22
+PWD_TMP=${PWD}
+CMD="/bin/bash $args"
+#echo ${CMD}
+#exit
+#echo connect
+ssh -p ${PORT} ${USER}@{REMOTE} -R 10000:localhost:22 "wsl -- bash -c 'mkdir -p share/${USER_LOGIN} && sshfs -p 10000 ${USER_LOGIN}@localhost: share/${USER_LOGIN} && HOME_TMP=\$HOME && HOME=share/${USER_LOGIN} && cd; ${CMD}; RETVALUE=\$?; cd \$HOME_TMP; fusermount -u share/${USER_LOGIN}; exit \$RETVALUE'"
+
+

@@ -1,0 +1,278 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "clang current file",
+            "type": "shell",
+            "command": "clang++ ${file} -DSC_INCLUDE_FX -std=c++11 -I${workspaceRoot}/../ -DDEBUG_SYSTEMC -ferror-limit=0 -I/usr/local/systemc-2.3.3/include",
+            "options": {
+                "cwd": ""
+            },
+            "problemMatcher": {
+                "base": "$gcc",
+                "fileLocation": "absolute"
+            }
+        },
+        {
+            "label": "Make build",
+            "type": "shell",
+            "command": "make -C ../../ debug_build -j8",
+            "options": {
+                "cwd": ""
+            },
+            "problemMatcher": {
+                "base": "$gcc",
+                "fileLocation": [
+                    "relative",
+                    "${workspaceRoot}/../../"
+                ]
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "Make build PE_N=8 PE_BW_N=4",
+            "type": "shell",
+            "command": "make -C ../../ debug_build PARAM_LIST='PE_N=8 PE_BW_N=4' -j8",
+            "options": {
+                "cwd": ""
+            },
+            "problemMatcher": {
+                "base": "$gcc",
+                "fileLocation": [
+                    "relative",
+                    "${workspaceRoot}/../../"
+                ]
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "Make run test PE_N=8 PE_BW_N=4 HLS_DEBUG_LEVEL=5",
+            "type": "shell",
+            "command": "make -C ../../ test PARAM_LIST='PE_N=8 PE_BW_N=4 HLS_DEBUG_LEVEL=1' -j8",
+            "options": {
+                "cwd": ""
+            },
+            "problemMatcher": {
+                "base": "$gcc",
+                "fileLocation": [
+                    "relative",
+                    "${workspaceRoot}/../../"
+                ]
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "Make build_ip PE_N=2 PE_BW_N=4",
+            "type": "shell",
+            "command": "make -C ../../ build_ip PARAM_LIST='PE_N=2 PE_BW_N=4' -j8",
+            "options": {
+                "cwd": ""
+            },
+            "problemMatcher": {
+                "base": "$gcc",
+                "fileLocation": [
+                    "relative",
+                    "${workspaceRoot}/../../"
+                ]
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "Make build_ip_unsafe PE_N=2 PE_BW_N=4",
+            "type": "shell",
+            "command": "make -C ../../ build_ip_unsafe PARAM_LIST='PE_N=2 PE_BW_N=4' -j8",
+            "options": {
+                "cwd": ""
+            },
+            "problemMatcher": {
+                "base": "$gcc",
+                "fileLocation": [
+                    "relative",
+                    "${workspaceRoot}/../../"
+                ]
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "Make run test",
+            "type": "shell",
+            "command": "make -C ../../ test PARAM_LIST='HLS_DEBUG_LEVEL=1' -j8",
+            "options": {
+                "cwd": ""
+            },
+            "problemMatcher": {
+                "base": "$gcc",
+                "fileLocation": [
+                    "relative",
+                    "${workspaceRoot}/../../"
+                ]
+            },
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "Make run test cosim",
+            "type": "shell",
+            "command": "make -C ../../ cosim -j8",
+            "options": {
+                "cwd": ""
+            },
+            "problemMatcher": {
+                "base": "$gcc",
+                "fileLocation": [
+                    "relative",
+                    "${workspaceRoot}/../../"
+                ]
+            },
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "Make run test - single thread",
+            "type": "shell",
+            "command": "make -C ../../ test -j1",
+            "options": {
+                "cwd": ""
+            },
+            "problemMatcher": {
+                "base": "$gcc",
+                "fileLocation": [
+                    "relative",
+                    "${workspaceRoot}/../../"
+                ]
+            },
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "Make rtl",
+            "type": "shell",
+            "command": "make -C ../../ rtl",
+            "options": {
+                "cwd": ""
+            },
+            "problemMatcher": {
+                "base": "$gcc",
+                "fileLocation": [
+                    "relative",
+                    "${workspaceRoot}/../../IP/"
+                ]
+            },
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            },
+            "dependsOn": [
+                "Make run test"
+            ]
+        },
+        {
+            "label": "Make coverage",
+            "type": "shell",
+            "command": "make -C ../../ coverage -j8",
+            "options": {
+                "cwd": ""
+            },
+            "problemMatcher": {
+                "base": "$gcc",
+                "fileLocation": [
+                    "relative",
+                    "${workspaceRoot}/../../"
+                ]
+            },
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "Make clean",
+            "type": "shell",
+            "command": "make -C ../../ clean",
+            "options": {
+                "cwd": ""
+            },
+            "problemMatcher": {
+                "base": "$gcc",
+                "fileLocation": [
+                    "relative",
+                    "${workspaceRoot}/../../"
+                ]
+            },
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "Build current TB",
+            "type": "shell",
+            "command": "@echo on & copy /Y ${file} ..\\..\\builder\\main.cpp && copy /Y ${file} main.cpp & cd ..\\..\\builder\\ && make all -j8",
+            "problemMatcher": [
+                "$gcc"
+            ]
+        },
+        {
+            "label": "rebuild TB",
+            "type": "shell",
+            "command": "@echo on & copy /Y  main.cpp ..\\..\\builder\\main.cpp & cd ..\\..\\builder\\ && make all -j8",
+            "problemMatcher": [
+                "$gcc"
+            ]
+        },
+        {
+            "label": "Run current TB",
+            "type": "shell",
+            "command": "@echo on & cd ..\\..\\builder\\ && pwd && vivado_hls run_sim.tcl",
+            "dependsOn": "Build current TB",
+            "problemMatcher": []
+        },
+        {
+            "label": "rerun current TB",
+            "type": "shell",
+            "command": "@echo on & cd ..\\..\\builder\\ && pwd && vivado_hls run_sim.tcl",
+            "dependsOn": "rebuild TB",
+            "problemMatcher": []
+        },
+        {
+            "type": "shell",
+            "label": "g++.exe build active file",
+            "command": "C:\\eda\\mingw64\\bin\\g++.exe",
+            "args": [
+                "-g",
+                "${file}",
+                "-o",
+                "${fileDirname}\\${fileBasenameNoExtension}.exe"
+            ],
+            "options": {
+                "cwd": "C:\\eda\\mingw64\\bin"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ]
+        }
+    ]
+}

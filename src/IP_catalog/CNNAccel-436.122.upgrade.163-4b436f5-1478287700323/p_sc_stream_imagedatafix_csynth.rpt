@@ -1,0 +1,152 @@
+
+
+================================================================
+== Vivado HLS Report for 'p_sc_stream_imagedatafix'
+================================================================
+* Date:           Fri Jan 10 01:43:55 2020
+
+* Version:        2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)
+* Project:        CNNAccel
+* Solution:       default
+* Product family: zynquplus
+* Target device:  xczu3eg-sbva484-1-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     5.659|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    ?|    ?|    ?|    ?|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        +--------------------------------------------+---------------------------------+-----+-----+-----+-----+---------+
+        |                                            |                                 |  Latency  |  Interval | Pipeline|
+        |                  Instance                  |              Module             | min | max | min | max |   Type  |
+        +--------------------------------------------+---------------------------------+-----+-----+-----+-----+---------+
+        |grp_p_sc_stream_pixel_2_stream_fu_150       |p_sc_stream_pixel_2_stream       |    0|    4|    0|    4|   none  |
+        |grp_p_sc_stream_router_merge_fu_174         |p_sc_stream_router_merge         |    ?|    ?|    ?|    ?|   none  |
+        |grp_p_sc_stream_imagedatafix_thread_fu_204  |p_sc_stream_imagedatafix_thread  |    ?|    ?|    ?|    ?|   none  |
+        +--------------------------------------------+---------------------------------+-----+-----+-----+-----+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+-----+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  | URAM|
++-----------------+---------+-------+--------+-------+-----+
+|DSP              |        -|      -|       -|      -|    -|
+|Expression       |        -|      -|       -|      -|    -|
+|FIFO             |        0|      -|      55|    460|    -|
+|Instance         |        -|      -|     483|   1495|    -|
+|Memory           |        -|      -|       -|      -|    -|
+|Multiplexer      |        -|      -|       -|      -|    -|
+|Register         |        -|      -|       -|      -|    -|
++-----------------+---------+-------+--------+-------+-----+
+|Total            |        0|      0|     538|   1955|    0|
++-----------------+---------+-------+--------+-------+-----+
+|Available        |      432|    360|  141120|  70560|    0|
++-----------------+---------+-------+--------+-------+-----+
+|Utilization (%)  |        0|      0|   ~0   |      2|    0|
++-----------------+---------+-------+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +--------------------------------------------+---------------------------------+---------+-------+-----+------+-----+
+    |                  Instance                  |              Module             | BRAM_18K| DSP48E|  FF |  LUT | URAM|
+    +--------------------------------------------+---------------------------------+---------+-------+-----+------+-----+
+    |grp_p_sc_stream_imagedatafix_thread_fu_204  |p_sc_stream_imagedatafix_thread  |        0|      0|  422|  1066|    0|
+    |grp_p_sc_stream_pixel_2_stream_fu_150       |p_sc_stream_pixel_2_stream       |        0|      0|   56|   265|    0|
+    |grp_p_sc_stream_router_merge_fu_174         |p_sc_stream_router_merge         |        0|      0|    5|   164|    0|
+    +--------------------------------------------+---------------------------------+---------+-------+-----+------+-----+
+    |Total                                       |                                 |        0|      0|  483|  1495|    0|
+    +--------------------------------------------+---------------------------------+---------+-------+-----+------+-----+
+
+    * DSP48E: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    +------------------------+---------+---+----+-----+------+-----+---------+
+    |          Name          | BRAM_18K| FF| LUT| URAM| Depth| Bits| Size:D*B|
+    +------------------------+---------+---+----+-----+------+-----+---------+
+    |sc_fifo_chn_14_fifo_U   |        0|  5|   0|    -|     4|    8|       32|
+    |sc_fifo_chn_15_fifo_U   |        0|  5|   0|    -|     4|    8|       32|
+    |sc_fifo_chn_16_fifo_U   |        0|  5|   0|    -|     4|    8|       32|
+    |sc_fifo_chn_17_fifo_U   |        0|  5|   0|    -|     4|    1|        4|
+    |sc_fifo_chn_1_fifo_U    |        0|  5|   0|    -|     1|    1|        1|
+    |sc_fifo_chn_310_fifo_U  |        0|  5|   0|    -|     1|  128|      128|
+    |sc_fifo_chn_3_fifo_U    |        0|  5|   0|    -|     1|  128|      128|
+    |sc_fifo_chn_411_fifo_U  |        0|  5|   0|    -|     1|    1|        1|
+    |sc_fifo_chn_4_fifo_U    |        0|  5|   0|    -|     1|    1|        1|
+    |sc_fifo_chn_512_fifo_U  |        0|  5|   0|    -|     1|   16|       16|
+    |sc_fifo_chn_5_fifo_U    |        0|  5|   0|    -|     1|   16|       16|
+    +------------------------+---------+---+----+-----+------+-----+---------+
+    |Total                   |        0| 55|   0|    0|    23|  316|      391|
+    +------------------------+---------+---+----+-----+------+-----+---------+
+
+    * Expression: 
+    N/A
+
+    * Multiplexer: 
+    N/A
+
+    * Register: 
+    N/A
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++----------------+-----+-----+------------+--------------------------------------------------------------------------+--------------+
+|    RTL Ports   | Dir | Bits|  Protocol  |                               Source Object                              |    C Type    |
++----------------+-----+-----+------------+--------------------------------------------------------------------------+--------------+
+|clk             |  in |    1| ap_ctrl_hs | _sc_stream_imagedatafix<16, 2, 8, 128, 16, 3>::_sc_stream_imagedatafix.1 | return value |
+|reset           |  in |    1| ap_ctrl_hs | _sc_stream_imagedatafix<16, 2, 8, 128, 16, 3>::_sc_stream_imagedatafix.1 | return value |
+|din_0_dout      |  in |  128|   ap_fifo  |                                   din_0                                  |    pointer   |
+|din_0_empty_n   |  in |    1|   ap_fifo  |                                   din_0                                  |    pointer   |
+|din_0_read      | out |    1|   ap_fifo  |                                   din_0                                  |    pointer   |
+|din_1_dout      |  in |    1|   ap_fifo  |                                   din_1                                  |    pointer   |
+|din_1_empty_n   |  in |    1|   ap_fifo  |                                   din_1                                  |    pointer   |
+|din_1_read      | out |    1|   ap_fifo  |                                   din_1                                  |    pointer   |
+|din_2_dout      |  in |   16|   ap_fifo  |                                   din_2                                  |    pointer   |
+|din_2_empty_n   |  in |    1|   ap_fifo  |                                   din_2                                  |    pointer   |
+|din_2_read      | out |    1|   ap_fifo  |                                   din_2                                  |    pointer   |
+|dout_0_din      | out |  128|   ap_fifo  |                                  dout_0                                  |    pointer   |
+|dout_0_full_n   |  in |    1|   ap_fifo  |                                  dout_0                                  |    pointer   |
+|dout_0_write    | out |    1|   ap_fifo  |                                  dout_0                                  |    pointer   |
+|dout_1_din      | out |    1|   ap_fifo  |                                  dout_1                                  |    pointer   |
+|dout_1_full_n   |  in |    1|   ap_fifo  |                                  dout_1                                  |    pointer   |
+|dout_1_write    | out |    1|   ap_fifo  |                                  dout_1                                  |    pointer   |
+|dout_2_din      | out |   16|   ap_fifo  |                                  dout_2                                  |    pointer   |
+|dout_2_full_n   |  in |    1|   ap_fifo  |                                  dout_2                                  |    pointer   |
+|dout_2_write    | out |    1|   ap_fifo  |                                  dout_2                                  |    pointer   |
+|enable_dout     |  in |    1|   ap_fifo  |                                  enable                                  |    pointer   |
+|enable_empty_n  |  in |    1|   ap_fifo  |                                  enable                                  |    pointer   |
+|enable_read     | out |    1|   ap_fifo  |                                  enable                                  |    pointer   |
++----------------+-----+-----+------------+--------------------------------------------------------------------------+--------------+
+

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [RTGEN 206-101] Reset signal 'reset' was already created" projectName="generic" solutionName="defualt" date="2020-01-10T00:53:28.969+0100" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name '_sc_stream_resize_down_fast_v2' to 'p_sc_stream_resize_down_fast_v2'." projectName="generic" solutionName="defualt" date="2020-01-10T00:53:26.884+0100" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name '_sc_stream_resize_down_fast_v2_thread' to 'p_sc_stream_resize_down_fast_v2_thread'." projectName="generic" solutionName="defualt" date="2020-01-10T00:53:26.873+0100" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] 'Loop-1' (../src/./hwcore/pipes/streamresizedown.h:156:8) in function '_sc_stream_resize_down_fast_v2&lt;32, 3, 1>::thread' is an infinite loop." projectName="generic" solutionName="defualt" date="2020-01-10T00:53:26.831+0100" type="Warning"/>
+        <logs message="WARNING: [SYNCHK 200-23] ../src/./hwcore/pipes/data_types.h:218: variable-indexed range selection may cause suboptimal QoR." projectName="generic" solutionName="defualt" date="2020-01-10T00:53:25.778+0100" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-503] Ignored unroll directive 'Loop-1.1' (../src/./hwcore/pipes/streamresizedown.h:159) in function '_sc_stream_resize_down_fast_v2&lt;32, 3, 1>::thread()': multiple loop unroll directives in one loop, use the first one and ignore the rest." projectName="generic" solutionName="defualt" date="2020-01-10T00:53:25.533+0100" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] In file included from generic/scmodule.cpp:1:&#xA;In file included from generic/scmodule.cpp:7:&#xA;In file included from ../src/./hwcore/pipes/streamresizedown.h:6:&#xA;../src/./hwcore/pipes/data_types.h:108:24: warning: default template arguments for a function template are a C++11 extension [-Wc++11-extensions]&#xA; template &lt;int pW, int pkeepW = 8> inline void fit(const SC_DATA_STREAM_t&lt;pW, pkeepW> &amp;ref) {&#xA;                       ^        ~&#xA;../src/./hwcore/pipes/data_types.h:324:43: warning: alias declarations are a C++11 extension [-Wc++11-extensions]&#xA;template &lt;int W> using sc_data_stream_t = typename SC_DATA_STREAM_T_trait&lt;1 * W>::interface_T;&#xA;                                          ^&#xA;In file included from generic/scmodule.cpp:1:&#xA;In file included from generic/scmodule.cpp:7:&#xA;../src/./hwcore/pipes/streamresizedown.h:215:39: warning: alias declarations are a C++11 extension [-Wc++11-extensions]&#xA;using sc_stream_resize_down_skipper = ::_sc_stream_resize_down_skipper&lt;W, Nin, Nout>;&#xA;                                      ^&#xA;../src/./hwcore/pipes/streamresizedown.h:216:72: warning: alias declarations are a C++11 extension [-Wc++11-extensions]&#xA;template &lt;int W, int Nin, int Nout> using sc_stream_resize_down_fast = ::_sc_stream_resize_down_fast&lt;W, Nin, Nout>;&#xA;                                                                       ^&#xA;../src/./hwcore/pipes/streamresizedown.h:218:39: warning: alias declarations are a C++11 extension [-Wc++11-extensions]&#xA;using sc_stream_resize_down_fast_v2 = ::_sc_stream_resize_down_fast_v2&lt;W, Nin, Nout>;&#xA;                                      ^&#xA;5 warnings generated." projectName="generic" solutionName="defualt" date="2020-01-10T00:53:23.825+0100" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] In file included from generic/scmodule.cpp:7:&#xA;../src/./hwcore/pipes/streamresizedown.h:10:2: warning: __tag not defined!!! [-W#warnings]&#xA;#warning __tag not defined!!!&#xA; ^&#xA;1 warning generated." projectName="generic" solutionName="defualt" date="2020-01-10T00:52:44.118+0100" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

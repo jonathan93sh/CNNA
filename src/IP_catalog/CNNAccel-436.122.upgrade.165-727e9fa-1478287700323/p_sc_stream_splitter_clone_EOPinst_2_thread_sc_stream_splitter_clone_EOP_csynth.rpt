@@ -1,0 +1,241 @@
+
+
+================================================================
+== Vivado HLS Report for 'p_sc_stream_splitter_clone_EOPinst_2_thread_sc_stream_splitter_clone_EOP'
+================================================================
+* Date:           Fri Jan 10 13:54:31 2020
+
+* Version:        2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)
+* Project:        CNNAccel
+* Solution:       default
+* Product family: zynquplus
+* Target device:  xczu3eg-sbva484-1-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     4.334|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    ?|    ?|    ?|    ?|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------+-----+-----+----------+-----------+-----------+------+----------+
+        |             |  Latency  | Iteration|  Initiation Interval  | Trip |          |
+        |  Loop Name  | min | max |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------+-----+-----+----------+-----------+-----------+------+----------+
+        |- Loop 1     |    ?|    ?|         ?|          -|          -|  inf |    no    |
+        | + Loop 1.1  |    ?|    ?|         1|          1|          1|     ?|    yes   |
+        +-------------+-----+-----+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+-----+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  | URAM|
++-----------------+---------+-------+--------+-------+-----+
+|DSP              |        -|      -|       -|      -|    -|
+|Expression       |        -|      -|       0|     20|    -|
+|FIFO             |        -|      -|       -|      -|    -|
+|Instance         |        -|      -|       -|      -|    -|
+|Memory           |        -|      -|       -|      -|    -|
+|Multiplexer      |        -|      -|       -|    264|    -|
+|Register         |        -|      -|       4|      -|    -|
++-----------------+---------+-------+--------+-------+-----+
+|Total            |        0|      0|       4|    284|    0|
++-----------------+---------+-------+--------+-------+-----+
+|Available        |      432|    360|  141120|  70560|    0|
++-----------------+---------+-------+--------+-------+-----+
+|Utilization (%)  |        0|      0|   ~0   |   ~0  |    0|
++-----------------+---------+-------+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP48E: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +--------------------------+----------+-------+---+----+------------+------------+
+    |       Variable Name      | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +--------------------------+----------+-------+---+----+------------+------------+
+    |io_acc_block_signal_op28  |    and   |      0|  0|   2|           1|           1|
+    |io_acc_block_signal_op32  |    and   |      0|  0|   2|           1|           1|
+    |io_acc_block_signal_op33  |    and   |      0|  0|   2|           1|           1|
+    |io_acc_block_signal_op34  |    and   |      0|  0|   2|           1|           1|
+    |io_acc_block_signal_op35  |    and   |      0|  0|   2|           1|           1|
+    |io_acc_block_signal_op36  |    and   |      0|  0|   2|           1|           1|
+    |io_acc_block_signal_op37  |    and   |      0|  0|   2|           1|           1|
+    |io_acc_block_signal_op38  |    and   |      0|  0|   2|           1|           1|
+    |io_acc_block_signal_op39  |    and   |      0|  0|   2|           1|           1|
+    |ap_block_state3           |    or    |      0|  0|   2|           1|           1|
+    +--------------------------+----------+-------+---+----+------------+------------+
+    |Total                     |          |      0|  0|  20|          10|          10|
+    +--------------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +---------------+----+-----------+-----+-----------+
+    |      Name     | LUT| Input Size| Bits| Total Bits|
+    +---------------+----+-----------+-----+-----------+
+    |ap_NS_fsm      |  21|          4|    1|          4|
+    |din_0_blk_n    |   9|          2|    1|          2|
+    |din_1_blk_n    |   9|          2|    1|          2|
+    |din_2_blk_n    |   9|          2|    1|          2|
+    |dout_0_blk_n   |   9|          2|    1|          2|
+    |dout_10_blk_n  |   9|          2|    1|          2|
+    |dout_11_blk_n  |   9|          2|    1|          2|
+    |dout_12_blk_n  |   9|          2|    1|          2|
+    |dout_13_blk_n  |   9|          2|    1|          2|
+    |dout_14_blk_n  |   9|          2|    1|          2|
+    |dout_15_blk_n  |   9|          2|    1|          2|
+    |dout_16_blk_n  |   9|          2|    1|          2|
+    |dout_17_blk_n  |   9|          2|    1|          2|
+    |dout_18_blk_n  |   9|          2|    1|          2|
+    |dout_19_blk_n  |   9|          2|    1|          2|
+    |dout_1_blk_n   |   9|          2|    1|          2|
+    |dout_20_blk_n  |   9|          2|    1|          2|
+    |dout_21_blk_n  |   9|          2|    1|          2|
+    |dout_22_blk_n  |   9|          2|    1|          2|
+    |dout_23_blk_n  |   9|          2|    1|          2|
+    |dout_2_blk_n   |   9|          2|    1|          2|
+    |dout_3_blk_n   |   9|          2|    1|          2|
+    |dout_4_blk_n   |   9|          2|    1|          2|
+    |dout_5_blk_n   |   9|          2|    1|          2|
+    |dout_6_blk_n   |   9|          2|    1|          2|
+    |dout_7_blk_n   |   9|          2|    1|          2|
+    |dout_8_blk_n   |   9|          2|    1|          2|
+    |dout_9_blk_n   |   9|          2|    1|          2|
+    +---------------+----+-----------+-----+-----------+
+    |Total          | 264|         58|   28|         58|
+    +---------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-----------+---+----+-----+-----------+
+    |    Name   | FF| LUT| Bits| Const Bits|
+    +-----------+---+----+-----+-----------+
+    |ap_CS_fsm  |  4|   0|    4|          0|
+    +-----------+---+----+-----+-----------+
+    |Total      |  4|   0|    4|          0|
+    +-----------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++----------------+-----+-----+------------+----------------------------------------------------------------------------------------------------------------------+--------------+
+|    RTL Ports   | Dir | Bits|  Protocol  |                                                     Source Object                                                    |    C Type    |
++----------------+-----+-----+------------+----------------------------------------------------------------------------------------------------------------------+--------------+
+|ap_clk          |  in |    1| ap_ctrl_hs | _sc_stream_splitter_clone_EOPinst_2<hwcore::pipes::SC_DATA_STREAM_t<384, 8>, 8>::thread_sc_stream_splitter_clone_EOP | return value |
+|ap_rst          |  in |    1| ap_ctrl_hs | _sc_stream_splitter_clone_EOPinst_2<hwcore::pipes::SC_DATA_STREAM_t<384, 8>, 8>::thread_sc_stream_splitter_clone_EOP | return value |
+|din_0_dout      |  in |  384|   ap_fifo  |                                                         din_0                                                        |    pointer   |
+|din_0_empty_n   |  in |    1|   ap_fifo  |                                                         din_0                                                        |    pointer   |
+|din_0_read      | out |    1|   ap_fifo  |                                                         din_0                                                        |    pointer   |
+|din_1_dout      |  in |    1|   ap_fifo  |                                                         din_1                                                        |    pointer   |
+|din_1_empty_n   |  in |    1|   ap_fifo  |                                                         din_1                                                        |    pointer   |
+|din_1_read      | out |    1|   ap_fifo  |                                                         din_1                                                        |    pointer   |
+|din_2_dout      |  in |   48|   ap_fifo  |                                                         din_2                                                        |    pointer   |
+|din_2_empty_n   |  in |    1|   ap_fifo  |                                                         din_2                                                        |    pointer   |
+|din_2_read      | out |    1|   ap_fifo  |                                                         din_2                                                        |    pointer   |
+|dout_0_din      | out |  384|   ap_fifo  |                                                        dout_0                                                        |    pointer   |
+|dout_0_full_n   |  in |    1|   ap_fifo  |                                                        dout_0                                                        |    pointer   |
+|dout_0_write    | out |    1|   ap_fifo  |                                                        dout_0                                                        |    pointer   |
+|dout_1_din      | out |  384|   ap_fifo  |                                                        dout_1                                                        |    pointer   |
+|dout_1_full_n   |  in |    1|   ap_fifo  |                                                        dout_1                                                        |    pointer   |
+|dout_1_write    | out |    1|   ap_fifo  |                                                        dout_1                                                        |    pointer   |
+|dout_2_din      | out |  384|   ap_fifo  |                                                        dout_2                                                        |    pointer   |
+|dout_2_full_n   |  in |    1|   ap_fifo  |                                                        dout_2                                                        |    pointer   |
+|dout_2_write    | out |    1|   ap_fifo  |                                                        dout_2                                                        |    pointer   |
+|dout_3_din      | out |  384|   ap_fifo  |                                                        dout_3                                                        |    pointer   |
+|dout_3_full_n   |  in |    1|   ap_fifo  |                                                        dout_3                                                        |    pointer   |
+|dout_3_write    | out |    1|   ap_fifo  |                                                        dout_3                                                        |    pointer   |
+|dout_4_din      | out |  384|   ap_fifo  |                                                        dout_4                                                        |    pointer   |
+|dout_4_full_n   |  in |    1|   ap_fifo  |                                                        dout_4                                                        |    pointer   |
+|dout_4_write    | out |    1|   ap_fifo  |                                                        dout_4                                                        |    pointer   |
+|dout_5_din      | out |  384|   ap_fifo  |                                                        dout_5                                                        |    pointer   |
+|dout_5_full_n   |  in |    1|   ap_fifo  |                                                        dout_5                                                        |    pointer   |
+|dout_5_write    | out |    1|   ap_fifo  |                                                        dout_5                                                        |    pointer   |
+|dout_6_din      | out |  384|   ap_fifo  |                                                        dout_6                                                        |    pointer   |
+|dout_6_full_n   |  in |    1|   ap_fifo  |                                                        dout_6                                                        |    pointer   |
+|dout_6_write    | out |    1|   ap_fifo  |                                                        dout_6                                                        |    pointer   |
+|dout_7_din      | out |  384|   ap_fifo  |                                                        dout_7                                                        |    pointer   |
+|dout_7_full_n   |  in |    1|   ap_fifo  |                                                        dout_7                                                        |    pointer   |
+|dout_7_write    | out |    1|   ap_fifo  |                                                        dout_7                                                        |    pointer   |
+|dout_8_din      | out |    1|   ap_fifo  |                                                        dout_8                                                        |    pointer   |
+|dout_8_full_n   |  in |    1|   ap_fifo  |                                                        dout_8                                                        |    pointer   |
+|dout_8_write    | out |    1|   ap_fifo  |                                                        dout_8                                                        |    pointer   |
+|dout_9_din      | out |    1|   ap_fifo  |                                                        dout_9                                                        |    pointer   |
+|dout_9_full_n   |  in |    1|   ap_fifo  |                                                        dout_9                                                        |    pointer   |
+|dout_9_write    | out |    1|   ap_fifo  |                                                        dout_9                                                        |    pointer   |
+|dout_10_din     | out |    1|   ap_fifo  |                                                        dout_10                                                       |    pointer   |
+|dout_10_full_n  |  in |    1|   ap_fifo  |                                                        dout_10                                                       |    pointer   |
+|dout_10_write   | out |    1|   ap_fifo  |                                                        dout_10                                                       |    pointer   |
+|dout_11_din     | out |    1|   ap_fifo  |                                                        dout_11                                                       |    pointer   |
+|dout_11_full_n  |  in |    1|   ap_fifo  |                                                        dout_11                                                       |    pointer   |
+|dout_11_write   | out |    1|   ap_fifo  |                                                        dout_11                                                       |    pointer   |
+|dout_12_din     | out |    1|   ap_fifo  |                                                        dout_12                                                       |    pointer   |
+|dout_12_full_n  |  in |    1|   ap_fifo  |                                                        dout_12                                                       |    pointer   |
+|dout_12_write   | out |    1|   ap_fifo  |                                                        dout_12                                                       |    pointer   |
+|dout_13_din     | out |    1|   ap_fifo  |                                                        dout_13                                                       |    pointer   |
+|dout_13_full_n  |  in |    1|   ap_fifo  |                                                        dout_13                                                       |    pointer   |
+|dout_13_write   | out |    1|   ap_fifo  |                                                        dout_13                                                       |    pointer   |
+|dout_14_din     | out |    1|   ap_fifo  |                                                        dout_14                                                       |    pointer   |
+|dout_14_full_n  |  in |    1|   ap_fifo  |                                                        dout_14                                                       |    pointer   |
+|dout_14_write   | out |    1|   ap_fifo  |                                                        dout_14                                                       |    pointer   |
+|dout_15_din     | out |    1|   ap_fifo  |                                                        dout_15                                                       |    pointer   |
+|dout_15_full_n  |  in |    1|   ap_fifo  |                                                        dout_15                                                       |    pointer   |
+|dout_15_write   | out |    1|   ap_fifo  |                                                        dout_15                                                       |    pointer   |
+|dout_16_din     | out |   48|   ap_fifo  |                                                        dout_16                                                       |    pointer   |
+|dout_16_full_n  |  in |    1|   ap_fifo  |                                                        dout_16                                                       |    pointer   |
+|dout_16_write   | out |    1|   ap_fifo  |                                                        dout_16                                                       |    pointer   |
+|dout_17_din     | out |   48|   ap_fifo  |                                                        dout_17                                                       |    pointer   |
+|dout_17_full_n  |  in |    1|   ap_fifo  |                                                        dout_17                                                       |    pointer   |
+|dout_17_write   | out |    1|   ap_fifo  |                                                        dout_17                                                       |    pointer   |
+|dout_18_din     | out |   48|   ap_fifo  |                                                        dout_18                                                       |    pointer   |
+|dout_18_full_n  |  in |    1|   ap_fifo  |                                                        dout_18                                                       |    pointer   |
+|dout_18_write   | out |    1|   ap_fifo  |                                                        dout_18                                                       |    pointer   |
+|dout_19_din     | out |   48|   ap_fifo  |                                                        dout_19                                                       |    pointer   |
+|dout_19_full_n  |  in |    1|   ap_fifo  |                                                        dout_19                                                       |    pointer   |
+|dout_19_write   | out |    1|   ap_fifo  |                                                        dout_19                                                       |    pointer   |
+|dout_20_din     | out |   48|   ap_fifo  |                                                        dout_20                                                       |    pointer   |
+|dout_20_full_n  |  in |    1|   ap_fifo  |                                                        dout_20                                                       |    pointer   |
+|dout_20_write   | out |    1|   ap_fifo  |                                                        dout_20                                                       |    pointer   |
+|dout_21_din     | out |   48|   ap_fifo  |                                                        dout_21                                                       |    pointer   |
+|dout_21_full_n  |  in |    1|   ap_fifo  |                                                        dout_21                                                       |    pointer   |
+|dout_21_write   | out |    1|   ap_fifo  |                                                        dout_21                                                       |    pointer   |
+|dout_22_din     | out |   48|   ap_fifo  |                                                        dout_22                                                       |    pointer   |
+|dout_22_full_n  |  in |    1|   ap_fifo  |                                                        dout_22                                                       |    pointer   |
+|dout_22_write   | out |    1|   ap_fifo  |                                                        dout_22                                                       |    pointer   |
+|dout_23_din     | out |   48|   ap_fifo  |                                                        dout_23                                                       |    pointer   |
+|dout_23_full_n  |  in |    1|   ap_fifo  |                                                        dout_23                                                       |    pointer   |
+|dout_23_write   | out |    1|   ap_fifo  |                                                        dout_23                                                       |    pointer   |
++----------------+-----+-----+------------+----------------------------------------------------------------------------------------------------------------------+--------------+
+
