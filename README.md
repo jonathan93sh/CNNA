@@ -2,9 +2,9 @@
 A scalable and efficient convolutional neural network accelerator using HLS for a System on Chip design
 
 # Abstract:
-The source code presents a configurable Convolutional Neural Network Accelerator (CNNA) for a System on Chip design (SoC). 
+The source code concerns a configurable Convolutional Neural Network Accelerator (CNNA) for a System on Chip design (SoC). 
 The goal was to accelerate inference of different deep learning networks on an embedded SoC platform. 
-The presented CNNA has a scalable architecture which uses High Level Synthesis (HLS) and SystemC for the hardware accelerator. 
+The CNNA has a scalable architecture which uses High Level Synthesis (HLS) and SystemC for the hardware accelerator. 
 It is able to accelerate any Convolutional Neural Network (CNN) exported from Python and supports a combination of convolutional, max-pooling, and fully connected layers. 
 A training method with fixed-point quantized weights is proposed and presented in the paper with link below. 
 The CNNA is template-based, enabling it to scale for different targets of the Xilinx Zynq platform. 
@@ -22,7 +22,7 @@ This code targets a development platform with Linux and Xilinx Vivado 2019.1 and
 - PreProcessing: contains the Python code to perform preprocessing of the model (*.json) and weights (*.h5).
 - PYNQ: contains the Python library (NNAccelerator.py) and jupyter notebooks for inference on the target platform (Xilinx Ultra96v2 with PYNQ)
 - src: contains the SystemC source code for the IP Core (CNNA)
-- src/jupyterlab/HEB.py: Python script to build the bit file stored in src/IP_catalog/<IP core>/bitfiles
+- src/jupyterlab/HEB.py: Python script to build the bit file stored in src/IP_catalog/[IP core]/bitfiles
 
 
 
