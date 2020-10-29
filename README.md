@@ -15,7 +15,7 @@ fitting it to the desired platform and model. The CNN VGG16 was used to test the
 https://arxiv.org/abs/2004.13075
 
 # Development Tools
-This code requires a development platform with Linux, Python and Xilinx Vivado 2019.1 installed.
+This code requires a development platform with Linux, Python (Anaconda) and Xilinx Vivado 2019.1 installed.
 The target platform is Xilinx Ultra96v2 running PYNQ version 2.4. 
 
 # Directories
