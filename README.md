@@ -21,7 +21,7 @@ The target platform is Xilinx Ultra96v2 running PYNQ version 2.4.
 # Directories
 - Training: contains the Python code to train fixed-point CNN models in Keras. The trained model is saved in Training/json (*.json) and the weights in Training/weights (*.h5).
 - PreProcessing: contains the Python code to perform preprocessing of the model (*.json) and weights (*.h5).
-- PYNQ: contains the Python library (NNAccelerator.py) and jupyter notebooks for inference on the target platform (Xilinx Ultra96v2 with PYNQ)
+- PYNQ: contains the Python library (NNAccelerator.py) and jupyter notebooks for initialization and inference on the target platform (Xilinx Ultra96v2 with PYNQ)
 - src: contains the SystemC source code for the IP Core (CNNA)
 - src/jupyterlab/HEB.py: Python script to build the bit file stored in src/IP_catalog/[IP core]/bitfiles
 
