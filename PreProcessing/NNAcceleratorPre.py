@@ -157,7 +157,7 @@ class NNAcceleratorPre():
                 inPtrSub = ins%wBW
                 inPtrBig = np.floor(ins/wBW)
                 ptrTo = ((1+inPtrBig)*nOutputRaw*wBW)+out*wBW+inPtrSub
-                print('out: ', out, ', ptrFrom: ', ptrFrom, ', ptrTo: ', ptrTo)
+                #print('out: ', out, ', ptrFrom: ', ptrFrom, ', ptrTo: ', ptrTo)
                 if out < nOutputs:
                     self.insertInDmaBuffer(dmaBuffer,data[ptrFrom],int(ptrTo))
                 else:
