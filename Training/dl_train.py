@@ -81,7 +81,8 @@ def magic(model_name, opt, lrs, fc_layers=(1024, 1024), batch_size=64, dropout=0
     opt_name = opt[0]
     opt = opt[1]()
     lrs_name = lrs[0]
-    model_name_save = f"{model_name}_detect_FULL__OPT_{opt_name}___LRS_{lrs_name}_final_1024"
+    #model_name_save = f"{model_name}_detect_FULL__OPT_{opt_name}___LRS_{lrs_name}_final_1024"
+    model_name_save = f"{model_name}_detect_FULL__OPT_{opt_name}___LRS_{lrs_name}_final_4096"
 
     print("Training for "+model_name_save)
     if dry_run:
@@ -213,8 +214,8 @@ if __name__ == '__main__':
     WL = [16]#16, 8
     OPT = ['SGD']
     SCALEAUTO = [True, False]#,False]#, False]
-    fc_layers = [1024,1024]
-    #fc_layers = [4096,4096]
+    #fc_layers = [1024,1024]
+    fc_layers = [4096,4096]
     
     dropout = 0.0#0.5 sættes til 0 ved autoscale
     batch_size = 16 #
