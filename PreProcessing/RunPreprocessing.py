@@ -40,10 +40,10 @@ weightName = 'VGG16_detect.hdf5'
 
 threads = list()
 
-#threads.append( Thread(target = accCNNA8_1.pre, args = (jsonName,weightName,False)))
-#threads.append( Thread(target = accCNNA8_2.pre, args = (jsonName,weightName,False)))
-#threads.append( Thread(target = accCNNA16.pre, args = (jsonName,weightName,False)))
-threads.append( Thread(target = accCNNA32.pre, args = (jsonName,weightName,False)))
+threads.append( Thread(target = accCNNA8_1.pre, args = (jsonName,weightName,False)))
+threads.append( Thread(target = accCNNA8_2.pre, args = (jsonName,weightName,False)))
+threads.append( Thread(target = accCNNA16.pre, args = (jsonName,weightName,False)))
+#threads.append( Thread(target = accCNNA32.pre, args = (jsonName,weightName,False)))
 
 for thread in threads:
     thread.start()
