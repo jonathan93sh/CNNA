@@ -201,10 +201,6 @@ def magic(model_name, opt, lrs, fc_layers=(1024, 1024), batch_size=64, dropout=0
 
 if __name__ == '__main__':
 
-    #def train(fix_W=16,OPT='SGD',fc_layers = [4096,4096],epochs=100,model_name="VGGsmallfix",scale_auto=True)
-    
-    
-    
     #lr = 3*3e-4#1
     #min_lr = 9*1e-4#1
     lr = 1*1e-3 # full
@@ -213,20 +209,20 @@ if __name__ == '__main__':
 
     WL = [16]#16, 8
     OPT = ['SGD']
-    SCALEAUTO = [True, False]#,False]#, False]
+    SCALEAUTO = [True]#,False] # Enable to train with and without auto scale
     #fc_layers = [1024,1024]
     fc_layers = [4096,4096]
     
-    dropout = 0.0#0.5 sættes til 0 ved autoscale
+    dropout = 0.0#0.5 must be 0 using autoscale
     batch_size = 16 #
     max_epochs = 100 #1000
 
     # Reduce learning rate on plateau
     def reduce_lr(): return ReduceLROnPlateau(
         monitor='loss',
-        #factor=0.98,#0.95
+        #factor=0.50, #full
         #patience=50,#5
-        factor=0.50, #full
+        factor=0.95,#0.98
         patience=10, #full
         min_lr=min_lr,
         verbose=verbose
@@ -242,8 +238,6 @@ if __name__ == '__main__':
 
                 X_fix_W = wl
                 X_fix_I = 2
-
-
 
                 if wl == 0:
                     if sa:
@@ -287,71 +281,3 @@ if __name__ == '__main__':
                     dry_run=False,
                     acf=acfObj,pred_acf=pred_acfObj)
                 
-
-                
-                
-    
-    
-
-    
-
-    #def fixAdam(): return Adam_fix(lr=lr, fixW=W_fix_W,
-                                   #fixI=W_fix_I)  # ,name='adam_fix')
-
-    #def fixSGD(): return SGD_fix(lr=lr, fixW=W_fix_W, fixI=W_fix_I)
-    #CyclicAdam = lambda : Cyclical_Adam(lr =lr, beta_3 = 10**6)
-    #Adam_ = lambda : Adam(lr=lr)
-    #Sgd = lambda : SGD(lr=lr)
-
-    # OPTs.append(("CyclicAdam",CyclicAdam))
-    # OPTs.append(("Adam",Adam_))
-    # OPTs.append(("Sgd",Sgd))
-
-    #lr_Cyclical_cos = lambda : LearningRateScheduler(get_lr_scheduler_cyclical(lr,1,min_lr,15),1)
-    #lr_triangular = lambda : LearningRateScheduler(get_lr_scheduler_triangular(lr, min_lr, 15),1)
-
-
-    #LRSchedulers = []
-    # LRSchedulers.append(("lr_Cyclical_cos",lr_Cyclical_cos))
-    # LRSchedulers.append(("lr_triangular",lr_triangular))
-    # LRSchedulers.append(("reduce_lr",reduce_lr))
-
-    # models = []    #ResNet50 | DenseNet121 | MobileNetV2 | VGG19 |InceptionV3
-    # models.append("VGG19")
-    # models.append("ResNet50")
-
-    # Hyperparameters
-    
-    
-
-    # LRSchedulers[0]
-    #itr = 0
-    #magic(
-    #    lrs=("reduce_lr_loss",reduce_lr),
-    #    opt=("tmp_detect_fixSGD_Wfix_"+str(W_fix_W)+"W_fix_I_"+str(W_fix_I) +
-    #         "X_fix_W_"+str(X_fix_W)+"X_fix_I_"+str(X_fix_I), fixSGD),
-        #model_from_file=True,
-        #model_json="VGG16_flowers___OPT_fixSGD_Wfix_16W_fix_I_2X_fix_W_16X_fix_I_2___LRS_reduce_lr_fix.json",
-        #model_w_file="dl_weights/VGG16_flowers___OPT_fixSGD_Wfix_16W_fix_I_2X_fix_W_16X_fix_I_2___LRS_reduce_lr-epoch190-acc0.2201-loss3.1715-valacc0.1464-valloss3.4019.hdf5",
-    #    model_name="VGGsmallfix",
-    #    fc_layers=fc_layers,
-    #    batch_size=batch_size,
-    #    dropout=dropout,
-    #    MAX_EPOCHS=max_epochs,
-    #    dry_run=False,
-    #    acf=acfObj,pred_acf=pred_acfObj)
-
-    # for opt in OPTs:
-    #    for model in models:
-    #        for lrs in LRSchedulers:
-    #            #if (getpass.getuser() == "GigaPC") == (itr % 3 == 0):
-    #            magic(
-    #                lrs=lrs,
-    #                opt=opt,
-    #                model_name=model,
-    #                fc_layers=fc_layers,
-    #                batch_size=batch_size,
-    #                dropout=dropout,
-    #                MAX_EPOCHS=max_epochs,
-    #                dry_run=False)
-    #            itr=itr+1
