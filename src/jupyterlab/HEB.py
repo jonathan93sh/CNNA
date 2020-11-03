@@ -20,7 +20,7 @@ save_id='180Mhz.p'
 #%% Word-length OPT
 
 # define object funtion 
-if True:
+if False:
     init_wordlengt = [8,4] # fixed16.16
     
     target_mse = 1e-3
@@ -271,7 +271,6 @@ if False:
 test = cnna_model_make([16,128,8,3,32]) # Paper CNNA16
 #test = cnna_model_make([8,128,16,1,42]) # Paper CNNA8_1
 #test = cnna_model_make([8,128,8,3,42]) # Paper CNNA8_2
-print(test)
 
 #for p in top3_list16:
 #    result_rtl.append(cnna_model_make(p))
