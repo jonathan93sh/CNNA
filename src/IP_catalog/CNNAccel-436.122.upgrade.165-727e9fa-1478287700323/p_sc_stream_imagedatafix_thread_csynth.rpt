@@ -1,0 +1,324 @@
+
+
+================================================================
+== Vivado HLS Report for 'p_sc_stream_imagedatafix_thread'
+================================================================
+* Date:           Fri Jan 10 13:40:13 2020
+
+* Version:        2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)
+* Project:        CNNAccel
+* Solution:       default
+* Product family: zynquplus
+* Target device:  xczu3eg-sbva484-1-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     5.659|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    ?|    ?|    ?|    ?|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------+-----+-----+----------+-----------+-----------+------+----------+
+        |             |  Latency  | Iteration|  Initiation Interval  | Trip |          |
+        |  Loop Name  | min | max |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------+-----+-----+----------+-----------+-----------+------+----------+
+        |- Loop 1     |    ?|    ?|         ?|          -|          -|  inf |    no    |
+        | + Loop 1.1  |    ?|    ?|         1|          1|          1|     ?|    yes   |
+        | + Loop 1.2  |    ?|    ?|         2|          2|          3|     ?|    yes   |
+        +-------------+-----+-----+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+-----+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  | URAM|
++-----------------+---------+-------+--------+-------+-----+
+|DSP              |        -|      -|       -|      -|    -|
+|Expression       |        -|      -|       0|    125|    -|
+|FIFO             |        -|      -|       -|      -|    -|
+|Instance         |        -|      -|       0|    195|    -|
+|Memory           |        -|      -|       -|      -|    -|
+|Multiplexer      |        -|      -|       -|    746|    -|
+|Register         |        -|      -|     422|      -|    -|
++-----------------+---------+-------+--------+-------+-----+
+|Total            |        0|      0|     422|   1066|    0|
++-----------------+---------+-------+--------+-------+-----+
+|Available        |      432|    360|  141120|  70560|    0|
++-----------------+---------+-------+--------+-------+-----+
+|Utilization (%)  |        0|      0|   ~0   |      1|    0|
++-----------------+---------+-------+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +--------------------------------------------+----------------------------------------+---------+-------+---+----+-----+
+    |                  Instance                  |                 Module                 | BRAM_18K| DSP48E| FF| LUT| URAM|
+    +--------------------------------------------+----------------------------------------+---------+-------+---+----+-----+
+    |p_sc_stream_imagedatafix_mux_164_8_1_1_U94  |p_sc_stream_imagedatafix_mux_164_8_1_1  |        0|      0|  0|  65|    0|
+    |p_sc_stream_imagedatafix_mux_164_8_1_1_U95  |p_sc_stream_imagedatafix_mux_164_8_1_1  |        0|      0|  0|  65|    0|
+    |p_sc_stream_imagedatafix_mux_164_8_1_1_U96  |p_sc_stream_imagedatafix_mux_164_8_1_1  |        0|      0|  0|  65|    0|
+    +--------------------------------------------+----------------------------------------+---------+-------+---+----+-----+
+    |Total                                       |                                        |        0|      0|  0| 195|    0|
+    +--------------------------------------------+----------------------------------------+---------+-------+---+----+-----+
+
+    * DSP48E: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +---------------------------+----------+-------+---+----+------------+------------+
+    |       Variable Name       | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------------------+----------+-------+---+----+------------+------------+
+    |itr_V_1_fu_938_p2          |     +    |      0|  0|  15|           1|           5|
+    |itr_V_2_fu_1268_p2         |     +    |      0|  0|  15|           1|           5|
+    |itr_V_fu_907_p2            |     +    |      0|  0|  15|           5|           1|
+    |and_ln244_fu_1301_p2       |    and   |      0|  0|   2|           1|           1|
+    |ap_condition_122           |    and   |      0|  0|   2|           1|           1|
+    |io_acc_block_signal_op132  |    and   |      0|  0|   2|           1|           1|
+    |io_acc_block_signal_op136  |    and   |      0|  0|   2|           1|           1|
+    |sc_fifo_chn_117_din        |    and   |      0|  0|   2|           1|           1|
+    |icmp_ln879_2_fu_901_p2     |   icmp   |      0|  0|   9|           3|           1|
+    |icmp_ln879_3_fu_922_p2     |   icmp   |      0|  0|   9|           3|           1|
+    |icmp_ln879_4_fu_953_p2     |   icmp   |      0|  0|   9|           3|           2|
+    |icmp_ln879_5_fu_1255_p2    |   icmp   |      0|  0|  11|           5|           4|
+    |icmp_ln879_fu_895_p2       |   icmp   |      0|  0|   9|           4|           1|
+    |phitmp_fu_1295_p2          |   icmp   |      0|  0|   9|           4|           1|
+    |ap_block_state2            |    or    |      0|  0|   2|           1|           1|
+    |ap_block_state3            |    or    |      0|  0|   2|           1|           1|
+    |ap_block_state6            |    or    |      0|  0|   2|           1|           1|
+    |or_ln226_fu_928_p2         |    or    |      0|  0|   2|           1|           1|
+    |or_ln232_fu_959_p2         |    or    |      0|  0|   2|           1|           1|
+    |select_ln240_fu_1287_p3    |  select  |      0|  0|   4|           1|           1|
+    +---------------------------+----------+-------+---+----+------------+------------+
+    |Total                      |          |      0|  0| 125|          40|          32|
+    +---------------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +--------------------------------------------+----+-----------+-----+-----------+
+    |                    Name                    | LUT| Input Size| Bits| Total Bits|
+    +--------------------------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                                   |  41|          8|    1|          8|
+    |ap_phi_mux_p_0199_1_phi_fu_556_p4           |  15|          3|    3|          9|
+    |ap_phi_mux_p_0199_2_phi_fu_576_p4           |  15|          3|    3|          9|
+    |ap_phi_mux_p_0199_3_phi_fu_804_p4           |   9|          2|    3|          6|
+    |ap_phi_mux_p_0203_3_phi_fu_816_p4           |   9|          2|    5|         10|
+    |ap_phi_mux_raw_pixels_0_V_3_phi_fu_780_p4   |   9|          2|    8|         16|
+    |ap_phi_mux_raw_pixels_10_V_3_phi_fu_660_p4  |   9|          2|    8|         16|
+    |ap_phi_mux_raw_pixels_11_V_3_phi_fu_648_p4  |   9|          2|    8|         16|
+    |ap_phi_mux_raw_pixels_12_V_3_phi_fu_636_p4  |   9|          2|    8|         16|
+    |ap_phi_mux_raw_pixels_13_V_3_phi_fu_624_p4  |   9|          2|    8|         16|
+    |ap_phi_mux_raw_pixels_14_V_3_phi_fu_612_p4  |   9|          2|    8|         16|
+    |ap_phi_mux_raw_pixels_15_V_3_phi_fu_600_p4  |   9|          2|    8|         16|
+    |ap_phi_mux_raw_pixels_1_V_3_phi_fu_768_p4   |   9|          2|    8|         16|
+    |ap_phi_mux_raw_pixels_2_V_3_phi_fu_756_p4   |   9|          2|    8|         16|
+    |ap_phi_mux_raw_pixels_3_V_3_phi_fu_744_p4   |   9|          2|    8|         16|
+    |ap_phi_mux_raw_pixels_4_V_3_phi_fu_732_p4   |   9|          2|    8|         16|
+    |ap_phi_mux_raw_pixels_5_V_3_phi_fu_720_p4   |   9|          2|    8|         16|
+    |ap_phi_mux_raw_pixels_6_V_3_phi_fu_708_p4   |   9|          2|    8|         16|
+    |ap_phi_mux_raw_pixels_7_V_3_phi_fu_696_p4   |   9|          2|    8|         16|
+    |ap_phi_mux_raw_pixels_8_V_3_phi_fu_684_p4   |   9|          2|    8|         16|
+    |ap_phi_mux_raw_pixels_9_V_3_phi_fu_672_p4   |   9|          2|    8|         16|
+    |ap_phi_mux_t_V_1_phi_fu_567_p4              |  15|          3|    5|         15|
+    |ap_phi_mux_t_V_2_phi_fu_588_p4              |  15|          3|    5|         15|
+    |ap_phi_mux_tmp_in_1_2_phi_fu_792_p4         |   9|          2|    1|          2|
+    |din_0_blk_n                                 |   9|          2|    1|          2|
+    |din_1_blk_n                                 |   9|          2|    1|          2|
+    |din_2_blk_n                                 |   9|          2|    1|          2|
+    |enable_blk_n                                |   9|          2|    1|          2|
+    |p_0199_0_reg_530                            |   9|          2|    3|          6|
+    |p_0199_3_reg_800                            |   9|          2|    3|          6|
+    |p_0203_3_reg_813                            |   9|          2|    5|         10|
+    |raw_pixels_0_V_2_reg_510                    |   9|          2|    8|         16|
+    |raw_pixels_0_V_3_reg_776                    |   9|          2|    8|         16|
+    |raw_pixels_10_V_2_reg_410                   |   9|          2|    8|         16|
+    |raw_pixels_10_V_3_reg_656                   |   9|          2|    8|         16|
+    |raw_pixels_11_V_2_reg_400                   |   9|          2|    8|         16|
+    |raw_pixels_11_V_3_reg_644                   |   9|          2|    8|         16|
+    |raw_pixels_12_V_2_reg_390                   |   9|          2|    8|         16|
+    |raw_pixels_12_V_3_reg_632                   |   9|          2|    8|         16|
+    |raw_pixels_13_V_2_reg_380                   |   9|          2|    8|         16|
+    |raw_pixels_13_V_3_reg_620                   |   9|          2|    8|         16|
+    |raw_pixels_14_V_2_reg_370                   |   9|          2|    8|         16|
+    |raw_pixels_14_V_3_reg_608                   |   9|          2|    8|         16|
+    |raw_pixels_15_V_2_reg_360                   |   9|          2|    8|         16|
+    |raw_pixels_15_V_3_reg_596                   |   9|          2|    8|         16|
+    |raw_pixels_1_V_2_reg_500                    |   9|          2|    8|         16|
+    |raw_pixels_1_V_3_reg_764                    |   9|          2|    8|         16|
+    |raw_pixels_2_V_2_reg_490                    |   9|          2|    8|         16|
+    |raw_pixels_2_V_3_reg_752                    |   9|          2|    8|         16|
+    |raw_pixels_3_V_2_reg_480                    |   9|          2|    8|         16|
+    |raw_pixels_3_V_3_reg_740                    |   9|          2|    8|         16|
+    |raw_pixels_4_V_2_reg_470                    |   9|          2|    8|         16|
+    |raw_pixels_4_V_3_reg_728                    |   9|          2|    8|         16|
+    |raw_pixels_5_V_2_reg_460                    |   9|          2|    8|         16|
+    |raw_pixels_5_V_3_reg_716                    |   9|          2|    8|         16|
+    |raw_pixels_6_V_2_reg_450                    |   9|          2|    8|         16|
+    |raw_pixels_6_V_3_reg_704                    |   9|          2|    8|         16|
+    |raw_pixels_7_V_2_reg_440                    |   9|          2|    8|         16|
+    |raw_pixels_7_V_3_reg_692                    |   9|          2|    8|         16|
+    |raw_pixels_8_V_2_reg_430                    |   9|          2|    8|         16|
+    |raw_pixels_8_V_3_reg_680                    |   9|          2|    8|         16|
+    |raw_pixels_9_V_2_reg_420                    |   9|          2|    8|         16|
+    |raw_pixels_9_V_3_reg_668                    |   9|          2|    8|         16|
+    |sc_fifo_chn_114_blk_n                       |   9|          2|    1|          2|
+    |sc_fifo_chn_115_blk_n                       |   9|          2|    1|          2|
+    |sc_fifo_chn_116_blk_n                       |   9|          2|    1|          2|
+    |sc_fifo_chn_117_blk_n                       |   9|          2|    1|          2|
+    |sc_fifo_chn_1_blk_n                         |   9|          2|    1|          2|
+    |sc_fifo_chn_1_din                           |  15|          3|    1|          3|
+    |sc_fifo_chn_320_blk_n                       |   9|          2|    1|          2|
+    |sc_fifo_chn_421_blk_n                       |   9|          2|    1|          2|
+    |sc_fifo_chn_522_blk_n                       |   9|          2|    1|          2|
+    |t_V_2_reg_585                               |   9|          2|    5|         10|
+    |t_V_reg_541                                 |   9|          2|    4|          8|
+    |tmp_in_1_1_reg_520                          |   9|          2|    1|          2|
+    |tmp_in_1_2_reg_788                          |   9|          2|    1|          2|
+    +--------------------------------------------+----+-----------+-----+-----------+
+    |Total                                       | 746|        163|  445|        913|
+    +--------------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +---------------------------+---+----+-----+-----------+
+    |            Name           | FF| LUT| Bits| Const Bits|
+    +---------------------------+---+----+-----+-----------+
+    |ap_CS_fsm                  |  7|   0|    7|          0|
+    |icmp_ln879_2_reg_1590      |  1|   0|    1|          0|
+    |icmp_ln879_reg_1586        |  1|   0|    1|          0|
+    |or_ln226_reg_1594          |  1|   0|    1|          0|
+    |or_ln232_reg_1603          |  1|   0|    1|          0|
+    |p_0199_0_reg_530           |  3|   0|    3|          0|
+    |p_0199_3_reg_800           |  3|   0|    3|          0|
+    |p_0203_3_reg_813           |  5|   0|    5|          0|
+    |raw_pixels_0_V_2_reg_510   |  8|   0|    8|          0|
+    |raw_pixels_0_V_3_reg_776   |  8|   0|    8|          0|
+    |raw_pixels_0_V_fu_230      |  8|   0|    8|          0|
+    |raw_pixels_10_V_1_fu_270   |  8|   0|    8|          0|
+    |raw_pixels_10_V_2_reg_410  |  8|   0|    8|          0|
+    |raw_pixels_10_V_3_reg_656  |  8|   0|    8|          0|
+    |raw_pixels_11_V_1_fu_274   |  8|   0|    8|          0|
+    |raw_pixels_11_V_2_reg_400  |  8|   0|    8|          0|
+    |raw_pixels_11_V_3_reg_644  |  8|   0|    8|          0|
+    |raw_pixels_12_V_1_fu_278   |  8|   0|    8|          0|
+    |raw_pixels_12_V_2_reg_390  |  8|   0|    8|          0|
+    |raw_pixels_12_V_3_reg_632  |  8|   0|    8|          0|
+    |raw_pixels_13_V_1_fu_282   |  8|   0|    8|          0|
+    |raw_pixels_13_V_2_reg_380  |  8|   0|    8|          0|
+    |raw_pixels_13_V_3_reg_620  |  8|   0|    8|          0|
+    |raw_pixels_14_V_1_fu_286   |  8|   0|    8|          0|
+    |raw_pixels_14_V_2_reg_370  |  8|   0|    8|          0|
+    |raw_pixels_14_V_3_reg_608  |  8|   0|    8|          0|
+    |raw_pixels_15_V_1_fu_290   |  8|   0|    8|          0|
+    |raw_pixels_15_V_2_reg_360  |  8|   0|    8|          0|
+    |raw_pixels_15_V_3_reg_596  |  8|   0|    8|          0|
+    |raw_pixels_1_V_1_fu_234    |  8|   0|    8|          0|
+    |raw_pixels_1_V_2_reg_500   |  8|   0|    8|          0|
+    |raw_pixels_1_V_3_reg_764   |  8|   0|    8|          0|
+    |raw_pixels_2_V_1_fu_238    |  8|   0|    8|          0|
+    |raw_pixels_2_V_2_reg_490   |  8|   0|    8|          0|
+    |raw_pixels_2_V_3_reg_752   |  8|   0|    8|          0|
+    |raw_pixels_3_V_1_fu_242    |  8|   0|    8|          0|
+    |raw_pixels_3_V_2_reg_480   |  8|   0|    8|          0|
+    |raw_pixels_3_V_3_reg_740   |  8|   0|    8|          0|
+    |raw_pixels_4_V_1_fu_246    |  8|   0|    8|          0|
+    |raw_pixels_4_V_2_reg_470   |  8|   0|    8|          0|
+    |raw_pixels_4_V_3_reg_728   |  8|   0|    8|          0|
+    |raw_pixels_5_V_1_fu_250    |  8|   0|    8|          0|
+    |raw_pixels_5_V_2_reg_460   |  8|   0|    8|          0|
+    |raw_pixels_5_V_3_reg_716   |  8|   0|    8|          0|
+    |raw_pixels_6_V_1_fu_254    |  8|   0|    8|          0|
+    |raw_pixels_6_V_2_reg_450   |  8|   0|    8|          0|
+    |raw_pixels_6_V_3_reg_704   |  8|   0|    8|          0|
+    |raw_pixels_7_V_1_fu_258    |  8|   0|    8|          0|
+    |raw_pixels_7_V_2_reg_440   |  8|   0|    8|          0|
+    |raw_pixels_7_V_3_reg_692   |  8|   0|    8|          0|
+    |raw_pixels_8_V_1_fu_262    |  8|   0|    8|          0|
+    |raw_pixels_8_V_2_reg_430   |  8|   0|    8|          0|
+    |raw_pixels_8_V_3_reg_680   |  8|   0|    8|          0|
+    |raw_pixels_9_V_1_fu_266    |  8|   0|    8|          0|
+    |raw_pixels_9_V_2_reg_420   |  8|   0|    8|          0|
+    |raw_pixels_9_V_3_reg_668   |  8|   0|    8|          0|
+    |t_V_2_reg_585              |  5|   0|    5|          0|
+    |t_V_reg_541                |  4|   0|    4|          0|
+    |tmp_in_1_1_reg_520         |  1|   0|    1|          0|
+    |tmp_in_1_2_reg_788         |  1|   0|    1|          0|
+    |trunc_ln65_reg_1598        |  4|   0|    4|          0|
+    |val_V_reg_1579             |  1|   0|    1|          0|
+    +---------------------------+---+----+-----+-----------+
+    |Total                      |422|   0|  422|          0|
+    +---------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++------------------------+-----+-----+------------+-------------------------------------------------------+--------------+
+|        RTL Ports       | Dir | Bits|  Protocol  |                     Source Object                     |    C Type    |
++------------------------+-----+-----+------------+-------------------------------------------------------+--------------+
+|ap_clk                  |  in |    1| ap_ctrl_hs | _sc_stream_imagedatafix<16, 2, 8, 128, 16, 3>::thread | return value |
+|ap_rst                  |  in |    1| ap_ctrl_hs | _sc_stream_imagedatafix<16, 2, 8, 128, 16, 3>::thread | return value |
+|din_0_dout              |  in |  128|   ap_fifo  |                         din_0                         |    pointer   |
+|din_0_empty_n           |  in |    1|   ap_fifo  |                         din_0                         |    pointer   |
+|din_0_read              | out |    1|   ap_fifo  |                         din_0                         |    pointer   |
+|din_1_dout              |  in |    1|   ap_fifo  |                         din_1                         |    pointer   |
+|din_1_empty_n           |  in |    1|   ap_fifo  |                         din_1                         |    pointer   |
+|din_1_read              | out |    1|   ap_fifo  |                         din_1                         |    pointer   |
+|din_2_dout              |  in |   16|   ap_fifo  |                         din_2                         |    pointer   |
+|din_2_empty_n           |  in |    1|   ap_fifo  |                         din_2                         |    pointer   |
+|din_2_read              | out |    1|   ap_fifo  |                         din_2                         |    pointer   |
+|enable_dout             |  in |    1|   ap_fifo  |                         enable                        |    pointer   |
+|enable_empty_n          |  in |    1|   ap_fifo  |                         enable                        |    pointer   |
+|enable_read             | out |    1|   ap_fifo  |                         enable                        |    pointer   |
+|sc_fifo_chn_1_din       | out |    1|   ap_fifo  |                     sc_fifo_chn_1                     |    pointer   |
+|sc_fifo_chn_1_full_n    |  in |    1|   ap_fifo  |                     sc_fifo_chn_1                     |    pointer   |
+|sc_fifo_chn_1_write     | out |    1|   ap_fifo  |                     sc_fifo_chn_1                     |    pointer   |
+|sc_fifo_chn_114_din     | out |    8|   ap_fifo  |                    sc_fifo_chn_114                    |    pointer   |
+|sc_fifo_chn_114_full_n  |  in |    1|   ap_fifo  |                    sc_fifo_chn_114                    |    pointer   |
+|sc_fifo_chn_114_write   | out |    1|   ap_fifo  |                    sc_fifo_chn_114                    |    pointer   |
+|sc_fifo_chn_115_din     | out |    8|   ap_fifo  |                    sc_fifo_chn_115                    |    pointer   |
+|sc_fifo_chn_115_full_n  |  in |    1|   ap_fifo  |                    sc_fifo_chn_115                    |    pointer   |
+|sc_fifo_chn_115_write   | out |    1|   ap_fifo  |                    sc_fifo_chn_115                    |    pointer   |
+|sc_fifo_chn_116_din     | out |    8|   ap_fifo  |                    sc_fifo_chn_116                    |    pointer   |
+|sc_fifo_chn_116_full_n  |  in |    1|   ap_fifo  |                    sc_fifo_chn_116                    |    pointer   |
+|sc_fifo_chn_116_write   | out |    1|   ap_fifo  |                    sc_fifo_chn_116                    |    pointer   |
+|sc_fifo_chn_117_din     | out |    1|   ap_fifo  |                    sc_fifo_chn_117                    |    pointer   |
+|sc_fifo_chn_117_full_n  |  in |    1|   ap_fifo  |                    sc_fifo_chn_117                    |    pointer   |
+|sc_fifo_chn_117_write   | out |    1|   ap_fifo  |                    sc_fifo_chn_117                    |    pointer   |
+|sc_fifo_chn_320_din     | out |  128|   ap_fifo  |                    sc_fifo_chn_320                    |    pointer   |
+|sc_fifo_chn_320_full_n  |  in |    1|   ap_fifo  |                    sc_fifo_chn_320                    |    pointer   |
+|sc_fifo_chn_320_write   | out |    1|   ap_fifo  |                    sc_fifo_chn_320                    |    pointer   |
+|sc_fifo_chn_421_din     | out |    1|   ap_fifo  |                    sc_fifo_chn_421                    |    pointer   |
+|sc_fifo_chn_421_full_n  |  in |    1|   ap_fifo  |                    sc_fifo_chn_421                    |    pointer   |
+|sc_fifo_chn_421_write   | out |    1|   ap_fifo  |                    sc_fifo_chn_421                    |    pointer   |
+|sc_fifo_chn_522_din     | out |   16|   ap_fifo  |                    sc_fifo_chn_522                    |    pointer   |
+|sc_fifo_chn_522_full_n  |  in |    1|   ap_fifo  |                    sc_fifo_chn_522                    |    pointer   |
+|sc_fifo_chn_522_write   | out |    1|   ap_fifo  |                    sc_fifo_chn_522                    |    pointer   |
++------------------------+-----+-----+------------+-------------------------------------------------------+--------------+
+

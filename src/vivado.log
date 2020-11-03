@@ -1,0 +1,66 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Mon Dec  9 01:11:16 2019
+# Process ID: 29351
+# Current directory: /home/jonathan/git/CNNAccel/src
+# Command line: vivado
+# Log file: /home/jonathan/git/CNNAccel/src/vivado.log
+# Journal file: /home/jonathan/git/CNNAccel/src/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /home/jonathan/git/CNNAccel/Vivado/CNNAccelTest0/CNNAccelTest0.xpr
+Scanning sources...
+Finished scanning sources
+WARNING: [filemgmt 56-3] Board Part Repository Path: Could not find the directory 'C:/Users/Daniel'.
+WARNING: [filemgmt 56-3] Board Part Repository Path: Could not find the directory 'C:/Users/Daniel Larsen/AppData/Roaming/Xilinx/Vivado/Larsen/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store'.
+WARNING: [filemgmt 56-3] Board Part Repository Path: Could not find the directory 'C:/Users/Daniel'.
+WARNING: [filemgmt 56-3] Board Part Repository Path: Could not find the directory 'C:/Users/Daniel'.
+WARNING: [filemgmt 56-3] Board Part Repository Path: Could not find the directory 'C:/Users/Daniel Larsen/AppData/Roaming/Xilinx/Vivado/Larsen/AppData/Roaming/Xilinx/Vivado/Larsen/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/jonathan/git/CNNAccel/src/IP_catalog'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/jonathan/git/CNNAccel/src/IP'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2019.1/data/ip'.
+WARNING: [BD 41-1661] One or more IPs have been locked in the design 'CNNA_BD.bd'. Please run report_ip_status for more details and recommendations on how to fix this issue.
+List of locked IPs:
+CNNA_BD_cnn_0_0
+
+open_project: Time (s): cpu = 00:00:35 ; elapsed = 00:00:23 . Memory (MB): peak = 6656.176 ; gain = 256.496 ; free physical = 285 ; free virtual = 17694
+update_compile_order -fileset sources_1
+open_bd_design {/home/jonathan/git/CNNAccel/Vivado/CNNAccelTest0/CNNAccelTest0.srcs/sources_1/bd/CNNA_BD/CNNA_BD.bd}
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - ps8_0_axi_periph
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps8_0_99M
+Adding component instance block -- xilinx.com:ip:axi_dma:7.1 - axi_dma_Y
+Adding component instance block -- xilinx.com:ip:smartconnect:1.0 - axi_smc
+Adding component instance block -- xilinx.com:ip:axi_dma:7.1 - axi_dma_X
+Adding component instance block -- xilinx.com:ip:smartconnect:1.0 - axi_smc1
+Adding component instance block -- xilinx.com:ip:axi_dma:7.1 - axi_dma_W
+Adding component instance block -- xilinx.com:ip:smartconnect:1.0 - axi_smc2
+Adding component instance block -- xilinx.com:ip:axi_dma:7.1 - axi_dma_BUF
+Adding component instance block -- xilinx.com:ip:smartconnect:1.0 - axi_smc3
+Adding component instance block -- xilinx.com:ip:zynq_ultra_ps_e:3.3 - zynq_ultra_ps_1
+WARNING: [BD 41-176] The physical port 'M_AXI_HPM0_LPD_aximm_wr_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'M_AXI_HPM0_LPD_aximm_rd_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_HP0_FPD_aximm_wr_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_HP0_FPD_aximm_rd_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_HP1_FPD_aximm_wr_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_HP1_FPD_aximm_rd_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_HP2_FPD_aximm_wr_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_HP2_FPD_aximm_rd_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_HP3_FPD_aximm_wr_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_HP3_FPD_aximm_rd_socket' specified in the portmap, is not found on the block! 
+Adding component instance block -- xilinx.com:ip:axi_intc:4.1 - axi_intc_0
+Adding component instance block -- xilinx.com:ip:xlconcat:2.1 - xlconcat_0
+Adding component instance block -- xilinx.com:hls:cnn:3.122 - cnn_0
+WARNING: [BD 41-1731] Type mismatch between connected pins: /axi_intc_0/irq(undef) and /zynq_ultra_ps_1/pl_ps_irq0(intr)
+Excluding </zynq_ultra_ps_1/SAXIGP2/HP0_LPS_OCM> from </axi_dma_Y/Data_S2MM>
+Excluding </zynq_ultra_ps_1/SAXIGP3/HP1_LPS_OCM> from </axi_dma_X/Data_MM2S>
+Excluding </zynq_ultra_ps_1/SAXIGP4/HP2_LPS_OCM> from </axi_dma_W/Data_MM2S>
+Excluding </zynq_ultra_ps_1/SAXIGP5/HP3_LPS_OCM> from </axi_dma_BUF/Data_MM2S>
+Successfully read diagram <CNNA_BD> from BD file </home/jonathan/git/CNNAccel/Vivado/CNNAccelTest0/CNNAccelTest0.srcs/sources_1/bd/CNNA_BD/CNNA_BD.bd>
+WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon Dec  9 01:13:43 2019...

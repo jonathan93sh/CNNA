@@ -1,0 +1,45 @@
+{
+    "configurations": [
+        {
+            "name": "Win32",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "D:/Xilinx/Vivado/2018.3/win64/tools/systemc/include/**",
+                "D:/Xilinx/Vivado/2018.3/common/technology/generic/SystemC/**",
+                "D:/Xilinx/Vivado/2018.3/common/technology/generic/SystemC/AESL_FP_comp/**",
+                "D:/Xilinx/Vivado/2018.3/common/technology/generic/SystemC/AESL_comp/**",
+                "${workspaceFolder}/../**"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE",
+                "SC_INCLUDE_FX"
+            ],
+            "windowsSdkVersion": "10.0.16299.0",
+            "compilerPath": "D:/Xilinx/Vivado/2018.3/msys64/mingw64/bin/clang++.exe",
+            "cStandard": "c11",
+            "cppStandard": "c++11",
+            "intelliSenseMode": "clang-x64"
+        },
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "/usr/local/systemc-2.3.3/include",
+                "${workspaceFolder}/../**"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE",
+                "SC_INCLUDE_FX"
+            ],
+            "compilerPath": "/usr/bin/g++",
+            "cStandard": "c11",
+            "cppStandard": "c++11",
+            "intelliSenseMode": "gcc-x64"
+        }
+    ],
+    "version": 4
+}

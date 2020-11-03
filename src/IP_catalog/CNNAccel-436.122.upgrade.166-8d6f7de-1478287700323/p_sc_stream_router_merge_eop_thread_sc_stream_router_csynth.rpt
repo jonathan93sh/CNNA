@@ -1,0 +1,185 @@
+
+
+================================================================
+== Vivado HLS Report for 'p_sc_stream_router_merge_eop_thread_sc_stream_router'
+================================================================
+* Date:           Mon Feb 17 22:36:16 2020
+
+* Version:        2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)
+* Project:        CNNAccel
+* Solution:       default
+* Product family: zynquplus
+* Target device:  xczu3eg-sbva484-1-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   5.00|     3.788|        0.62|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    ?|    ?|    ?|    ?|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------+-----+-----+----------+-----------+-----------+------+----------+
+        |             |  Latency  | Iteration|  Initiation Interval  | Trip |          |
+        |  Loop Name  | min | max |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------+-----+-----+----------+-----------+-----------+------+----------+
+        |- Loop 1     |    ?|    ?|         ?|          -|          -|  inf |    no    |
+        | + Loop 1.1  |    ?|    ?|         2|          1|          1|     ?|    yes   |
+        +-------------+-----+-----+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+-----+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  | URAM|
++-----------------+---------+-------+--------+-------+-----+
+|DSP              |        -|      -|       -|      -|    -|
+|Expression       |        -|      -|       0|     31|    -|
+|FIFO             |        -|      -|       -|      -|    -|
+|Instance         |        -|      -|       -|      -|    -|
+|Memory           |        -|      -|       -|      -|    -|
+|Multiplexer      |        -|      -|       -|    195|    -|
+|Register         |        -|      -|     152|      -|    -|
++-----------------+---------+-------+--------+-------+-----+
+|Total            |        0|      0|     152|    226|    0|
++-----------------+---------+-------+--------+-------+-----+
+|Available        |      432|    360|  141120|  70560|    0|
++-----------------+---------+-------+--------+-------+-----+
+|Utilization (%)  |        0|      0|   ~0   |   ~0  |    0|
++-----------------+---------+-------+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP48E: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------------------+----------+-------+---+----+------------+------------+
+    |           Variable Name          | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------------------+----------+-------+---+----+------------+------------+
+    |ap_condition_146                  |    and   |      0|  0|   2|           1|           1|
+    |ap_condition_66                   |    and   |      0|  0|   2|           1|           1|
+    |ap_predicate_tran4to5_state3      |    and   |      0|  0|   2|           1|           1|
+    |io_acc_block_signal_op35          |    and   |      0|  0|   2|           1|           1|
+    |io_acc_block_signal_op40          |    and   |      0|  0|   2|           1|           1|
+    |io_acc_block_signal_op55          |    and   |      0|  0|   2|           1|           1|
+    |icmp_ln246_fu_207_p2              |   icmp   |      0|  0|  13|          16|           1|
+    |ap_block_pp0_stage0_01001         |    or    |      0|  0|   2|           1|           1|
+    |ap_block_state3_pp0_stage0_iter0  |    or    |      0|  0|   2|           1|           1|
+    |ap_enable_pp0                     |    xor   |      0|  0|   2|           1|           2|
+    +----------------------------------+----------+-------+---+----+------------+------------+
+    |Total                             |          |      0|  0|  31|          25|          11|
+    +----------------------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------------------------+----+-----------+-----+-----------+
+    |                    Name                   | LUT| Input Size| Bits| Total Bits|
+    +-------------------------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                                  |  21|          4|    1|          4|
+    |ap_enable_reg_pp0_iter1                    |   9|          2|    1|          2|
+    |ap_phi_mux_tmp_tkeep_V_phi_fu_129_p4       |  15|          3|   16|         48|
+    |ap_phi_mux_tmp_tlast_V_2_phi_fu_140_p4     |  15|          3|    1|          3|
+    |ap_phi_reg_pp0_iter1_tmp_data_V_2_reg_147  |  15|          3|  128|        384|
+    |ctrl_channel_blk_n                         |   9|          2|    1|          2|
+    |din_a_0_blk_n                              |   9|          2|    1|          2|
+    |din_a_1_blk_n                              |   9|          2|    1|          2|
+    |din_a_2_blk_n                              |   9|          2|    1|          2|
+    |din_b_0_blk_n                              |   9|          2|    1|          2|
+    |din_b_1_blk_n                              |   9|          2|    1|          2|
+    |din_b_2_blk_n                              |   9|          2|    1|          2|
+    |dout_0_blk_n                               |   9|          2|    1|          2|
+    |dout_1_blk_n                               |   9|          2|    1|          2|
+    |dout_2_blk_n                               |   9|          2|    1|          2|
+    |tmp_tkeep_V_reg_125                        |  15|          3|   16|         48|
+    |tmp_tlast_V_2_reg_136                      |  15|          3|    1|          3|
+    +-------------------------------------------+----+-----------+-----+-----------+
+    |Total                                      | 195|         41|  174|        512|
+    +-------------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------------------------------------+-----+----+-----+-----------+
+    |                    Name                   |  FF | LUT| Bits| Const Bits|
+    +-------------------------------------------+-----+----+-----+-----------+
+    |ap_CS_fsm                                  |    4|   0|    4|          0|
+    |ap_enable_reg_pp0_iter0                    |    1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1                    |    1|   0|    1|          0|
+    |ap_phi_reg_pp0_iter1_tmp_data_V_2_reg_147  |  128|   0|  128|          0|
+    |tmp_tkeep_V_reg_125                        |   16|   0|   16|          0|
+    |tmp_tlast_V_2_reg_136                      |    1|   0|    1|          0|
+    |val_V_reg_213                              |    1|   0|    1|          0|
+    +-------------------------------------------+-----+----+-----+-----------+
+    |Total                                      |  152|   0|  152|          0|
+    +-------------------------------------------+-----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++----------------------+-----+-----+------------+-----------------------------------------------------------+--------------+
+|       RTL Ports      | Dir | Bits|  Protocol  |                       Source Object                       |    C Type    |
++----------------------+-----+-----+------------+-----------------------------------------------------------+--------------+
+|ap_clk                |  in |    1| ap_ctrl_hs | _sc_stream_router_merge_eop<128>::thread_sc_stream_router | return value |
+|ap_rst                |  in |    1| ap_ctrl_hs | _sc_stream_router_merge_eop<128>::thread_sc_stream_router | return value |
+|din_a_0_dout          |  in |  128|   ap_fifo  |                          din_a_0                          |    pointer   |
+|din_a_0_empty_n       |  in |    1|   ap_fifo  |                          din_a_0                          |    pointer   |
+|din_a_0_read          | out |    1|   ap_fifo  |                          din_a_0                          |    pointer   |
+|din_a_1_dout          |  in |    1|   ap_fifo  |                          din_a_1                          |    pointer   |
+|din_a_1_empty_n       |  in |    1|   ap_fifo  |                          din_a_1                          |    pointer   |
+|din_a_1_read          | out |    1|   ap_fifo  |                          din_a_1                          |    pointer   |
+|din_a_2_dout          |  in |   16|   ap_fifo  |                          din_a_2                          |    pointer   |
+|din_a_2_empty_n       |  in |    1|   ap_fifo  |                          din_a_2                          |    pointer   |
+|din_a_2_read          | out |    1|   ap_fifo  |                          din_a_2                          |    pointer   |
+|din_b_0_dout          |  in |  128|   ap_fifo  |                          din_b_0                          |    pointer   |
+|din_b_0_empty_n       |  in |    1|   ap_fifo  |                          din_b_0                          |    pointer   |
+|din_b_0_read          | out |    1|   ap_fifo  |                          din_b_0                          |    pointer   |
+|din_b_1_dout          |  in |    1|   ap_fifo  |                          din_b_1                          |    pointer   |
+|din_b_1_empty_n       |  in |    1|   ap_fifo  |                          din_b_1                          |    pointer   |
+|din_b_1_read          | out |    1|   ap_fifo  |                          din_b_1                          |    pointer   |
+|din_b_2_dout          |  in |   16|   ap_fifo  |                          din_b_2                          |    pointer   |
+|din_b_2_empty_n       |  in |    1|   ap_fifo  |                          din_b_2                          |    pointer   |
+|din_b_2_read          | out |    1|   ap_fifo  |                          din_b_2                          |    pointer   |
+|ctrl_channel_dout     |  in |    1|   ap_fifo  |                        ctrl_channel                       |    pointer   |
+|ctrl_channel_empty_n  |  in |    1|   ap_fifo  |                        ctrl_channel                       |    pointer   |
+|ctrl_channel_read     | out |    1|   ap_fifo  |                        ctrl_channel                       |    pointer   |
+|dout_0_din            | out |  128|   ap_fifo  |                           dout_0                          |    pointer   |
+|dout_0_full_n         |  in |    1|   ap_fifo  |                           dout_0                          |    pointer   |
+|dout_0_write          | out |    1|   ap_fifo  |                           dout_0                          |    pointer   |
+|dout_1_din            | out |    1|   ap_fifo  |                           dout_1                          |    pointer   |
+|dout_1_full_n         |  in |    1|   ap_fifo  |                           dout_1                          |    pointer   |
+|dout_1_write          | out |    1|   ap_fifo  |                           dout_1                          |    pointer   |
+|dout_2_din            | out |   16|   ap_fifo  |                           dout_2                          |    pointer   |
+|dout_2_full_n         |  in |    1|   ap_fifo  |                           dout_2                          |    pointer   |
+|dout_2_write          | out |    1|   ap_fifo  |                           dout_2                          |    pointer   |
++----------------------+-----+-----+------------+-----------------------------------------------------------+--------------+
+

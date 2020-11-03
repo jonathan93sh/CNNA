@@ -1,0 +1,151 @@
+
+
+================================================================
+== Vivado HLS Report for 'p_PE_v2'
+================================================================
+* Date:           Mon Feb 24 01:07:47 2020
+
+* Version:        2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)
+* Project:        CNNAccel
+* Solution:       default
+* Product family: zynquplus
+* Target device:  xczu3eg-sbva484-1-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   5.00|     4.373|        0.62|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    ?|    ?|    ?|    ?|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        +------------------------------+-------------------+-----+-----+-----+-----+---------+
+        |                              |                   |  Latency  |  Interval | Pipeline|
+        |           Instance           |       Module      | min | max | min | max |   Type  |
+        +------------------------------+-------------------+-----+-----+-----+-----+---------+
+        |grp_Summer_fu_144             |Summer             |    ?|    ?|    ?|    ?|   none  |
+        |grp_p_PE_v2_PE_thread_fu_170  |p_PE_v2_PE_thread  |    ?|    ?|    ?|    ?|   none  |
+        +------------------------------+-------------------+-----+-----+-----+-----+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+-----+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  | URAM|
++-----------------+---------+-------+--------+-------+-----+
+|DSP              |        -|      -|       -|      -|    -|
+|Expression       |        -|      -|       -|      -|    -|
+|FIFO             |        0|      -|      15|     60|    -|
+|Instance         |        0|      1|   14934|  12280|    -|
+|Memory           |        -|      -|       -|      -|    -|
+|Multiplexer      |        -|      -|       -|      -|    -|
+|Register         |        -|      -|       -|      -|    -|
++-----------------+---------+-------+--------+-------+-----+
+|Total            |        0|      1|   14949|  12340|    0|
++-----------------+---------+-------+--------+-------+-----+
+|Available        |      432|    360|  141120|  70560|    0|
++-----------------+---------+-------+--------+-------+-----+
+|Utilization (%)  |        0|   ~0  |      10|     17|    0|
++-----------------+---------+-------+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +------------------------------+-------------------+---------+-------+-------+-------+-----+
+    |           Instance           |       Module      | BRAM_18K| DSP48E|   FF  |  LUT  | URAM|
+    +------------------------------+-------------------+---------+-------+-------+-------+-----+
+    |grp_Summer_fu_144             |Summer             |        0|      1|    485|    792|    0|
+    |grp_p_PE_v2_PE_thread_fu_170  |p_PE_v2_PE_thread  |        0|      0|  14449|  11488|    0|
+    +------------------------------+-------------------+---------+-------+-------+-------+-----+
+    |Total                         |                   |        0|      1|  14934|  12280|    0|
+    +------------------------------+-------------------+---------+-------+-------+-------+-----+
+
+    * DSP48E: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    +----------------------+---------+---+----+-----+------+-----+---------+
+    |         Name         | BRAM_18K| FF| LUT| URAM| Depth| Bits| Size:D*B|
+    +----------------------+---------+---+----+-----+------+-----+---------+
+    |sc_fifo_chn_3_fifo_U  |        0|  5|   0|    -|     1|   16|       16|
+    |sc_fifo_chn_4_fifo_U  |        0|  5|   0|    -|     1|    1|        1|
+    |sc_fifo_chn_5_fifo_U  |        0|  5|   0|    -|     1|    2|        2|
+    +----------------------+---------+---+----+-----+------+-----+---------+
+    |Total                 |        0| 15|   0|    0|     3|   19|       19|
+    +----------------------+---------+---+----+-----+------+-----+---------+
+
+    * Expression: 
+    N/A
+
+    * Multiplexer: 
+    N/A
+
+    * Register: 
+    N/A
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++------------------+-----+-----+------------+--------------------------------------+--------------+
+|     RTL Ports    | Dir | Bits|  Protocol  |             Source Object            |    C Type    |
++------------------+-----+-----+------------+--------------------------------------+--------------+
+|clk               |  in |    1| ap_ctrl_hs | _PE_v2<8, 2, 48, 1, 48, 0>::_PE_v2.1 | return value |
+|reset             |  in |    1| ap_ctrl_hs | _PE_v2<8, 2, 48, 1, 48, 0>::_PE_v2.1 | return value |
+|Win_0_dout        |  in |  392|   ap_fifo  |                 Win_0                |    pointer   |
+|Win_0_empty_n     |  in |    1|   ap_fifo  |                 Win_0                |    pointer   |
+|Win_0_read        | out |    1|   ap_fifo  |                 Win_0                |    pointer   |
+|Win_1_dout        |  in |    1|   ap_fifo  |                 Win_1                |    pointer   |
+|Win_1_empty_n     |  in |    1|   ap_fifo  |                 Win_1                |    pointer   |
+|Win_1_read        | out |    1|   ap_fifo  |                 Win_1                |    pointer   |
+|Win_2_dout        |  in |   49|   ap_fifo  |                 Win_2                |    pointer   |
+|Win_2_empty_n     |  in |    1|   ap_fifo  |                 Win_2                |    pointer   |
+|Win_2_read        | out |    1|   ap_fifo  |                 Win_2                |    pointer   |
+|Xin_0_dout        |  in |  384|   ap_fifo  |                 Xin_0                |    pointer   |
+|Xin_0_empty_n     |  in |    1|   ap_fifo  |                 Xin_0                |    pointer   |
+|Xin_0_read        | out |    1|   ap_fifo  |                 Xin_0                |    pointer   |
+|Xin_1_dout        |  in |    1|   ap_fifo  |                 Xin_1                |    pointer   |
+|Xin_1_empty_n     |  in |    1|   ap_fifo  |                 Xin_1                |    pointer   |
+|Xin_1_read        | out |    1|   ap_fifo  |                 Xin_1                |    pointer   |
+|Xin_2_dout        |  in |   48|   ap_fifo  |                 Xin_2                |    pointer   |
+|Xin_2_empty_n     |  in |    1|   ap_fifo  |                 Xin_2                |    pointer   |
+|Xin_2_read        | out |    1|   ap_fifo  |                 Xin_2                |    pointer   |
+|ctrl_acf_dout     |  in |   16|   ap_fifo  |               ctrl_acf               |    pointer   |
+|ctrl_acf_empty_n  |  in |    1|   ap_fifo  |               ctrl_acf               |    pointer   |
+|ctrl_acf_read     | out |    1|   ap_fifo  |               ctrl_acf               |    pointer   |
+|dout_0_din        | out |    8|   ap_fifo  |                dout_0                |    pointer   |
+|dout_0_full_n     |  in |    1|   ap_fifo  |                dout_0                |    pointer   |
+|dout_0_write      | out |    1|   ap_fifo  |                dout_0                |    pointer   |
+|dout_1_din        | out |    1|   ap_fifo  |                dout_1                |    pointer   |
+|dout_1_full_n     |  in |    1|   ap_fifo  |                dout_1                |    pointer   |
+|dout_1_write      | out |    1|   ap_fifo  |                dout_1                |    pointer   |
+|dout_2_din        | out |    1|   ap_fifo  |                dout_2                |    pointer   |
+|dout_2_full_n     |  in |    1|   ap_fifo  |                dout_2                |    pointer   |
+|dout_2_write      | out |    1|   ap_fifo  |                dout_2                |    pointer   |
++------------------+-----+-----+------------+--------------------------------------+--------------+
+

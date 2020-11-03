@@ -1,0 +1,20 @@
+
+
+Implementation tool: Xilinx Vivado v.2019.1
+Project:             CNNAccel
+Solution:            default
+Device target:       xczu3eg-sbva484-1-e
+Report date:         Mon Feb 17 23:41:05 CET 2020
+
+#=== Post-Implementation Resource usage ===
+CLB:           8678
+LUT:          42465
+FF:           74001
+DSP:            360
+BRAM:           277
+SRL:           3368
+#=== Final timing ===
+CP required:    5.000
+CP achieved post-synthesis:    NA
+CP achieved post-implementation:    NA
+No Sequential Path

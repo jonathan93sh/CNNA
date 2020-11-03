@@ -1,0 +1,254 @@
+
+
+================================================================
+== Vivado HLS Report for 'cnn'
+================================================================
+* Date:           Sun Feb 23 22:32:08 2020
+
+* Version:        2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)
+* Project:        CNNAccel
+* Solution:       default
+* Product family: zynquplus
+* Target device:  xczu3eg-sbva484-1-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   5.00|     8.898|        0.62|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    ?|    ?|    ?|    ?|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        +---------------------------------------------+--------------------------------+-----+-----+-----+-----+---------+
+        |                                             |                                |  Latency  |  Interval | Pipeline|
+        |                   Instance                  |             Module             | min | max | min | max |   Type  |
+        +---------------------------------------------+--------------------------------+-----+-----+-----+-----+---------+
+        |grp_sc_status_module_fu_3908                 |sc_status_module                |    1|    1|    1|    1|   none  |
+        |grp_sc_status_reg_fu_3932                    |sc_status_reg                   |    1|    1|    1|    1|   none  |
+        |grp_sc_status_reg_fu_3962                    |sc_status_reg                   |    1|    1|    1|    1|   none  |
+        |grp_sc_status_reg_fu_3992                    |sc_status_reg                   |    1|    1|    1|    1|   none  |
+        |grp_sc_status_reg_fu_4022                    |sc_status_reg                   |    1|    1|    1|    1|   none  |
+        |grp_sc_status_reg_fu_4052                    |sc_status_reg                   |    1|    1|    1|    1|   none  |
+        |grp_sc_status_reg_fu_4082                    |sc_status_reg                   |    1|    1|    1|    1|   none  |
+        |grp_sc_status_reg_fu_4112                    |sc_status_reg                   |    1|    1|    1|    1|   none  |
+        |grp_sc_status_reg_fu_4142                    |sc_status_reg                   |    1|    1|    1|    1|   none  |
+        |grp_sc_status_reg_fu_4172                    |sc_status_reg                   |    1|    1|    1|    1|   none  |
+        |grp_sc_status_reg_fu_4202                    |sc_status_reg                   |    1|    1|    1|    1|   none  |
+        |grp_sc_status_reg_fu_4232                    |sc_status_reg                   |    1|    1|    1|    1|   none  |
+        |grp_sc_status_reg_fu_4262                    |sc_status_reg                   |    1|    1|    1|    1|   none  |
+        |grp_sc_status_reg_fu_4292                    |sc_status_reg                   |    1|    1|    1|    1|   none  |
+        |call_ln119_sc_status_end_fu_4322             |sc_status_end                   |    0|    0|    0|    0|   none  |
+        |grp_p_top_cnn_fu_4340                        |p_top_cnn                       |    ?|    ?|    ?|    ?|   none  |
+        |call_ln271_cnn_reg1_methode_fu_7446          |cnn_reg1_methode                |    0|    0|    0|    0|   none  |
+        |grp_cnn_thread_cnn_ctrl_fu_11066             |cnn_thread_cnn_ctrl             |    ?|    ?|    ?|    ?|   none  |
+        |grp_cnn_thread_cnn_stream_w_sink_fu_14686    |cnn_thread_cnn_stream_w_sink    |    2|    2|    2|    2|   none  |
+        |grp_cnn_thread_cnn_stream_buf_sink_fu_18306  |cnn_thread_cnn_stream_buf_sink  |    2|    2|    2|    2|   none  |
+        |grp_cnn_thread_cnn_stream_sink_fu_21926      |cnn_thread_cnn_stream_sink      |    2|    2|    2|    2|   none  |
+        |grp_cnn_thread_cnn_stream_source_fu_25546    |cnn_thread_cnn_stream_source    |    2|    2|    2|    2|   none  |
+        +---------------------------------------------+--------------------------------+-----+-----+-----+-----+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+--------+-----+
+|       Name      | BRAM_18K| DSP48E|   FF   |   LUT  | URAM|
++-----------------+---------+-------+--------+--------+-----+
+|DSP              |        -|      -|       -|       -|    -|
+|Expression       |        -|      -|       -|       -|    -|
+|FIFO             |        0|      -|     189|    1331|    -|
+|Instance         |      197|     21|   97746|  133706|    0|
+|Memory           |        -|      -|       -|       -|    -|
+|Multiplexer      |        -|      -|       -|       -|    -|
+|Register         |        -|      -|     416|       -|    -|
++-----------------+---------+-------+--------+--------+-----+
+|Total            |      197|     21|   98351|  135037|    0|
++-----------------+---------+-------+--------+--------+-----+
+|Available        |      432|    360|  141120|   70560|    0|
++-----------------+---------+-------+--------+--------+-----+
+|Utilization (%)  |       45|      5|      69|     191|    0|
++-----------------+---------+-------+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    +---------------------------------------------+--------------------------------+---------+-------+-------+--------+-----+
+    |                   Instance                  |             Module             | BRAM_18K| DSP48E|   FF  |   LUT  | URAM|
+    +---------------------------------------------+--------------------------------+---------+-------+-------+--------+-----+
+    |call_ln271_cnn_reg1_methode_fu_7446          |cnn_reg1_methode                |        0|      0|      0|       0|    0|
+    |grp_cnn_thread_cnn_ctrl_fu_11066             |cnn_thread_cnn_ctrl             |        0|      0|     78|     264|    0|
+    |grp_cnn_thread_cnn_stream_buf_sink_fu_18306  |cnn_thread_cnn_stream_buf_sink  |        0|      0|      2|      69|    0|
+    |grp_cnn_thread_cnn_stream_sink_fu_21926      |cnn_thread_cnn_stream_sink      |        0|      0|     34|     117|    0|
+    |grp_cnn_thread_cnn_stream_source_fu_25546    |cnn_thread_cnn_stream_source    |        0|      0|     34|     117|    0|
+    |grp_cnn_thread_cnn_stream_w_sink_fu_14686    |cnn_thread_cnn_stream_w_sink    |        0|      0|      2|      69|    0|
+    |grp_p_top_cnn_fu_4340                        |p_top_cnn                       |      197|     21|  97596|  132494|    0|
+    |call_ln119_sc_status_end_fu_4322             |sc_status_end                   |        0|      0|      0|      43|    0|
+    |grp_sc_status_module_fu_3908                 |sc_status_module                |        0|      0|      0|       0|    0|
+    |grp_sc_status_reg_fu_3932                    |sc_status_reg                   |        0|      0|      0|      41|    0|
+    |grp_sc_status_reg_fu_3962                    |sc_status_reg                   |        0|      0|      0|      41|    0|
+    |grp_sc_status_reg_fu_3992                    |sc_status_reg                   |        0|      0|      0|      41|    0|
+    |grp_sc_status_reg_fu_4022                    |sc_status_reg                   |        0|      0|      0|      41|    0|
+    |grp_sc_status_reg_fu_4052                    |sc_status_reg                   |        0|      0|      0|      41|    0|
+    |grp_sc_status_reg_fu_4082                    |sc_status_reg                   |        0|      0|      0|      41|    0|
+    |grp_sc_status_reg_fu_4112                    |sc_status_reg                   |        0|      0|      0|      41|    0|
+    |grp_sc_status_reg_fu_4142                    |sc_status_reg                   |        0|      0|      0|      41|    0|
+    |grp_sc_status_reg_fu_4172                    |sc_status_reg                   |        0|      0|      0|      41|    0|
+    |grp_sc_status_reg_fu_4202                    |sc_status_reg                   |        0|      0|      0|      41|    0|
+    |grp_sc_status_reg_fu_4232                    |sc_status_reg                   |        0|      0|      0|      41|    0|
+    |grp_sc_status_reg_fu_4262                    |sc_status_reg                   |        0|      0|      0|      41|    0|
+    |grp_sc_status_reg_fu_4292                    |sc_status_reg                   |        0|      0|      0|      41|    0|
+    +---------------------------------------------+--------------------------------+---------+-------+-------+--------+-----+
+    |Total                                        |                                |      197|     21|  97746|  133706|    0|
+    +---------------------------------------------+--------------------------------+---------+-------+-------+--------+-----+
+
+    * DSP48E: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    +------------------------+---------+---+----+-----+------+-----+---------+
+    |          Name          | BRAM_18K| FF| LUT| URAM| Depth| Bits| Size:D*B|
+    +------------------------+---------+---+----+-----+------+-----+---------+
+    |sc_fifo_chn_122_fifo_U  |        0|  5|   0|    -|     1|   32|       32|
+    |sc_fifo_chn_123_fifo_U  |        0|  7|   0|    -|    16|   16|      256|
+    |sc_fifo_chn_124_fifo_U  |        0|  7|   0|    -|    16|   16|      256|
+    |sc_fifo_chn_125_fifo_U  |        0|  7|   0|    -|    16|   16|      256|
+    |sc_fifo_chn_126_fifo_U  |        0|  7|   0|    -|    16|   16|      256|
+    |sc_fifo_chn_127_fifo_U  |        0|  7|   0|    -|    16|   16|      256|
+    |sc_fifo_chn_128_fifo_U  |        0|  7|   0|    -|    16|   16|      256|
+    |sc_fifo_chn_129_fifo_U  |        0|  7|   0|    -|    16|    1|       16|
+    |sc_fifo_chn_130_fifo_U  |        0|  7|   0|    -|    16|   16|      256|
+    |sc_fifo_chn_131_fifo_U  |        0|  5|   0|    -|     1|   16|       16|
+    |sc_fifo_chn_132_fifo_U  |        0|  7|   0|    -|    16|    1|       16|
+    |sc_fifo_chn_133_fifo_U  |        0|  7|   0|    -|    16|    1|       16|
+    |sc_fifo_chn_134_fifo_U  |        0|  7|   0|    -|    16|   16|      256|
+    |sc_fifo_chn_135_fifo_U  |        0|  7|   0|    -|    16|   16|      256|
+    |sc_fifo_chn_136_fifo_U  |        0|  7|   0|    -|    16|   16|      256|
+    |sc_fifo_chn_137_fifo_U  |        0|  7|   0|    -|    16|   16|      256|
+    |sc_fifo_chn_138_fifo_U  |        0|  7|   0|    -|    16|   16|      256|
+    |sc_fifo_chn_139_fifo_U  |        0|  7|   0|    -|    16|   16|      256|
+    |sc_fifo_chn_1_fifo_U    |        0|  7|   0|    -|    16|   31|      496|
+    |sc_fifo_chn_313_fifo_U  |        0|  5|   0|    -|     1|  128|      128|
+    |sc_fifo_chn_316_fifo_U  |        0|  5|   0|    -|     1|  128|      128|
+    |sc_fifo_chn_319_fifo_U  |        0|  5|   0|    -|     1|  128|      128|
+    |sc_fifo_chn_3_fifo_U    |        0|  5|   0|    -|     1|  128|      128|
+    |sc_fifo_chn_414_fifo_U  |        0|  5|   0|    -|     1|    1|        1|
+    |sc_fifo_chn_417_fifo_U  |        0|  5|   0|    -|     1|    1|        1|
+    |sc_fifo_chn_420_fifo_U  |        0|  5|   0|    -|     1|    1|        1|
+    |sc_fifo_chn_4_fifo_U    |        0|  5|   0|    -|     1|    1|        1|
+    |sc_fifo_chn_515_fifo_U  |        0|  5|   0|    -|     1|   16|       16|
+    |sc_fifo_chn_518_fifo_U  |        0|  5|   0|    -|     1|   16|       16|
+    |sc_fifo_chn_521_fifo_U  |        0|  5|   0|    -|     1|   16|       16|
+    |sc_fifo_chn_5_fifo_U    |        0|  5|   0|    -|     1|   16|       16|
+    +------------------------+---------+---+----+-----+------+-----+---------+
+    |Total                   |        0|189|   0|    0|   286|  870|     4500|
+    +------------------------+---------+---+----+-----+------+-----+---------+
+
+    * Expression: 
+    N/A
+
+    * Multiplexer: 
+    N/A
+
+    * Register: 
+    +--------------------------------+----+----+-----+-----------+
+    |              Name              | FF | LUT| Bits| Const Bits|
+    +--------------------------------+----+----+-----+-----------+
+    |r0_dma_ingress_status           |  32|   0|   32|          0|
+    |r10_data_buf_clb_n_status       |  32|   0|   32|          0|
+    |r11_data_buf_shift_size_status  |  32|   0|   32|          0|
+    |r12_data_out_n_status           |  32|   0|   32|          0|
+    |r1_dma_egress_status            |  32|   0|   32|          0|
+    |r2_data_W_status                |  32|   0|   32|          0|
+    |r3_data_P_status                |  32|   0|   32|          0|
+    |r4_input_BW_N_status            |  32|   0|   32|          0|
+    |r5_output_BW_N_status           |  32|   0|   32|          0|
+    |r6_pe_n_status                  |  32|   0|   32|          0|
+    |r7_pe_bw_n_status               |  32|   0|   32|          0|
+    |r8_wbuf_size_status             |  32|   0|   32|          0|
+    |r9_data_buf_clb_size_status     |  32|   0|   32|          0|
+    +--------------------------------+----+----+-----+-----------+
+    |Total                           | 416|   0|  416|          0|
+    +--------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-------------------------+-----+-----+------------+-----------------+--------------+
+|        RTL Ports        | Dir | Bits|  Protocol  |  Source Object  |    C Type    |
++-------------------------+-----+-----+------------+-----------------+--------------+
+|clk                      |  in |    1| ap_ctrl_hs |     cnn::cnn    | return value |
+|reset                    |  in |    1| ap_ctrl_hs |     cnn::cnn    | return value |
+|data_sink_0_dout         |  in |  128|   ap_fifo  |   data_sink_0   |    pointer   |
+|data_sink_0_empty_n      |  in |    1|   ap_fifo  |   data_sink_0   |    pointer   |
+|data_sink_0_read         | out |    1|   ap_fifo  |   data_sink_0   |    pointer   |
+|data_sink_1_dout         |  in |    1|   ap_fifo  |   data_sink_1   |    pointer   |
+|data_sink_1_empty_n      |  in |    1|   ap_fifo  |   data_sink_1   |    pointer   |
+|data_sink_1_read         | out |    1|   ap_fifo  |   data_sink_1   |    pointer   |
+|data_sink_2_dout         |  in |   16|   ap_fifo  |   data_sink_2   |    pointer   |
+|data_sink_2_empty_n      |  in |    1|   ap_fifo  |   data_sink_2   |    pointer   |
+|data_sink_2_read         | out |    1|   ap_fifo  |   data_sink_2   |    pointer   |
+|data_buf_sink_0_dout     |  in |  128|   ap_fifo  | data_buf_sink_0 |    pointer   |
+|data_buf_sink_0_empty_n  |  in |    1|   ap_fifo  | data_buf_sink_0 |    pointer   |
+|data_buf_sink_0_read     | out |    1|   ap_fifo  | data_buf_sink_0 |    pointer   |
+|data_buf_sink_1_dout     |  in |    1|   ap_fifo  | data_buf_sink_1 |    pointer   |
+|data_buf_sink_1_empty_n  |  in |    1|   ap_fifo  | data_buf_sink_1 |    pointer   |
+|data_buf_sink_1_read     | out |    1|   ap_fifo  | data_buf_sink_1 |    pointer   |
+|data_buf_sink_2_dout     |  in |   16|   ap_fifo  | data_buf_sink_2 |    pointer   |
+|data_buf_sink_2_empty_n  |  in |    1|   ap_fifo  | data_buf_sink_2 |    pointer   |
+|data_buf_sink_2_read     | out |    1|   ap_fifo  | data_buf_sink_2 |    pointer   |
+|w_sink_0_dout            |  in |  128|   ap_fifo  |     w_sink_0    |    pointer   |
+|w_sink_0_empty_n         |  in |    1|   ap_fifo  |     w_sink_0    |    pointer   |
+|w_sink_0_read            | out |    1|   ap_fifo  |     w_sink_0    |    pointer   |
+|w_sink_1_dout            |  in |    1|   ap_fifo  |     w_sink_1    |    pointer   |
+|w_sink_1_empty_n         |  in |    1|   ap_fifo  |     w_sink_1    |    pointer   |
+|w_sink_1_read            | out |    1|   ap_fifo  |     w_sink_1    |    pointer   |
+|w_sink_2_dout            |  in |   16|   ap_fifo  |     w_sink_2    |    pointer   |
+|w_sink_2_empty_n         |  in |    1|   ap_fifo  |     w_sink_2    |    pointer   |
+|w_sink_2_read            | out |    1|   ap_fifo  |     w_sink_2    |    pointer   |
+|ctrl_sink_0_dout         |  in |   64|   ap_fifo  |   ctrl_sink_0   |    pointer   |
+|ctrl_sink_0_empty_n      |  in |    1|   ap_fifo  |   ctrl_sink_0   |    pointer   |
+|ctrl_sink_0_read         | out |    1|   ap_fifo  |   ctrl_sink_0   |    pointer   |
+|ctrl_sink_1_dout         |  in |    1|   ap_fifo  |   ctrl_sink_1   |    pointer   |
+|ctrl_sink_1_empty_n      |  in |    1|   ap_fifo  |   ctrl_sink_1   |    pointer   |
+|ctrl_sink_1_read         | out |    1|   ap_fifo  |   ctrl_sink_1   |    pointer   |
+|ctrl_sink_2_dout         |  in |    8|   ap_fifo  |   ctrl_sink_2   |    pointer   |
+|ctrl_sink_2_empty_n      |  in |    1|   ap_fifo  |   ctrl_sink_2   |    pointer   |
+|ctrl_sink_2_read         | out |    1|   ap_fifo  |   ctrl_sink_2   |    pointer   |
+|data_source_0_din        | out |  128|   ap_fifo  |  data_source_0  |    pointer   |
+|data_source_0_full_n     |  in |    1|   ap_fifo  |  data_source_0  |    pointer   |
+|data_source_0_write      | out |    1|   ap_fifo  |  data_source_0  |    pointer   |
+|data_source_1_din        | out |    1|   ap_fifo  |  data_source_1  |    pointer   |
+|data_source_1_full_n     |  in |    1|   ap_fifo  |  data_source_1  |    pointer   |
+|data_source_1_write      | out |    1|   ap_fifo  |  data_source_1  |    pointer   |
+|data_source_2_din        | out |   16|   ap_fifo  |  data_source_2  |    pointer   |
+|data_source_2_full_n     |  in |    1|   ap_fifo  |  data_source_2  |    pointer   |
+|data_source_2_write      | out |    1|   ap_fifo  |  data_source_2  |    pointer   |
+|status_add               |  in |   32|   ap_none  |    status_add   |    pointer   |
+|status_val               | out |   32|   ap_vld   |    status_val   |    pointer   |
++-------------------------+-----+-----+------------+-----------------+--------------+
+

@@ -1,0 +1,1 @@
+In this directory the h5 weights will be stored during training

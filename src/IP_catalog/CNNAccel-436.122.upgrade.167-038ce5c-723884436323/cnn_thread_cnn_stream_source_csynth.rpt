@@ -1,0 +1,154 @@
+
+
+================================================================
+== Vivado HLS Report for 'cnn_thread_cnn_stream_source'
+================================================================
+* Date:           Sun Feb 23 22:25:36 2020
+
+* Version:        2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)
+* Project:        CNNAccel
+* Solution:       default
+* Product family: zynquplus
+* Target device:  xczu3eg-sbva484-1-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   5.00|     2.167|        0.62|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    2|    2|    2|    2|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+        |          |  Latency  | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name| min | max |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+        |- Loop 1  |    1|    1|         1|          1|          1|  inf |    yes   |
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+-----+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  | URAM|
++-----------------+---------+-------+--------+-------+-----+
+|DSP              |        -|      -|       -|      -|    -|
+|Expression       |        -|      -|       0|     45|    -|
+|FIFO             |        -|      -|       -|      -|    -|
+|Instance         |        -|      -|       -|      -|    -|
+|Memory           |        -|      -|       -|      -|    -|
+|Multiplexer      |        -|      -|       -|     72|    -|
+|Register         |        -|      -|      34|      -|    -|
++-----------------+---------+-------+--------+-------+-----+
+|Total            |        0|      0|      34|    117|    0|
++-----------------+---------+-------+--------+-------+-----+
+|Available        |      432|    360|  141120|  70560|    0|
++-----------------+---------+-------+--------+-------+-----+
+|Utilization (%)  |        0|      0|   ~0   |   ~0  |    0|
++-----------------+---------+-------+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP48E: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------------+----------+-------+---+----+------------+------------+
+    |        Variable Name       | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------------+----------+-------+---+----+------------+------------+
+    |count_fu_3758_p2            |     +    |      0|  0|  39|          32|           1|
+    |io_acc_block_signal_op2959  |    and   |      0|  0|   2|           1|           1|
+    |io_acc_block_signal_op2963  |    and   |      0|  0|   2|           1|           1|
+    |ap_block_state2             |    or    |      0|  0|   2|           1|           1|
+    +----------------------------+----------+-------+---+----+------------+------------+
+    |Total                       |          |      0|  0|  45|          35|           4|
+    +----------------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +----------------------+----+-----------+-----+-----------+
+    |         Name         | LUT| Input Size| Bits| Total Bits|
+    +----------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm             |   9|          2|    1|          2|
+    |data_source_0_blk_n   |   9|          2|    1|          2|
+    |data_source_1_blk_n   |   9|          2|    1|          2|
+    |data_source_2_blk_n   |   9|          2|    1|          2|
+    |p_09_0_reg_3732       |   9|          2|   32|         64|
+    |sc_fifo_chn_37_blk_n  |   9|          2|    1|          2|
+    |sc_fifo_chn_48_blk_n  |   9|          2|    1|          2|
+    |sc_fifo_chn_59_blk_n  |   9|          2|    1|          2|
+    +----------------------+----+-----------+-----+-----------+
+    |Total                 |  72|         16|   39|         78|
+    +----------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-----------------+----+----+-----+-----------+
+    |       Name      | FF | LUT| Bits| Const Bits|
+    +-----------------+----+----+-----+-----------+
+    |ap_CS_fsm        |   2|   0|    2|          0|
+    |p_09_0_reg_3732  |  32|   0|   32|          0|
+    +-----------------+----+----+-----+-----------+
+    |Total            |  34|   0|   34|          0|
+    +-----------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++------------------------------+-----+-----+------------+-------------------------------+--------------+
+|           RTL Ports          | Dir | Bits|  Protocol  |         Source Object         |    C Type    |
++------------------------------+-----+-----+------------+-------------------------------+--------------+
+|ap_clk                        |  in |    1| ap_ctrl_hs | cnn::thread_cnn_stream_source | return value |
+|ap_rst                        |  in |    1| ap_ctrl_hs | cnn::thread_cnn_stream_source | return value |
+|data_source_0_din             | out |  128|   ap_fifo  |         data_source_0         |    pointer   |
+|data_source_0_full_n          |  in |    1|   ap_fifo  |         data_source_0         |    pointer   |
+|data_source_0_write           | out |    1|   ap_fifo  |         data_source_0         |    pointer   |
+|data_source_1_din             | out |    1|   ap_fifo  |         data_source_1         |    pointer   |
+|data_source_1_full_n          |  in |    1|   ap_fifo  |         data_source_1         |    pointer   |
+|data_source_1_write           | out |    1|   ap_fifo  |         data_source_1         |    pointer   |
+|data_source_2_din             | out |   16|   ap_fifo  |         data_source_2         |    pointer   |
+|data_source_2_full_n          |  in |    1|   ap_fifo  |         data_source_2         |    pointer   |
+|data_source_2_write           | out |    1|   ap_fifo  |         data_source_2         |    pointer   |
+|r0_dma_ingress_status         | out |   32|   ap_vld   |     r0_dma_ingress_status     |    pointer   |
+|r0_dma_ingress_status_ap_vld  | out |    1|   ap_vld   |     r0_dma_ingress_status     |    pointer   |
+|sc_fifo_chn_37_dout           |  in |  128|   ap_fifo  |         sc_fifo_chn_37        |    pointer   |
+|sc_fifo_chn_37_empty_n        |  in |    1|   ap_fifo  |         sc_fifo_chn_37        |    pointer   |
+|sc_fifo_chn_37_read           | out |    1|   ap_fifo  |         sc_fifo_chn_37        |    pointer   |
+|sc_fifo_chn_48_dout           |  in |    1|   ap_fifo  |         sc_fifo_chn_48        |    pointer   |
+|sc_fifo_chn_48_empty_n        |  in |    1|   ap_fifo  |         sc_fifo_chn_48        |    pointer   |
+|sc_fifo_chn_48_read           | out |    1|   ap_fifo  |         sc_fifo_chn_48        |    pointer   |
+|sc_fifo_chn_59_dout           |  in |   16|   ap_fifo  |         sc_fifo_chn_59        |    pointer   |
+|sc_fifo_chn_59_empty_n        |  in |    1|   ap_fifo  |         sc_fifo_chn_59        |    pointer   |
+|sc_fifo_chn_59_read           | out |    1|   ap_fifo  |         sc_fifo_chn_59        |    pointer   |
++------------------------------+-----+-----+------------+-------------------------------+--------------+
+

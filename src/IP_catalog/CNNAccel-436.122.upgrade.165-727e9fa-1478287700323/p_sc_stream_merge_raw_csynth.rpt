@@ -1,0 +1,192 @@
+
+
+================================================================
+== Vivado HLS Report for 'p_sc_stream_merge_raw'
+================================================================
+* Date:           Fri Jan 10 13:52:59 2020
+
+* Version:        2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)
+* Project:        CNNAccel
+* Solution:       default
+* Product family: zynquplus
+* Target device:  xczu3eg-sbva484-1-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     8.091|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    0|    4|    0|    4|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        +-------------------------------------------------------------+--------------------------------------------------+-----+-----+-----+-----+---------+
+        |                                                             |                                                  |  Latency  |  Interval | Pipeline|
+        |                           Instance                          |                      Module                      | min | max | min | max |   Type  |
+        +-------------------------------------------------------------+--------------------------------------------------+-----+-----+-----+-----+---------+
+        |grp_p_sc_stream_merge_raw_thread_sc_stream_merge_raw_fu_108  |p_sc_stream_merge_raw_thread_sc_stream_merge_raw  |    3|    3|    3|    3|   none  |
+        +-------------------------------------------------------------+--------------------------------------------------+-----+-----+-----+-----+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+-----+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  | URAM|
++-----------------+---------+-------+--------+-------+-----+
+|DSP              |        -|      -|       -|      -|    -|
+|Expression       |        -|      -|       -|      -|    -|
+|FIFO             |        -|      -|       -|      -|    -|
+|Instance         |        -|      -|     325|    668|    -|
+|Memory           |        -|      -|       -|      -|    -|
+|Multiplexer      |        -|      -|       -|      -|    -|
+|Register         |        -|      -|       -|      -|    -|
++-----------------+---------+-------+--------+-------+-----+
+|Total            |        0|      0|     325|    668|    0|
++-----------------+---------+-------+--------+-------+-----+
+|Available        |      432|    360|  141120|  70560|    0|
++-----------------+---------+-------+--------+-------+-----+
+|Utilization (%)  |        0|      0|   ~0   |   ~0  |    0|
++-----------------+---------+-------+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +-------------------------------------------------------------+--------------------------------------------------+---------+-------+-----+-----+-----+
+    |                           Instance                          |                      Module                      | BRAM_18K| DSP48E|  FF | LUT | URAM|
+    +-------------------------------------------------------------+--------------------------------------------------+---------+-------+-----+-----+-----+
+    |grp_p_sc_stream_merge_raw_thread_sc_stream_merge_raw_fu_108  |p_sc_stream_merge_raw_thread_sc_stream_merge_raw  |        0|      0|  325|  668|    0|
+    +-------------------------------------------------------------+--------------------------------------------------+---------+-------+-----+-----+-----+
+    |Total                                                        |                                                  |        0|      0|  325|  668|    0|
+    +-------------------------------------------------------------+--------------------------------------------------+---------+-------+-----+-----+-----+
+
+    * DSP48E: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    N/A
+
+    * Multiplexer: 
+    N/A
+
+    * Register: 
+    N/A
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++----------------+-----+-----+------------+-----------------------------------------------------+--------------+
+|    RTL Ports   | Dir | Bits|  Protocol  |                    Source Object                    |    C Type    |
++----------------+-----+-----+------------+-----------------------------------------------------+--------------+
+|clk             |  in |    1| ap_ctrl_hs | _sc_stream_merge_raw<16, 8>::_sc_stream_merge_raw.1 | return value |
+|reset           |  in |    1| ap_ctrl_hs | _sc_stream_merge_raw<16, 8>::_sc_stream_merge_raw.1 | return value |
+|din_0_dout      |  in |   16|   ap_fifo  |                        din_0                        |    pointer   |
+|din_0_empty_n   |  in |    1|   ap_fifo  |                        din_0                        |    pointer   |
+|din_0_read      | out |    1|   ap_fifo  |                        din_0                        |    pointer   |
+|din_1_dout      |  in |   16|   ap_fifo  |                        din_1                        |    pointer   |
+|din_1_empty_n   |  in |    1|   ap_fifo  |                        din_1                        |    pointer   |
+|din_1_read      | out |    1|   ap_fifo  |                        din_1                        |    pointer   |
+|din_2_dout      |  in |   16|   ap_fifo  |                        din_2                        |    pointer   |
+|din_2_empty_n   |  in |    1|   ap_fifo  |                        din_2                        |    pointer   |
+|din_2_read      | out |    1|   ap_fifo  |                        din_2                        |    pointer   |
+|din_3_dout      |  in |   16|   ap_fifo  |                        din_3                        |    pointer   |
+|din_3_empty_n   |  in |    1|   ap_fifo  |                        din_3                        |    pointer   |
+|din_3_read      | out |    1|   ap_fifo  |                        din_3                        |    pointer   |
+|din_4_dout      |  in |   16|   ap_fifo  |                        din_4                        |    pointer   |
+|din_4_empty_n   |  in |    1|   ap_fifo  |                        din_4                        |    pointer   |
+|din_4_read      | out |    1|   ap_fifo  |                        din_4                        |    pointer   |
+|din_5_dout      |  in |   16|   ap_fifo  |                        din_5                        |    pointer   |
+|din_5_empty_n   |  in |    1|   ap_fifo  |                        din_5                        |    pointer   |
+|din_5_read      | out |    1|   ap_fifo  |                        din_5                        |    pointer   |
+|din_6_dout      |  in |   16|   ap_fifo  |                        din_6                        |    pointer   |
+|din_6_empty_n   |  in |    1|   ap_fifo  |                        din_6                        |    pointer   |
+|din_6_read      | out |    1|   ap_fifo  |                        din_6                        |    pointer   |
+|din_7_dout      |  in |   16|   ap_fifo  |                        din_7                        |    pointer   |
+|din_7_empty_n   |  in |    1|   ap_fifo  |                        din_7                        |    pointer   |
+|din_7_read      | out |    1|   ap_fifo  |                        din_7                        |    pointer   |
+|din_8_dout      |  in |    1|   ap_fifo  |                        din_8                        |    pointer   |
+|din_8_empty_n   |  in |    1|   ap_fifo  |                        din_8                        |    pointer   |
+|din_8_read      | out |    1|   ap_fifo  |                        din_8                        |    pointer   |
+|din_9_dout      |  in |    1|   ap_fifo  |                        din_9                        |    pointer   |
+|din_9_empty_n   |  in |    1|   ap_fifo  |                        din_9                        |    pointer   |
+|din_9_read      | out |    1|   ap_fifo  |                        din_9                        |    pointer   |
+|din_10_dout     |  in |    1|   ap_fifo  |                        din_10                       |    pointer   |
+|din_10_empty_n  |  in |    1|   ap_fifo  |                        din_10                       |    pointer   |
+|din_10_read     | out |    1|   ap_fifo  |                        din_10                       |    pointer   |
+|din_11_dout     |  in |    1|   ap_fifo  |                        din_11                       |    pointer   |
+|din_11_empty_n  |  in |    1|   ap_fifo  |                        din_11                       |    pointer   |
+|din_11_read     | out |    1|   ap_fifo  |                        din_11                       |    pointer   |
+|din_12_dout     |  in |    1|   ap_fifo  |                        din_12                       |    pointer   |
+|din_12_empty_n  |  in |    1|   ap_fifo  |                        din_12                       |    pointer   |
+|din_12_read     | out |    1|   ap_fifo  |                        din_12                       |    pointer   |
+|din_13_dout     |  in |    1|   ap_fifo  |                        din_13                       |    pointer   |
+|din_13_empty_n  |  in |    1|   ap_fifo  |                        din_13                       |    pointer   |
+|din_13_read     | out |    1|   ap_fifo  |                        din_13                       |    pointer   |
+|din_14_dout     |  in |    1|   ap_fifo  |                        din_14                       |    pointer   |
+|din_14_empty_n  |  in |    1|   ap_fifo  |                        din_14                       |    pointer   |
+|din_14_read     | out |    1|   ap_fifo  |                        din_14                       |    pointer   |
+|din_15_dout     |  in |    1|   ap_fifo  |                        din_15                       |    pointer   |
+|din_15_empty_n  |  in |    1|   ap_fifo  |                        din_15                       |    pointer   |
+|din_15_read     | out |    1|   ap_fifo  |                        din_15                       |    pointer   |
+|din_16_dout     |  in |    2|   ap_fifo  |                        din_16                       |    pointer   |
+|din_16_empty_n  |  in |    1|   ap_fifo  |                        din_16                       |    pointer   |
+|din_16_read     | out |    1|   ap_fifo  |                        din_16                       |    pointer   |
+|din_17_dout     |  in |    2|   ap_fifo  |                        din_17                       |    pointer   |
+|din_17_empty_n  |  in |    1|   ap_fifo  |                        din_17                       |    pointer   |
+|din_17_read     | out |    1|   ap_fifo  |                        din_17                       |    pointer   |
+|din_18_dout     |  in |    2|   ap_fifo  |                        din_18                       |    pointer   |
+|din_18_empty_n  |  in |    1|   ap_fifo  |                        din_18                       |    pointer   |
+|din_18_read     | out |    1|   ap_fifo  |                        din_18                       |    pointer   |
+|din_19_dout     |  in |    2|   ap_fifo  |                        din_19                       |    pointer   |
+|din_19_empty_n  |  in |    1|   ap_fifo  |                        din_19                       |    pointer   |
+|din_19_read     | out |    1|   ap_fifo  |                        din_19                       |    pointer   |
+|din_20_dout     |  in |    2|   ap_fifo  |                        din_20                       |    pointer   |
+|din_20_empty_n  |  in |    1|   ap_fifo  |                        din_20                       |    pointer   |
+|din_20_read     | out |    1|   ap_fifo  |                        din_20                       |    pointer   |
+|din_21_dout     |  in |    2|   ap_fifo  |                        din_21                       |    pointer   |
+|din_21_empty_n  |  in |    1|   ap_fifo  |                        din_21                       |    pointer   |
+|din_21_read     | out |    1|   ap_fifo  |                        din_21                       |    pointer   |
+|din_22_dout     |  in |    2|   ap_fifo  |                        din_22                       |    pointer   |
+|din_22_empty_n  |  in |    1|   ap_fifo  |                        din_22                       |    pointer   |
+|din_22_read     | out |    1|   ap_fifo  |                        din_22                       |    pointer   |
+|din_23_dout     |  in |    2|   ap_fifo  |                        din_23                       |    pointer   |
+|din_23_empty_n  |  in |    1|   ap_fifo  |                        din_23                       |    pointer   |
+|din_23_read     | out |    1|   ap_fifo  |                        din_23                       |    pointer   |
+|dout_0_din      | out |  128|   ap_fifo  |                        dout_0                       |    pointer   |
+|dout_0_full_n   |  in |    1|   ap_fifo  |                        dout_0                       |    pointer   |
+|dout_0_write    | out |    1|   ap_fifo  |                        dout_0                       |    pointer   |
+|dout_1_din      | out |    1|   ap_fifo  |                        dout_1                       |    pointer   |
+|dout_1_full_n   |  in |    1|   ap_fifo  |                        dout_1                       |    pointer   |
+|dout_1_write    | out |    1|   ap_fifo  |                        dout_1                       |    pointer   |
+|dout_2_din      | out |   16|   ap_fifo  |                        dout_2                       |    pointer   |
+|dout_2_full_n   |  in |    1|   ap_fifo  |                        dout_2                       |    pointer   |
+|dout_2_write    | out |    1|   ap_fifo  |                        dout_2                       |    pointer   |
++----------------+-----+-----+------------+-----------------------------------------------------+--------------+
+
