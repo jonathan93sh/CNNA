@@ -20,7 +20,7 @@ save_id='180Mhz.p'
 #%% Word-length OPT
 
 # define object funtion 
-if True:
+if False:
     init_wordlengt = [8,4] # fixed16.16
     
     target_mse = 1e-3
@@ -222,20 +222,21 @@ def cnna_model_make(param):
     return [ret_sim,paramstr]
 
 #%%
-top3_list16 = [[16,128,8,3,32], [16,128,32,1,32],[16,128,16,3,32]]
-top3_list8 = [[8,128,16,1,42],[8,128,8,3,42],[8,128,32,1,42]]
-result_rtl = []
-for p in top3_list16:
-    result_rtl.append(cnna_model_make(p))
-    os.system('git add ../IP_catalog/')
-    os.system('git commit -m "new bit upload: '+ p +'"')
-    os.system('git push')
-    
-for p in top3_list8:
-    result_rtl.append(cnna_model_make(p))
-    os.system('git add ../IP_catalog/')
-    os.system('git commit -m "new bit upload: '+ p +'"')
-    os.system('git push')
+if False:
+    top3_list16 = [[16,128,8,3,32], [16,128,32,1,32],[16,128,16,3,32]]
+    top3_list8 = [[8,128,16,1,42],[8,128,8,3,42],[8,128,32,1,42]]
+    result_rtl = []
+    for p in top3_list16:
+        result_rtl.append(cnna_model_make(p))
+        os.system('git add ../IP_catalog/')
+        os.system('git commit -m "new bit upload: '+ p +'"')
+        os.system('git push')
+        
+    for p in top3_list8:
+        result_rtl.append(cnna_model_make(p))
+        os.system('git add ../IP_catalog/')
+        os.system('git commit -m "new bit upload: '+ p +'"')
+        os.system('git push')
 
 #%%
 if False:
@@ -266,12 +267,10 @@ if False:
     
     os.system('systemctl suspend')
 
-#test = cnna_model_make([16,128,8,3,32])
 
-
-
-
-
+test = cnna_model_make([16,128,8,3,32]) # Paper CNNA16
+#test = cnna_model_make([8,128,16,1,42]) # Paper CNNA8_1
+#test = cnna_model_make([8,128,8,3,42]) # Paper CNNA8_2
 
 #for p in top3_list16:
 #    result_rtl.append(cnna_model_make(p))
