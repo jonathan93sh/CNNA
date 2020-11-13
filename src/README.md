@@ -24,4 +24,4 @@ src/jupyterlab/HEB.py -> Python script to create and make the bit file stored in
 src/make clean_rtl -> Cleans SystemC build, RTL and Vivado project
  
 # Result stored in 
-src/IP_catalog/ -> this catalog contains the bit file for the CNNA accelerator with a uniq name for specific configuration
+src/IP_catalog/ -> this catalog contains the bit file for the CNNA accelerator with a uniq name for each specifict configuration
