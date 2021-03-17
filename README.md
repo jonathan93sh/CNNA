@@ -1,4 +1,4 @@
-# Convolutinal Neural Network Accelerator (CNNA)
+# Convolutional Neural Network Accelerator (CNNA)
 A scalable and efficient convolutional neural network accelerator using HLS for a System on Chip design
 
 # Abstract:
