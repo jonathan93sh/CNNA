@@ -12,7 +12,8 @@ This approach enables design space exploration, which makes it possible to explo
 fitting it to the desired platform and model. The CNN VGG16 was used to test the solution on a Xilinx Ultra96 board using PYNQ. 
 
 # Paper
-https://arxiv.org/abs/2004.13075
+https://www.sciencedirect.com/science/article/pii/S0141933121005160
+(https://arxiv.org/abs/2004.13075)
 
 # Development Tools
 This code requires a development platform with Linux, Python (Anaconda) and Xilinx Vivado 2019.1 installed.
